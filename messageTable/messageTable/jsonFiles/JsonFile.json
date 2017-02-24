@@ -1,0 +1,88 @@
+{
+  "result" : [
+    {
+        "content" : "凡有所相,皆为虚妄",
+        "id" : "58ad35a80c750f65a9de9063",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-22T06:54:32.000Z",
+        "seq" : 3993,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "5767abbecbaf43383bfba097",
+        "updated_at" : "2017-02-22T06:54:32.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14877464720264156352134",
+        "chat_type" : 0
+    },
+    {
+        "content" : "绝圣弃智，民利百倍；绝仁弃义，民复孝慈；绝巧弃利，盗贼无有。此三者以为文不足，故令有所属；见素抱朴，少私寡欲；绝学无忧",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "56f3a79bb8df540c19a2556d",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "凡有所相,皆为虚妄",
+        "id" : "58ad35a80c750f65a9de9063",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-22T06:54:32.000Z",
+        "seq" : 3993,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "5767abbecbaf43383bfba097",
+        "updated_at" : "2017-02-22T06:54:32.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14877464720264156352134",
+        "chat_type" : 0
+    },
+    {
+        "content" : "绝圣弃智，民利百倍；绝仁弃义，民复孝慈；绝巧弃利，盗贼无有。此三者以为文不足，故令有所属；见素抱朴，少私寡欲；绝学无忧",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "56f3a79bb8df540c19a2556d",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    }
+  ],
+  "server_status" : [
+
+  ],
+  "code" : 1
+}
