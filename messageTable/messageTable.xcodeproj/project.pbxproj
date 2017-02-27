@@ -17,6 +17,12 @@
 		7537E1AA1E5EE81E00CDD21A /* PCMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1A31E5EE81E00CDD21A /* PCMessageModel.m */; };
 		7537E1AE1E5EEF5900CDD21A /* PCChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1AD1E5EEF5900CDD21A /* PCChatViewController.m */; };
 		7537E1B11E5EF06F00CDD21A /* PCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1B01E5EF06F00CDD21A /* PCMainViewController.m */; };
+		7537E1B71E5FD45800CDD21A /* PCMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1B61E5FD45800CDD21A /* PCMessageCell.m */; };
+		7537E1C21E6032A300CDD21A /* PCMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1C11E6032A300CDD21A /* PCMessageHelper.m */; };
+		7537E1C81E60365F00CDD21A /* PCMessageComponentBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1C71E60365F00CDD21A /* PCMessageComponentBubble.m */; };
+		759DB00C1E63CBCB0045567D /* PCMessageLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB00B1E63CBCB0045567D /* PCMessageLayout.m */; };
+		759DB0111E63FBF40045567D /* NSDate+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB00E1E63FBF40045567D /* NSDate+T8.m */; };
+		759DB0121E63FBF40045567D /* NSDateFormatter+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0101E63FBF40045567D /* NSDateFormatter+T8.m */; };
 		B65900405FD8E268D5CBB53E /* libPods-messageTable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C358F32768BC5905385D0184 /* libPods-messageTable.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +47,20 @@
 		7537E1AD1E5EEF5900CDD21A /* PCChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCChatViewController.m; sourceTree = "<group>"; };
 		7537E1AF1E5EF06F00CDD21A /* PCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMainViewController.h; sourceTree = "<group>"; };
 		7537E1B01E5EF06F00CDD21A /* PCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMainViewController.m; sourceTree = "<group>"; };
+		7537E1B51E5FD45800CDD21A /* PCMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageCell.h; sourceTree = "<group>"; };
+		7537E1B61E5FD45800CDD21A /* PCMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageCell.m; sourceTree = "<group>"; };
+		7537E1C01E6032A300CDD21A /* PCMessageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageHelper.h; sourceTree = "<group>"; };
+		7537E1C11E6032A300CDD21A /* PCMessageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageHelper.m; sourceTree = "<group>"; };
+		7537E1C61E60365F00CDD21A /* PCMessageComponentBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageComponentBubble.h; sourceTree = "<group>"; };
+		7537E1C71E60365F00CDD21A /* PCMessageComponentBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageComponentBubble.m; sourceTree = "<group>"; };
+		7537E1C91E6036D700CDD21A /* PCMessageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageMacros.h; sourceTree = "<group>"; };
+		7537E1CA1E60409D00CDD21A /* PCDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDefines.h; sourceTree = "<group>"; };
+		759DB00A1E63CBCB0045567D /* PCMessageLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageLayout.h; sourceTree = "<group>"; };
+		759DB00B1E63CBCB0045567D /* PCMessageLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageLayout.m; sourceTree = "<group>"; };
+		759DB00D1E63FBF40045567D /* NSDate+T8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+T8.h"; sourceTree = "<group>"; };
+		759DB00E1E63FBF40045567D /* NSDate+T8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+T8.m"; sourceTree = "<group>"; };
+		759DB00F1E63FBF40045567D /* NSDateFormatter+T8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+T8.h"; sourceTree = "<group>"; };
+		759DB0101E63FBF40045567D /* NSDateFormatter+T8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+T8.m"; sourceTree = "<group>"; };
 		79F3533901F069E52ED393CF /* Pods-messageTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messageTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-messageTable/Pods-messageTable.release.xcconfig"; sourceTree = "<group>"; };
 		ACA1CA7225731D40F2DC83C3 /* Pods-messageTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messageTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-messageTable/Pods-messageTable.debug.xcconfig"; sourceTree = "<group>"; };
 		C358F32768BC5905385D0184 /* libPods-messageTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-messageTable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,12 +142,17 @@
 		7537E19A1E5EE81E00CDD21A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				759DB00D1E63FBF40045567D /* NSDate+T8.h */,
+				759DB00E1E63FBF40045567D /* NSDate+T8.m */,
+				759DB00F1E63FBF40045567D /* NSDateFormatter+T8.h */,
+				759DB0101E63FBF40045567D /* NSDateFormatter+T8.m */,
 				7537E19B1E5EE81E00CDD21A /* NSDictionary+PC.h */,
 				7537E19C1E5EE81E00CDD21A /* NSDictionary+PC.m */,
 				7537E19D1E5EE81E00CDD21A /* NSString+PC.h */,
 				7537E19E1E5EE81E00CDD21A /* NSString+PC.m */,
 				7537E19F1E5EE81E00CDD21A /* PCUserDefaultHelper.h */,
 				7537E1A01E5EE81E00CDD21A /* PCUserDefaultHelper.m */,
+				7537E1CA1E60409D00CDD21A /* PCDefines.h */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -144,6 +169,12 @@
 		7537E1A41E5EE81E00CDD21A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7537E1BF1E60321400CDD21A /* Helper */,
+				7537E1C51E6035FB00CDD21A /* Components */,
+				7537E1C41E60351D00CDD21A /* MessageViews */,
+				7537E1C31E6034DF00CDD21A /* Layouts */,
+				7537E1B51E5FD45800CDD21A /* PCMessageCell.h */,
+				7537E1B61E5FD45800CDD21A /* PCMessageCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +188,41 @@
 				7537E1B01E5EF06F00CDD21A /* PCMainViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7537E1BF1E60321400CDD21A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7537E1C01E6032A300CDD21A /* PCMessageHelper.h */,
+				7537E1C11E6032A300CDD21A /* PCMessageHelper.m */,
+				7537E1C91E6036D700CDD21A /* PCMessageMacros.h */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7537E1C31E6034DF00CDD21A /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				759DB00A1E63CBCB0045567D /* PCMessageLayout.h */,
+				759DB00B1E63CBCB0045567D /* PCMessageLayout.m */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		7537E1C41E60351D00CDD21A /* MessageViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MessageViews;
+			sourceTree = "<group>";
+		};
+		7537E1C51E6035FB00CDD21A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7537E1C61E60365F00CDD21A /* PCMessageComponentBubble.h */,
+				7537E1C71E60365F00CDD21A /* PCMessageComponentBubble.m */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		8807199330FC535EE0820F86 /* Frameworks */ = {
@@ -292,12 +358,18 @@
 			files = (
 				7537E1B11E5EF06F00CDD21A /* PCMainViewController.m in Sources */,
 				7537E1AA1E5EE81E00CDD21A /* PCMessageModel.m in Sources */,
+				7537E1C81E60365F00CDD21A /* PCMessageComponentBubble.m in Sources */,
+				7537E1B71E5FD45800CDD21A /* PCMessageCell.m in Sources */,
 				7537E1AE1E5EEF5900CDD21A /* PCChatViewController.m in Sources */,
 				7537E1A71E5EE81E00CDD21A /* NSDictionary+PC.m in Sources */,
 				7537E1A91E5EE81E00CDD21A /* PCUserDefaultHelper.m in Sources */,
 				7537E1861E5EE7E600CDD21A /* AppDelegate.m in Sources */,
 				7537E1A81E5EE81E00CDD21A /* NSString+PC.m in Sources */,
+				7537E1C21E6032A300CDD21A /* PCMessageHelper.m in Sources */,
+				759DB00C1E63CBCB0045567D /* PCMessageLayout.m in Sources */,
+				759DB0111E63FBF40045567D /* NSDate+T8.m in Sources */,
 				7537E1831E5EE7E600CDD21A /* main.m in Sources */,
+				759DB0121E63FBF40045567D /* NSDateFormatter+T8.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +472,7 @@
 				DEVELOPMENT_TEAM = 54KWRA6QCY;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/messageTable/PrefixHeader.pch";
 				INFOPLIST_FILE = messageTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.messageTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +487,7 @@
 				DEVELOPMENT_TEAM = 54KWRA6QCY;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/messageTable/PrefixHeader.pch";
 				INFOPLIST_FILE = messageTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.messageTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";

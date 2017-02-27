@@ -14,10 +14,15 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import "YYKit.h"
+#import "NSDate+T8.h"
+#import "NSDateFormatter+T8.h"
 #import "NSDictionary+PC.h"
 #import "PCUserDefaultHelper.h"
 #import "NSString+PC.h"
 #import "PCMessageModel.h"
+#import "PCDefines.h"
+#import "PCMessageModel.h"
+#import "PCMessageMacros.h"
 #endif
 
 #endif /* PrefixHeader_pch */

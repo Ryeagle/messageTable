@@ -7,12 +7,18 @@
 //
 
 #import "PCChatViewController.h"
+#import "PCMessageCell.h"
 
-@interface PCChatViewController ()
+@interface PCChatViewController () <UITableViewDelegate, UITableViewDataSource>
+
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) NSMutableArray *chatArray;
+@property (nonatomic, strong) NSMutableArray *chatLayoutArr;
 
+#ifdef RyeagleForTest
+@property (nonatomic, strong) NSTimer *timer;
+
+#endif
 @end
 
 @implementation PCChatViewController
@@ -21,17 +27,67 @@
     [super viewDidLoad];
     
     [self setup];
-    
+    [self setupNav];
+    [self setupTableView];
     [self getData];
+#ifdef RyeagleForTest
+#endif
 }
+
+#ifdef RyeagleForTest
+- (void)setupTimer
+{
+    __weak typeof(self) weakSelf = self;
+    _timer = [NSTimer timerWithTimeInterval:1.f block:^(NSTimer * _Nonnull timer) {
+        [weakSelf.tableView reloadData];
+    } repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+
+}
+#endif
 
 - (void)setup
 {
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)setupNav
+{
+    UISwitch *switcher = [UISwitch new];
+    switcher.layer.transformScale = 0.8;
+    
+    [switcher setOn:[PCUserDefaultHelper sharedInstance].showMemberName];
+    [switcher addBlockForControlEvents:UIControlEventValueChanged block:^(UISwitch *sender) {
+        [self setShowName:sender.isOn];
+    }];
+    
+    UIView *view = [UIView new];
+    view.size = CGSizeMake(40, 44);
+    [view addSubview:switcher];
+    switcher.centerX = view.width / 2;
+    switcher.centerY = view.height / 2;
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:view];
+    self.navigationItem.rightBarButtonItem = item;
+}
+
+- (void)setupTableView
+{
+    _tableView = [[UITableView alloc]init];
+    [_tableView setFrame:self.view.bounds];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.backgroundColor = AppBgColor;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:_tableView];
+    
+    [_tableView setTableFooterView:[[UIView alloc]initWithFrame:CGRectZero]];
+    [_tableView reloadData];
+}
+
 - (void)getData
 {
+    _chatLayoutArr = [NSMutableArray array];
     NSData *jsonData = [NSData dataNamed:[NSString stringWithFormat:@"JsonFile.json"]];
     NSError* error;
     NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData
@@ -44,10 +100,55 @@
         
         if (dict && [dict isKindOfClass:[NSDictionary class]]) {
             PCMessageModel *messageModel = [[PCMessageModel alloc]initWithDict:dict];
-            NSLog(@"messageModel name:%@ content:%@", messageModel.fullname, messageModel.content);
+            PCMessageLayout *layout = [[PCMessageLayout alloc] initWithMessageModel:messageModel];
+            layout.shouldShowTime = YES;
+            if (layout) {
+                [_chatLayoutArr addObject:layout];
+            }
+        }
+    }
+    @autoreleasepool {
+        for (int i = 0; i < 13; i++) {
+            [_chatLayoutArr addObjectsFromArray:_chatLayoutArr];
         }
     }
     
+    [self.tableView reloadData];
+}
+
+#pragma mark Private Method
+- (void)setShowName:(BOOL)showName
+{
+    [PCUserDefaultHelper sharedInstance].showMemberName = showName;
+    [self.tableView reloadData];
+}
+
+#pragma mark UITableViewDelegate & UITableViewDataSource
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PCMessageLayout *layout = [_chatLayoutArr objectAtIndex:indexPath.row];
+    return layout.height;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _chatLayoutArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellForChatTable = @"cellForChatTable";
+    
+    PCMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:cellForChatTable];
+    
+    if (!cell) {
+        cell = [[PCMessageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellForChatTable];
+    }
+    
+    PCMessageLayout *laytout = _chatLayoutArr[indexPath.row];
+    cell.layout = laytout;
+    
+    return cell;
 }
 
 @end
