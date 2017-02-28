@@ -71,4 +71,10 @@
 #define PCMessageSystemMessageFontSize              12
 #define PCMessageTimeFontSize                       12
 
+//正则
+#define URLLINKREGULAR @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
+#define PHONEREGULAR @"((((\\+)|(00))?[- ]?\\d{1,9})[- ]?)?[0-9\\-]{5,26}"
+#define EMAILREGULAR @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+#define ADRESSREGULAR @"\\d+\\.\\d+\\.\\d+\\.\\d+"
+
 #endif /* PCMessageMacros_h */

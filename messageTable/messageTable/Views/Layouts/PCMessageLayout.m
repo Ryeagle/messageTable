@@ -64,10 +64,8 @@
 - (void)setNameLayout
 {
 #warning 项目中替换判断方式
-    if ([PCUserDefaultHelper sharedInstance].showMemberName) {
-        if (_messageModel.message_bubble_type == PCMessageBubbleTypeReceiving) {
-            _nameViewLayout = [[PCMessageNameViewLayout alloc] initWithMessageModel:_messageModel];
-        }
+    if (_messageModel.message_bubble_type == PCMessageBubbleTypeReceiving) {
+        _nameViewLayout = [[PCMessageNameViewLayout alloc] initWithMessageModel:_messageModel];
     }
 }
 

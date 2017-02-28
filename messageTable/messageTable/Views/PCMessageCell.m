@@ -35,7 +35,6 @@
 - (void)configContentView:(NSString *)reuseIdentifier
 {
     _boundsView = [[PCMessageTextView alloc] init];
-    
     [self.contentView addSubview:_boundsView];
 }
 
