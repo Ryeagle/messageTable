@@ -29,93 +29,75 @@
 {
     _height = 0;
     _avatarViewLeft = 0;
-    _bubbleViewLeft = 0;
-    _bubbleViewTop = 0;
-    _bubbleViewWidth = 0;
-    _bubbleViewHeight = 0;
-    _timeLabelTop = 0;
-    _timeLabelLeft = 0;
-    _timeLabelWidth = 0;
-    _timeLabelHeight = 0;
+    _avatarBubbleViewTop = 0;
+    _avatarBubbleViewLeft = 0;
+    _avatarBubbleViewWidth = 0;
+    _avatarBubbleViewHeight = 0;
     _timeViewTop = 0;
     _timeViewLeft = 0;
-    _timeViewWidth = 0;
-    _timeViewHeight = 0;
 }
 
 - (void)setLayout
 {
-    _bubbleType = [PCMessageComponentBubble componentBubbleType:_messageModel];
+    _bubbleType = [PCMessageAvatarBubble componentBubbleType:_messageModel];
+    
+    [self setNameLayout];
     
     if (_shouldShowTime) {
         [self setTimeLayout];
-        _avatarViewTop = _timeViewTop + _timeViewHeight + PCMessageTopPadding;
+        _avatarViewTop = _timeViewTop + _timeViewLayout.viewHeight + PCMessageTimeBottomPadding;
     } else {
         _avatarViewTop = PCMessageTopPadding;
     }
     
-    [self setTextMessageLayout];
+    switch (_messageModel.media_type) {
+        case PCMessageMediaTypeText:
+            [self setTextMessageLayout];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma mark SetupLayout Name View
+- (void)setNameLayout
+{
+#warning 项目中替换判断方式
+    if ([PCUserDefaultHelper sharedInstance].showMemberName) {
+        if (_messageModel.message_bubble_type == PCMessageBubbleTypeReceiving) {
+            _nameViewLayout = [[PCMessageNameViewLayout alloc] initWithMessageModel:_messageModel];
+        }
+    }
 }
 
 #pragma mark SetupLayout Time View
 - (void)setTimeLayout
 {
-    UIFont *timeFont = [UIFont systemFontOfSize:PCMessageTimeFontSize];
-    NSMutableAttributedString *timeStr = [[NSMutableAttributedString alloc] initWithString:[[NSDate getDateFromT8TimeStamp:_messageModel.created_at] formattedTime]];
-    timeStr.font = timeFont;
-    timeStr.color = [UIColor whiteColor];
-    YYTextLinePositionSimpleModifier *modifier = [YYTextLinePositionSimpleModifier new];
-    modifier.fixedLineHeight = PCMessageTimeFontSize * 1.3;
-    YYTextContainer *timeContainer = [YYTextContainer containerWithSize:CGSizeMake(PCMessageTextMaxWidth, MAXFLOAT)];
-    timeContainer.linePositionModifier = modifier;
-    _timeLabelLayout = [YYTextLayout layoutWithContainer:timeContainer text:timeStr];
-    
-    _timeLabelWidth = _timeLabelLayout.textBoundingSize.width;
-    _timeLabelHeight = _timeLabelLayout.textBoundingSize.height;
+    _timeViewLayout = [[PCMessageTimeViewLayout alloc]initWithMessageModel:_messageModel];
     
     _timeViewTop = PCMessageTopPadding;
-    _timeViewWidth = _timeLabelWidth + 2 * PCMessageTimeInnerPaddding;
-    _timeViewHeight = _timeLabelHeight + 2 * PCMessageTimeInnerPaddding;
-    _timeViewLeft = (SCREEN_WIDTH - _timeLabelWidth) / 2;
-    
-    _timeLabelLeft = PCMessageTimeInnerPaddding;
-    _timeLabelTop = PCMessageTimeInnerPaddding;
+    _timeViewLeft = (SCREEN_WIDTH - _timeViewLayout.viewWidth) / 2;
 }
 
 #pragma mark SetupLayout Text Message
 - (void)setTextMessageLayout
 {
-    UIFont *textFont = [UIFont systemFontOfSize:PCMessageTextFontSize];
-    NSMutableAttributedString *textStr = [[NSMutableAttributedString alloc] initWithString:_messageModel.content];
-    textStr.font = textFont;
-    textStr.color = MainContentColor;
-    YYTextLinePositionSimpleModifier *modifier = [YYTextLinePositionSimpleModifier new];
-    modifier.fixedLineHeight = PCMessageTextFontSize * 1.3;
-    YYTextContainer *textContainer = [YYTextContainer containerWithSize:CGSizeMake(PCMessageTextMaxWidth, MAXFLOAT)];
-    textContainer.linePositionModifier = modifier;
-    _textLayout = [YYTextLayout layoutWithContainer:textContainer text:textStr];
-    
-    _textHeight = _textLayout.textBoundingSize.height + PCMessageTextBottomPadding;
-    _textWidth = _textLayout.textBoundingSize.width;
-    
-    _bubbleViewWidth = _textWidth + 2 * PCMessageTextBubblePadding + PCMessageBubbleAngleWidth;
-    _bubbleViewHeight = (_textHeight < PCMessageTextLineHeight) ? PCMessageTextMinHeight : _textHeight + 2 * PCMessageTextBubblePadding;
+    _textViewLayout = [[PCMessageTextViewLayout alloc] initWithMessageModel:_messageModel];
     
     if (_messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
         _avatarViewLeft = PCMessageAvatarSenderLeft;
-        _bubbleViewLeft = _avatarViewLeft - PCMessageBubbleAvatarPadding - _bubbleViewWidth;
-        _textLeft = _bubbleViewLeft + PCMessageTextBubblePadding;
+        _avatarBubbleViewLeft = _avatarViewLeft - PCMessageBubbleAvatarPadding - _textViewLayout.viewWidth;
     } else {
         _avatarViewLeft = PCMessageAvatarReceiverLeft;
-        _bubbleViewLeft = PCMessageAvatarReceiverLeft + PCMessageAvatarSize + PCMessageBubbleAvatarPadding;
-        _textLeft = _bubbleViewLeft + PCMessageTextBubblePadding + PCMessageBubbleAngleWidth;
+        _avatarBubbleViewLeft = PCMessageAvatarReceiverLeft + PCMessageAvatarSize + PCMessageBubbleAvatarPadding;
     }
     
-    _bubbleViewTop = _avatarViewTop;
+    _avatarBubbleViewTop = _avatarViewTop;
+    _avatarBubbleViewHeight = _textViewLayout.viewHeight;
+    _avatarBubbleViewWidth = _textViewLayout.viewWidth;
     
-    _textTop =(_textHeight < PCMessageTextLineHeight) ? _bubbleViewTop + (_bubbleViewHeight - _textHeight) / 2 : _bubbleViewTop + PCMessageTextBubblePadding;
-    
-    _height = _bubbleViewTop + _bubbleViewHeight + PCMessageTopPadding + PCMessageTopPadding;
+    _height = _avatarBubbleViewTop + _avatarBubbleViewHeight + PCMessageTopPadding + PCMessageTopPadding;
 }
 
 @end

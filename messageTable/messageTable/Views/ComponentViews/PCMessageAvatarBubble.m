@@ -1,12 +1,13 @@
 //
-//  PCMessageComponentBubble.m
+//  PCMessageAvatarBubble.m
 //  messageTable
 //
-//  Created by Ryeagler on 2017/2/24.
+//  Created by Ryeagler on 2017/2/28.
 //  Copyright © 2017年 Ryeagle. All rights reserved.
 //
 
-#import "PCMessageComponentBubble.h"
+#import "PCMessageAvatarBubble.h"
+
 
 #define T8TextMessageBackgroundImageDef(name, isSend, filePhone) \
 static UIImage *name() \
@@ -27,7 +28,7 @@ T8TextMessageBackgroundImageDef(senderTextHighlightImage, true, @"Chat_text_send
 T8TextMessageBackgroundImageDef(receiverTextHighlightImage, false, @"Chat_text_receiver_highlight")
 T8TextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sender_highlight")
 
-@implementation PCMessageComponentBubble
+@implementation PCMessageAvatarBubble
 
 - (instancetype)init
 {

@@ -132,7 +132,7 @@
         "seq" : 3993,
         "channel_id" : "57cf9e976068b373dc072b0a",
         "_status" : 1,
-        "creator" : "5767abbecbaf43383bfba097",
+        "creator" : "56f3a79bb8df540c19a2556d",
         "updated_at" : "2017-02-22T06:54:32.000Z",
         "extend" : {
 
@@ -239,7 +239,48 @@
         },
         "tseq" : "14878244501080062429097",
         "chat_type" : 0
+    },
+    {
+        "content" : "lizhuo@tinfinite.com😀打算18734900387😀www.baidu.com🇨🇳🇺🇸🇨🇺192.168.1.1",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "56f3a79bb8df540c19a2556d",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "我",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
     }
+
   ],
   "server_status" : [
 

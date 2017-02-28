@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class PCMessageTimeViewLayout;
+@class PCMessageNameViewLayout;
+@class PCMessageTextViewLayout;
 @interface PCMessageLayout : NSObject
 
 @property (nonatomic, strong) PCMessageModel *messageModel;
@@ -15,37 +18,27 @@
 
 //时间
 @property (nonatomic, assign) BOOL shouldShowTime;
-@property (nonatomic, strong) YYTextLayout *timeLabelLayout;
 @property (nonatomic, assign) CGFloat timeViewLeft;
 @property (nonatomic, assign) CGFloat timeViewTop;
-@property (nonatomic, assign) CGFloat timeViewWidth;
-@property (nonatomic, assign) CGFloat timeViewHeight;
-@property (nonatomic, assign) CGFloat timeLabelLeft;
-@property (nonatomic, assign) CGFloat timeLabelTop;
-@property (nonatomic, assign) CGFloat timeLabelWidth;
-@property (nonatomic, assign) CGFloat timeLabelHeight;
+@property (nonatomic, strong) PCMessageTimeViewLayout *timeViewLayout;
 
-//姓名
+//身份与姓名
 @property (nonatomic, strong) YYTextLayout *identityLayout;
-@property (nonatomic, strong) YYTextLayout *nameLayout;
+@property (nonatomic, strong) PCMessageNameViewLayout *nameViewLayout;
 
 //头像
 @property (nonatomic, assign) CGFloat avatarViewLeft;
 @property (nonatomic, assign) CGFloat avatarViewTop;
 
-//气泡
-@property (nonatomic, assign) CGFloat bubbleViewTop;
-@property (nonatomic, assign) CGFloat bubbleViewLeft;
-@property (nonatomic, assign) CGFloat bubbleViewWidth;
-@property (nonatomic, assign) CGFloat bubbleViewHeight;
+//对话气泡
+@property (nonatomic, assign) CGFloat avatarBubbleViewTop;
+@property (nonatomic, assign) CGFloat avatarBubbleViewLeft;
+@property (nonatomic, assign) CGFloat avatarBubbleViewWidth;
+@property (nonatomic, assign) CGFloat avatarBubbleViewHeight;
 @property (nonatomic, assign) PCMessageComponentBubbleType bubbleType;
 
 //文字消息
-@property (nonatomic, strong) YYTextLayout *textLayout;
-@property (nonatomic, assign) CGFloat textHeight;
-@property (nonatomic, assign) CGFloat textWidth;
-@property (nonatomic, assign) CGFloat textTop;
-@property (nonatomic, assign) CGFloat textLeft;
+@property (nonatomic, strong) PCMessageTextViewLayout *textViewLayout;
 
 //网页分享
 @property (nonatomic, strong) YYTextLayout *mainContextLayout;

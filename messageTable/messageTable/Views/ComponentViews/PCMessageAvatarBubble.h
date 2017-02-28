@@ -1,8 +1,8 @@
 //
-//  PCMessageComponentBubble.h
+//  PCMessageAvatarBubble.h
 //  messageTable
 //
-//  Created by Ryeagler on 2017/2/24.
+//  Created by Ryeagler on 2017/2/28.
 //  Copyright © 2017年 Ryeagle. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, PCMessageComponentBubbleType) {
     PCMessageComponentBubbleTypeUnknown
 };
 
-@interface PCMessageComponentBubble : UIImageView
+@interface PCMessageAvatarBubble : UIImageView
 
 @property (nonatomic, assign) PCMessageComponentBubbleType type;
 

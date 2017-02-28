@@ -10,20 +10,37 @@
 #define PCMessageMacros_h
 
 //#define RyeagleForTest
-#import "PCMessageComponentBubble.h"
+
+#import "PCMessageAvatarBubble.h"
+#import "PCMessageTimeView.h"
+#import "PCMessageNameView.h"
+#import "PCMessageAvatarBaseView.h"
+#import "PCMessageNoInteractionBaseView.h"
+#import "PCMessageNoAvatarBaseView.h"
+#import "PCMessageTextView.h"
 #import "PCMessageLayout.h"
+#import "PCMessageTextViewLayout.h"
+#import "PCMessageTimeViewLayout.h"
+#import "PCMessageNameViewLayout.h"
+#import "PCMessageNameViewLayout.h"
 
 //总体
 #define PCMessageTopPadding                         5
 #define PCMessageBottomPadding                      15
 
 //时间
-#define PCMessageTimeInnerPaddding                  2
+#define PCMessageTimeInnerLeftPaddding              5
+#define PCMessageTimeInnerTopPadding                3.5
 #define PCMessageTimeBottomPadding                  10
 
 //姓名
-#define PCMessageNameHeight                         12
-#define PCMessageNameBottomPadding                  3
+#define PCMessageNameHeight                         (PCMessageNameLabelHeight + 2 * PCMessageNameInnderPadding)
+#define PCMessageNameLeftPaddding                   (PCMessageBubbleAvatarPadding + PCMessageBubbleAngleWidth)
+#define PCMessageNameLabelHeight                    15
+#define PCMessageNameLabelWidth                     (SCREEN_WIDTH - 180)
+#define PCMessageAdminIdentityWidth                 40
+#define PCMessageOwnerIdentityWidth                 28
+#define PCMessageNameInnderPadding                  3
 
 //头像
 #define PCMessageAvatarMarginPadding                15
@@ -33,7 +50,7 @@
 
 //聊天气泡
 #define PCMessageBubbleAvatarPadding                5
-#define PCMessageBubbleAngleWidth                   7
+#define PCMessageBubbleAngleWidth                   5
 
 //普通气泡
 
@@ -41,8 +58,8 @@
 #define PCMessageTextBubblePadding                  11
 #define PCMessageTextMaxWidth                       (SCREEN_WIDTH - 150)
 #define PCMessageTextMinHeight                      PCMessageAvatarSize
-#define PCMessageTextBottomPadding                  3
-#define PCMessageTextLineHeight                     27
+#define PCMessageTextInnerBottomPadding             3
+#define PCMessageTextOneLineHeight                     27
 
 //文章分享
 #define PCWebLinkMessageWidth                       190
@@ -52,6 +69,6 @@
 #define PCMEssageIdentityFontSize                   12
 #define PCMessageTextFontSize                       15
 #define PCMessageSystemMessageFontSize              12
-#define PCMessageTimeFontSize                       13
+#define PCMessageTimeFontSize                       12
 
 #endif /* PCMessageMacros_h */

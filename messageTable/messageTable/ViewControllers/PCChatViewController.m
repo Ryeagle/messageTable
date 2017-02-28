@@ -30,8 +30,6 @@
     [self setupNav];
     [self setupTableView];
     [self getData];
-#ifdef RyeagleForTest
-#endif
 }
 
 #ifdef RyeagleForTest
@@ -56,9 +54,10 @@
     UISwitch *switcher = [UISwitch new];
     switcher.layer.transformScale = 0.8;
     
+    __weak typeof(self) weakSelf = self;
     [switcher setOn:[PCUserDefaultHelper sharedInstance].showMemberName];
     [switcher addBlockForControlEvents:UIControlEventValueChanged block:^(UISwitch *sender) {
-        [self setShowName:sender.isOn];
+        [weakSelf setShowName:sender.isOn];
     }];
     
     UIView *view = [UIView new];
@@ -107,10 +106,12 @@
             }
         }
     }
+    
     @autoreleasepool {
         for (int i = 0; i < 13; i++) {
             [_chatLayoutArr addObjectsFromArray:_chatLayoutArr];
         }
+
     }
     
     [self.tableView reloadData];
@@ -127,7 +128,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PCMessageLayout *layout = [_chatLayoutArr objectAtIndex:indexPath.row];
-    return layout.height;
+    
+    return ([PCUserDefaultHelper sharedInstance].showMemberName && layout.messageModel.message_bubble_type == PCMessageBubbleTypeReceiving)? layout.height + PCMessageNameHeight : layout.height;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -19,10 +19,19 @@
 		7537E1B11E5EF06F00CDD21A /* PCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1B01E5EF06F00CDD21A /* PCMainViewController.m */; };
 		7537E1B71E5FD45800CDD21A /* PCMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1B61E5FD45800CDD21A /* PCMessageCell.m */; };
 		7537E1C21E6032A300CDD21A /* PCMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1C11E6032A300CDD21A /* PCMessageHelper.m */; };
-		7537E1C81E60365F00CDD21A /* PCMessageComponentBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1C71E60365F00CDD21A /* PCMessageComponentBubble.m */; };
 		759DB00C1E63CBCB0045567D /* PCMessageLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB00B1E63CBCB0045567D /* PCMessageLayout.m */; };
 		759DB0111E63FBF40045567D /* NSDate+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB00E1E63FBF40045567D /* NSDate+T8.m */; };
 		759DB0121E63FBF40045567D /* NSDateFormatter+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0101E63FBF40045567D /* NSDateFormatter+T8.m */; };
+		759DB0201E6537270045567D /* PCMessageTextViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB01F1E6537270045567D /* PCMessageTextViewLayout.m */; };
+		759DB0231E6537580045567D /* PCMessageTimeViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0221E6537580045567D /* PCMessageTimeViewLayout.m */; };
+		759DB0271E653AD50045567D /* PCMessageAvatarBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0261E653AD50045567D /* PCMessageAvatarBubble.m */; };
+		759DB02A1E653BCD0045567D /* PCMessageTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0291E653BCD0045567D /* PCMessageTimeView.m */; };
+		759DB02E1E653CB00045567D /* PCMessageNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB02D1E653CB00045567D /* PCMessageNameView.m */; };
+		759DB0311E653F8F0045567D /* PCMessageNoAvatarBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0301E653F8F0045567D /* PCMessageNoAvatarBaseView.m */; };
+		759DB0341E653FB40045567D /* PCMessageNoInteractionBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0331E653FB40045567D /* PCMessageNoInteractionBaseView.m */; };
+		759DB0371E653FD40045567D /* PCMessageAvatarBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0361E653FD40045567D /* PCMessageAvatarBaseView.m */; };
+		759DB03A1E65404E0045567D /* PCMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0391E65404E0045567D /* PCMessageTextView.m */; };
+		759DB03D1E654C1F0045567D /* PCMessageNameViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB03C1E654C1F0045567D /* PCMessageNameViewLayout.m */; };
 		B65900405FD8E268D5CBB53E /* libPods-messageTable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C358F32768BC5905385D0184 /* libPods-messageTable.a */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +60,6 @@
 		7537E1B61E5FD45800CDD21A /* PCMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageCell.m; sourceTree = "<group>"; };
 		7537E1C01E6032A300CDD21A /* PCMessageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageHelper.h; sourceTree = "<group>"; };
 		7537E1C11E6032A300CDD21A /* PCMessageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageHelper.m; sourceTree = "<group>"; };
-		7537E1C61E60365F00CDD21A /* PCMessageComponentBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageComponentBubble.h; sourceTree = "<group>"; };
-		7537E1C71E60365F00CDD21A /* PCMessageComponentBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageComponentBubble.m; sourceTree = "<group>"; };
 		7537E1C91E6036D700CDD21A /* PCMessageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageMacros.h; sourceTree = "<group>"; };
 		7537E1CA1E60409D00CDD21A /* PCDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDefines.h; sourceTree = "<group>"; };
 		759DB00A1E63CBCB0045567D /* PCMessageLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageLayout.h; sourceTree = "<group>"; };
@@ -61,6 +68,26 @@
 		759DB00E1E63FBF40045567D /* NSDate+T8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+T8.m"; sourceTree = "<group>"; };
 		759DB00F1E63FBF40045567D /* NSDateFormatter+T8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+T8.h"; sourceTree = "<group>"; };
 		759DB0101E63FBF40045567D /* NSDateFormatter+T8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+T8.m"; sourceTree = "<group>"; };
+		759DB01E1E6537270045567D /* PCMessageTextViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageTextViewLayout.h; sourceTree = "<group>"; };
+		759DB01F1E6537270045567D /* PCMessageTextViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageTextViewLayout.m; sourceTree = "<group>"; };
+		759DB0211E6537580045567D /* PCMessageTimeViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageTimeViewLayout.h; sourceTree = "<group>"; };
+		759DB0221E6537580045567D /* PCMessageTimeViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageTimeViewLayout.m; sourceTree = "<group>"; };
+		759DB0251E653AD50045567D /* PCMessageAvatarBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageAvatarBubble.h; sourceTree = "<group>"; };
+		759DB0261E653AD50045567D /* PCMessageAvatarBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageAvatarBubble.m; sourceTree = "<group>"; };
+		759DB0281E653BCD0045567D /* PCMessageTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageTimeView.h; sourceTree = "<group>"; };
+		759DB0291E653BCD0045567D /* PCMessageTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageTimeView.m; sourceTree = "<group>"; };
+		759DB02C1E653CB00045567D /* PCMessageNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageNameView.h; sourceTree = "<group>"; };
+		759DB02D1E653CB00045567D /* PCMessageNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageNameView.m; sourceTree = "<group>"; };
+		759DB02F1E653F8F0045567D /* PCMessageNoAvatarBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageNoAvatarBaseView.h; sourceTree = "<group>"; };
+		759DB0301E653F8F0045567D /* PCMessageNoAvatarBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageNoAvatarBaseView.m; sourceTree = "<group>"; };
+		759DB0321E653FB40045567D /* PCMessageNoInteractionBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageNoInteractionBaseView.h; sourceTree = "<group>"; };
+		759DB0331E653FB40045567D /* PCMessageNoInteractionBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageNoInteractionBaseView.m; sourceTree = "<group>"; };
+		759DB0351E653FD40045567D /* PCMessageAvatarBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageAvatarBaseView.h; sourceTree = "<group>"; };
+		759DB0361E653FD40045567D /* PCMessageAvatarBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageAvatarBaseView.m; sourceTree = "<group>"; };
+		759DB0381E65404E0045567D /* PCMessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageTextView.h; sourceTree = "<group>"; };
+		759DB0391E65404E0045567D /* PCMessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageTextView.m; sourceTree = "<group>"; };
+		759DB03B1E654C1F0045567D /* PCMessageNameViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageNameViewLayout.h; sourceTree = "<group>"; };
+		759DB03C1E654C1F0045567D /* PCMessageNameViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageNameViewLayout.m; sourceTree = "<group>"; };
 		79F3533901F069E52ED393CF /* Pods-messageTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messageTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-messageTable/Pods-messageTable.release.xcconfig"; sourceTree = "<group>"; };
 		ACA1CA7225731D40F2DC83C3 /* Pods-messageTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messageTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-messageTable/Pods-messageTable.debug.xcconfig"; sourceTree = "<group>"; };
 		C358F32768BC5905385D0184 /* libPods-messageTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-messageTable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,9 +196,9 @@
 		7537E1A41E5EE81E00CDD21A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7537E1BF1E60321400CDD21A /* Helper */,
-				7537E1C51E6035FB00CDD21A /* Components */,
 				7537E1C41E60351D00CDD21A /* MessageViews */,
+				759DB0241E653AAD0045567D /* ComponentViews */,
+				7537E1BF1E60321400CDD21A /* Helper */,
 				7537E1C31E6034DF00CDD21A /* Layouts */,
 				7537E1B51E5FD45800CDD21A /* PCMessageCell.h */,
 				7537E1B61E5FD45800CDD21A /* PCMessageCell.m */,
@@ -205,6 +232,12 @@
 			children = (
 				759DB00A1E63CBCB0045567D /* PCMessageLayout.h */,
 				759DB00B1E63CBCB0045567D /* PCMessageLayout.m */,
+				759DB01E1E6537270045567D /* PCMessageTextViewLayout.h */,
+				759DB01F1E6537270045567D /* PCMessageTextViewLayout.m */,
+				759DB0211E6537580045567D /* PCMessageTimeViewLayout.h */,
+				759DB0221E6537580045567D /* PCMessageTimeViewLayout.m */,
+				759DB03B1E654C1F0045567D /* PCMessageNameViewLayout.h */,
+				759DB03C1E654C1F0045567D /* PCMessageNameViewLayout.m */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -212,17 +245,37 @@
 		7537E1C41E60351D00CDD21A /* MessageViews */ = {
 			isa = PBXGroup;
 			children = (
+				759DB02B1E653C690045567D /* BaseViews */,
+				759DB0381E65404E0045567D /* PCMessageTextView.h */,
+				759DB0391E65404E0045567D /* PCMessageTextView.m */,
 			);
 			path = MessageViews;
 			sourceTree = "<group>";
 		};
-		7537E1C51E6035FB00CDD21A /* Components */ = {
+		759DB0241E653AAD0045567D /* ComponentViews */ = {
 			isa = PBXGroup;
 			children = (
-				7537E1C61E60365F00CDD21A /* PCMessageComponentBubble.h */,
-				7537E1C71E60365F00CDD21A /* PCMessageComponentBubble.m */,
+				759DB0251E653AD50045567D /* PCMessageAvatarBubble.h */,
+				759DB0261E653AD50045567D /* PCMessageAvatarBubble.m */,
+				759DB0281E653BCD0045567D /* PCMessageTimeView.h */,
+				759DB0291E653BCD0045567D /* PCMessageTimeView.m */,
+				759DB02C1E653CB00045567D /* PCMessageNameView.h */,
+				759DB02D1E653CB00045567D /* PCMessageNameView.m */,
 			);
-			path = Components;
+			path = ComponentViews;
+			sourceTree = "<group>";
+		};
+		759DB02B1E653C690045567D /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				759DB02F1E653F8F0045567D /* PCMessageNoAvatarBaseView.h */,
+				759DB0301E653F8F0045567D /* PCMessageNoAvatarBaseView.m */,
+				759DB0321E653FB40045567D /* PCMessageNoInteractionBaseView.h */,
+				759DB0331E653FB40045567D /* PCMessageNoInteractionBaseView.m */,
+				759DB0351E653FD40045567D /* PCMessageAvatarBaseView.h */,
+				759DB0361E653FD40045567D /* PCMessageAvatarBaseView.m */,
+			);
+			path = BaseViews;
 			sourceTree = "<group>";
 		};
 		8807199330FC535EE0820F86 /* Frameworks */ = {
@@ -356,19 +409,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759DB0201E6537270045567D /* PCMessageTextViewLayout.m in Sources */,
 				7537E1B11E5EF06F00CDD21A /* PCMainViewController.m in Sources */,
 				7537E1AA1E5EE81E00CDD21A /* PCMessageModel.m in Sources */,
-				7537E1C81E60365F00CDD21A /* PCMessageComponentBubble.m in Sources */,
+				759DB0231E6537580045567D /* PCMessageTimeViewLayout.m in Sources */,
 				7537E1B71E5FD45800CDD21A /* PCMessageCell.m in Sources */,
 				7537E1AE1E5EEF5900CDD21A /* PCChatViewController.m in Sources */,
 				7537E1A71E5EE81E00CDD21A /* NSDictionary+PC.m in Sources */,
 				7537E1A91E5EE81E00CDD21A /* PCUserDefaultHelper.m in Sources */,
+				759DB03D1E654C1F0045567D /* PCMessageNameViewLayout.m in Sources */,
+				759DB02A1E653BCD0045567D /* PCMessageTimeView.m in Sources */,
 				7537E1861E5EE7E600CDD21A /* AppDelegate.m in Sources */,
 				7537E1A81E5EE81E00CDD21A /* NSString+PC.m in Sources */,
 				7537E1C21E6032A300CDD21A /* PCMessageHelper.m in Sources */,
+				759DB03A1E65404E0045567D /* PCMessageTextView.m in Sources */,
 				759DB00C1E63CBCB0045567D /* PCMessageLayout.m in Sources */,
+				759DB0271E653AD50045567D /* PCMessageAvatarBubble.m in Sources */,
 				759DB0111E63FBF40045567D /* NSDate+T8.m in Sources */,
 				7537E1831E5EE7E600CDD21A /* main.m in Sources */,
+				759DB0371E653FD40045567D /* PCMessageAvatarBaseView.m in Sources */,
+				759DB0341E653FB40045567D /* PCMessageNoInteractionBaseView.m in Sources */,
+				759DB02E1E653CB00045567D /* PCMessageNameView.m in Sources */,
+				759DB0311E653F8F0045567D /* PCMessageNoAvatarBaseView.m in Sources */,
 				759DB0121E63FBF40045567D /* NSDateFormatter+T8.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
