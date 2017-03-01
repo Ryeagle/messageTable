@@ -22,7 +22,7 @@
         _textLabel.fadeOnHighlight = NO;
         _textLabel.fadeOnAsynchronouslyDisplay = NO;
         _textLabel.highlightTapAction =  ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
-            NSLog(@"点击了:%@", text);
+            NSLog(@"点击了:%@", [text.string substringWithRange:range]);
         };
 
         [self.bubbleView addSubview:_textLabel];

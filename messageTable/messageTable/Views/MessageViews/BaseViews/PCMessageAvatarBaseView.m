@@ -38,13 +38,26 @@
 {
     _layout = layout;
     
+    [self setTimeLayout:layout];
+    [self setAvatarLayout:layout];
+    [self setNameLayout:layout];
+    [self setBubbleLayout:layout];
+    self.size = CGSizeMake(SCREEN_WIDTH, self.layout.height);
+}
+
+#pragma mark Set SubView's Layouts
+- (void)setTimeLayout:(PCMessageLayout *)layout
+{
     if (layout.shouldShowTime) {
         _timeView.hidden = NO;
         _timeView.frame = CGRectMake(layout.timeViewLeft, layout.timeViewTop, layout.timeViewLayout.viewWidth, layout.timeViewLayout.viewHeight);
         _timeView.timeLabel.frame = CGRectMake(layout.timeViewLayout.timeLabelLeft, layout.timeViewLayout.timeLabelTop, layout.timeViewLayout.timeLabelWidth, layout.timeViewLayout.timeLabelHeight);
         _timeView.timeLabel.textLayout = layout.timeViewLayout.timeLabelLayout;
     }
-    
+}
+
+- (void)setAvatarLayout:(PCMessageLayout *)layout
+{
     if (layout.messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
         [_avatarView setImage:[UIImage imageNamed:@"Chat_sender_avatar"]];
     } else {
@@ -53,9 +66,10 @@
     
     _avatarView.left = layout.avatarViewLeft;
     _avatarView.top = layout.avatarViewTop;
-    
-    [self setNameLayout:layout];
+}
 
+- (void)setBubbleLayout:(PCMessageLayout *)layout
+{
     _bubbleView.top = _nameView.hidden ? layout.avatarBubbleViewTop : layout.avatarBubbleViewTop + layout.nameViewLayout.viewHeight;
     _bubbleView.left = layout.avatarBubbleViewLeft;
     _bubbleView.size = CGSizeMake(layout.avatarBubbleViewWidth, layout.avatarBubbleViewHeight);
@@ -69,7 +83,6 @@
         if (layout.messageModel.message_bubble_type == PCMessageBubbleTypeReceiving) {
             
             _nameView.hidden = NO;
-            
             _nameView.frame = CGRectMake(_avatarView.left + _avatarView.width, _avatarView.top, layout.nameViewLayout.viewWidth, layout.nameViewLayout.viewHeight);
             _nameView.identityButton.frame = CGRectMake(layout.nameViewLayout.identityButtonLeft, layout.nameViewLayout.identityButtonTop, layout.nameViewLayout.identityButtonWidth, layout.nameViewLayout.identityButtonHeight);
             _nameView.nameLabel.frame = CGRectMake(layout.nameViewLayout.nameLabelLeft, layout.nameViewLayout.nameLabelTop, layout.nameViewLayout.nameLabelWidth, layout.nameViewLayout.nameLabelHeight);
