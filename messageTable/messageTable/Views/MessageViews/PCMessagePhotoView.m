@@ -29,7 +29,7 @@
     [super setLayout:layout];
     PCMessagePhotoViewLayout *photoViewLayout = (PCMessagePhotoViewLayout *)layout.contentLayout;
     
-    self.photoBubbleView.frame = CGRectMake(photoViewLayout.photoBubbleLeft, self.nameView.hidden ? photoViewLayout.photoBubbleTop : photoViewLayout.photoBubbleTop + layout.nameViewLayout.viewHeight, photoViewLayout.photoBubbleWidth, photoViewLayout.photoBubbleHeight);
+    self.photoBubbleView.frame = CGRectMake(layout.contentViewLeft, self.nameView.hidden ? layout.contentViewTop : layout.contentViewTop + layout.nameViewLayout.viewHeight, layout.contentViewWidth, layout.contentViewHeight);
     self.photoBubbleView.type = photoViewLayout.photoBubbleType;
     
     NSString *urlStr = layout.messageModel.content;

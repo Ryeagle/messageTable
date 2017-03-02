@@ -72,20 +72,64 @@
 #pragma mark Set Content Layout
 - (void)setContentLayout
 {
-    PCMessageMediaType meidaType = _messageModel.media_type;
+    PCMessageMediaType mediaType = _messageModel.media_type;
     
+    BOOL hasAvatar = YES;
     if (_messageModel.message_type == PCMessageTypeService) {
         self.contentLayout = [[PCMessageServiceLayout alloc]initWithMessageModel:_messageModel];
-    } else if (meidaType == PCMessageMediaTypeText) {
+        hasAvatar = NO;
+    } else if (mediaType == PCMessageMediaTypeText) {
         self.contentLayout = [[PCMessageTextViewLayout alloc]initWithMessageModel:_messageModel];
-    } else if (meidaType == PCMessageMediaTypePhoto){
+    } else if (mediaType == PCMessageMediaTypePhoto){
         self.contentLayout = [[PCMessagePhotoViewLayout alloc]initWithMessageModel:_messageModel];
-    } else if (meidaType == PCMessageMediaTypeFriendVerify) {
+    } else if (mediaType == PCMessageMediaTypeFriendVerify) {
         self.contentLayout = [[PCMessageFriendVerifyLayout alloc]initWithMessageModel:_messageModel];
+        hasAvatar = NO;
+    } else if (mediaType == PCMessageMediaTypeInvite) {
+        self.contentLayout = [[PCMessageInviteLayout alloc] initWithMessageModel:_messageModel];
+    } else if (mediaType == PCMessageMediaTypeWebLink) {
+        self.contentLayout = [[PCMessageWebLinkLayout alloc] initWithMessageModel:_messageModel];
+    } else if (mediaType == PCMessageMeidaTypeWalletAssistant) {
+        self.contentLayout = [[PCMessageWalletAssistantLayout alloc] initWithMessageModel:_messageModel];
+        hasAvatar = NO;
+    } else if (mediaType == PCMessageMediaTypePhotoText) {
+        self.contentLayout = [[PCMessagePhotoTextLayout alloc] initWithMessageModel:_messageModel];
+        hasAvatar = NO;
+    } else if (mediaType == PCMessageMediaTypeRender) {
+        self.contentLayout = [[PCMessageRenderLayout alloc] initWithMessageModel:_messageModel];
+    } else if (mediaType == PCMessageMediaTypeCombination) {
+        self.contentLayout = [[PCMessageCombinationLayout alloc] initWithMessageModel:_messageModel];
+    } else if (mediaType == PCMessageMediaTypeAudio) {
+        self.contentLayout = [[PCMessageAudioLayout alloc] initWithMessageModel:_messageModel];
+    } else if (mediaType == PCMessageMediaTypeMyCard) {
+        self.contentLayout = [[PCMessageMyCardLayout alloc] initWithMessageModel:_messageModel];
+    } else if (mediaType == PCMessageMediaTypePersonCard) {
+        self.contentLayout = [[PCMessageFriendCardLayout alloc] initWithMessageModel:_messageModel];
     }
-    
-    if (self.contentLayout && [self.contentLayout respondsToSelector:@selector(messageContentLayout:)]) {
-        [self.contentLayout messageContentLayout:self];
+
+    if (self.contentLayout && [self.contentLayout respondsToSelector:@selector(contentWidth)] && [self.contentLayout respondsToSelector:@selector(contentHeight)]) {
+        if (hasAvatar) {
+            if (_messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
+                _avatarViewLeft = PCMessageAvatarSenderLeft;
+                _contentViewLeft = _avatarViewLeft - PCMessageBubbleAvatarPadding - [self.contentLayout contentWidth];
+            } else {
+                _avatarViewLeft = PCMessageAvatarReceiverLeft;
+                _contentViewLeft = PCMessageAvatarReceiverLeft + PCMessageAvatarSize + PCMessageBubbleAvatarPadding;
+            }
+            
+            _contentViewTop = _avatarViewTop;
+            _contentViewHeight = [self.contentLayout contentHeight];
+            _contentViewWidth = [self.contentLayout contentWidth];
+            
+            _height = _contentViewTop + _contentViewHeight + PCMessageTopPadding + PCMessageTopPadding;
+        } else {
+            _contentViewWidth = [self.contentLayout contentWidth];
+            _contentViewHeight = [self.contentLayout contentHeight];
+            _contentViewTop = _timeViewTop + _timeViewLayout.viewHeight + PCMessageTimeBottomPadding;
+            _contentViewLeft = (SCREEN_WIDTH - _contentViewWidth) / 2;
+            
+            _height = _contentViewTop + _contentViewHeight + PCMessageBottomPadding;
+        }
     }
 }   
 

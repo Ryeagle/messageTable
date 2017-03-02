@@ -51,13 +51,13 @@
 }
 
 #pragma mark PCMessageLayoutProtol
-- (void)messageContentLayout:(PCMessageLayout *)layout
+- (CGFloat)contentHeight
 {
-    layout.contentViewWidth = _viewWidth;
-    layout.contentViewHeight = _viewHeight;
-    layout.contentViewTop = layout.timeViewTop + layout.timeViewLayout.viewHeight + PCMessageTimeBottomPadding;
-    layout.contentViewLeft = (SCREEN_WIDTH - layout.contentViewWidth) / 2;
-    
-    layout.height = layout.contentViewTop + layout.contentViewHeight + PCMessageBottomPadding;
+    return _viewHeight;
+}
+
+- (CGFloat)contentWidth
+{
+    return _viewWidth;
 }
 @end

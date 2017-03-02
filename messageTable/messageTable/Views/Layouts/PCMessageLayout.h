@@ -11,8 +11,9 @@
 @protocol PCMessageLayoutProtol <NSObject>
 
 @required
-
-- (void)messageContentLayout:(PCMessageLayout *)layout;
+- (CGFloat)contentWidth;
+- (CGFloat)contentHeight;
+//- (void)messageContentLayout:(PCMessageLayout *)layout;
 
 @end
 

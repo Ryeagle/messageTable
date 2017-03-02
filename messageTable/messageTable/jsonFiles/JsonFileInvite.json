@@ -1,0 +1,54 @@
+{
+  "result" : [
+    {
+      "content" : "",
+      "id" : "58b7d6660c750f753aba9144",
+      "readLimit" : [
+
+      ],
+      "media_type" : 7,
+      "message_type" : 1,
+      "created_at" : "2017-03-02T08:23:02.000Z",
+      "seq" : 4155,
+      "channel_id" : "57cf9e976068b373dc072b0a",
+      "_status" : 1,
+      "creator" : "57563d10497a822b3d6f48ac",
+      "updated_at" : "2017-03-02T08:23:02.000Z",
+      "extend" : {
+        "channel_id" : "57d61827fd8d2c0001534d1b",
+        "special_type" : 2,
+        "channel_avatar" : "http:\/\/o4a7cbihz.qnssl.com\/gavatar\/t9b4019284550060e.jpg",
+        "channel_name" : "我们都会有"
+      },
+      "tseq" : "14884429820888019789743",
+      "chat_type" : 0
+    },
+    {
+      "content" : "",
+      "id" : "58b7d6930c750f753aba9146",
+      "readLimit" : [
+
+      ],
+      "media_type" : 7,
+      "message_type" : 1,
+      "created_at" : "2017-03-02T08:23:47.000Z",
+      "seq" : 4156,
+      "channel_id" : "57cf9e976068b373dc072b0a",
+      "_status" : 1,
+      "creator" : "56f3a79bb8df540c19a2556d",
+      "updated_at" : "2017-03-02T08:23:47.000Z",
+      "extend" : {
+        "channel_id" : "57cf9f546068b373dc072b39",
+        "special_type" : 5,
+        "channel_avatar" : "http:\/\/o4a7cbihz.qnssl.com\/gavatar\/t2640e198302fa49c.jpg",
+        "channel_name" : "猴子🐵的水帘洞"
+      },
+      "tseq" : "14884430278536414229390",
+      "chat_type" : 0
+    }
+  ],
+  "server_status" : [
+
+  ],
+  "code" : 1
+}

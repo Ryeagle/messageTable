@@ -71,23 +71,15 @@
     
 }
 
-- (void)messageContentLayout:(PCMessageLayout *)layout
+#pragma mark PCMessageLayoutProtol
+
+- (CGFloat)contentWidth
 {
-    PCMessageModel *messageModel = layout.messageModel;
-    CGFloat avatarViewLeft = 0.f;
-    
-    if (messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
-        avatarViewLeft = PCMessageAvatarSenderLeft;
-        _photoBubbleLeft = avatarViewLeft - _photoBubbleWidth - PCMessagePhotoPadding;
-    } else {
-        avatarViewLeft = PCMessageAvatarReceiverLeft;
-        _photoBubbleLeft = PCMessageAvatarReceiverLeft + PCMessageAvatarSize + PCMessagePhotoPadding;
-    }
+    return _photoBubbleWidth;
+}
 
-    layout.avatarViewLeft = avatarViewLeft;
-    _photoBubbleTop = layout.avatarViewTop;
-
-    layout.height = _photoBubbleTop + _photoBubbleHeight + PCMessageTopPadding + PCMessageTopPadding;
-
+- (CGFloat)contentHeight
+{
+    return _photoBubbleHeight;
 }
 @end

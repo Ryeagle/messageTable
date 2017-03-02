@@ -44,7 +44,7 @@
     modifier.fixedLineHeight = PCMessageTextFontSize * 1.3;
     YYTextContainer *textContainer = [YYTextContainer containerWithSize:CGSizeMake(PCMessageTextMaxWidth, MAXFLOAT)];
     textContainer.linePositionModifier = modifier;
-    _textLayout = [YYTextLayout layoutWithContainer:textContainer text:[self highlightTextWithModel:messageModel]];
+    _textLayout = [YYTextLayout layoutWithContainer:textContainer text:[PCMessageHelper highlightTextWithModel:messageModel font:[UIFont systemFontOfSize:PCMessageTextFontSize] color:MainContentColor]];
     
     _textLabelHeight = _textLayout.textBoundingSize.height + PCMessageTextInnerBottomPadding;
     _textLabelWidth = _textLayout.textBoundingSize.width;
@@ -62,60 +62,14 @@
     
 }
 
-- (NSMutableAttributedString *)highlightTextWithModel:(PCMessageModel *)messageModel{
-    NSMutableAttributedString *textStr = [[NSMutableAttributedString alloc] initWithString:messageModel.content];
-    textStr.font = [UIFont systemFontOfSize:PCMessageTextFontSize];
-    textStr.color = MainContentColor;
-
-    NSString* string = textStr.string;
-    NSRange range = NSMakeRange(0,[string length]);
-    for(NSString* expression in @[URLLINKREGULAR, PHONEREGULAR, EMAILREGULAR, ADRESSREGULAR]) {
-        NSArray* matches = [[NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionDotMatchesLineSeparators error:nil] matchesInString:string options:0 range:range];
-        for(NSTextCheckingResult* match in matches) {
-            [self setHighlightInfo:@{@"String...." : @"Fuck The World"} withRange:match.range toText:textStr];
-        }
-    }
-    
-    return textStr;
-}
-
-- (void)setHighlightInfo:(NSDictionary*)info withRange:(NSRange)range toText:(NSMutableAttributedString *)text {
-    if (range.length == 0 || text.length == 0) return;
-    if (range.location >= text.length) return;
-    if (range.location + range.length > text.length) return;
-    
-    YYTextBorder *border = [YYTextBorder new];
-    border.cornerRadius = 3;
-    border.insets = UIEdgeInsetsMake(-2, -2, -2, -2);
-#warning 根据项目需求更改
-    border.fillColor = UIColorHex(EBEEF0);
-    
-    YYTextHighlight *highlight = [YYTextHighlight new];
-    [highlight setBackgroundBorder:border];
-    highlight.userInfo = info;
-    
-    [text setTextHighlight:highlight range:range];
-#warning 根据项目需求更改
-    [text setColor:UIColorHex(1A91DA) range:range];
-}
-
 #pragma mark PCMessageLayoutProtol
-- (void)messageContentLayout:(PCMessageLayout *)layout
+- (CGFloat)contentWidth
 {
-    PCMessageModel *messageModel = layout.messageModel;
-    
-    if (messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
-        layout.avatarViewLeft= PCMessageAvatarSenderLeft;
-        layout.contentViewLeft = layout.avatarViewLeft - PCMessageBubbleAvatarPadding - _viewWidth;
-    } else {
-        layout.avatarViewLeft = PCMessageAvatarReceiverLeft;
-        layout.contentViewLeft = PCMessageAvatarReceiverLeft + PCMessageAvatarSize + PCMessageBubbleAvatarPadding;
-    }
+    return _viewWidth;
+}
 
-    layout.contentViewTop = layout.avatarViewTop;
-    layout.contentViewHeight = _viewHeight;
-    layout.contentViewWidth = _viewWidth;
-
-    layout.height = layout.contentViewTop + layout.contentViewHeight + PCMessageTopPadding + PCMessageTopPadding;
+- (CGFloat)contentHeight
+{
+    return _viewHeight;
 }
 @end
