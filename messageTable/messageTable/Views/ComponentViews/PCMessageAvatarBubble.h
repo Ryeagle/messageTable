@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, PCMessageComponentBubbleType) {
-    PCMessageComponentBubbleTypeTextSender,
-    PCMessageComponentBubbleTypeTextReceiver,
-    PCMessageComponentBubbleTypeLinkSender,
-    PCMessageComponentBubbleTypeLinkReceiver,
-    PCMessageComponentBubbleTypeUnknown
+typedef NS_ENUM(NSUInteger, PCMessageAvatarBubbleType) {
+    PCMessageAvatarBubbleTypeTextSender,
+    PCMessageAvatarBubbleTypeTextReceiver,
+    PCMessageAvatarBubbleTypeLinkSender,
+    PCMessageAvatarBubbleTypeLinkReceiver,
+    PCMessageAvatarBubbleTypeUnknown
 };
 
 @interface PCMessageAvatarBubble : UIImageView
 
-@property (nonatomic, assign) PCMessageComponentBubbleType type;
+@property (nonatomic, assign) PCMessageAvatarBubbleType type;
 
-+ (PCMessageComponentBubbleType)componentBubbleType:(PCMessageModel *)messageModel;
++ (PCMessageAvatarBubbleType)avatarBubbleType:(PCMessageModel *)messageModel;
 
 @end

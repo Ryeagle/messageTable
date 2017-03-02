@@ -15,14 +15,22 @@
 #import "PCMessageTimeView.h"
 #import "PCMessageNameView.h"
 #import "PCMessageAvatarBaseView.h"
-#import "PCMessageNoInteractionBaseView.h"
 #import "PCMessageNoAvatarBaseView.h"
 #import "PCMessageTextView.h"
+#import "PCMessagePhotoBubble.h"
+#import "PCMessagePhotoView.h"
+#import "PCMessageServiceView.h"
+#import "PCMessageFriendVerifyView.h"
+
 #import "PCMessageLayout.h"
 #import "PCMessageTextViewLayout.h"
 #import "PCMessageTimeViewLayout.h"
 #import "PCMessageNameViewLayout.h"
 #import "PCMessageNameViewLayout.h"
+#import "PCMessagePhotoViewLayout.h"
+#import "PCMessageServiceLayout.h"
+#import "PCMessageFriendVerifyLayout.h"
+#import "PCMessageHelper.h"
 
 //总体
 #define PCMessageTopPadding                         5
@@ -52,29 +60,47 @@
 #define PCMessageBubbleAvatarPadding                5
 #define PCMessageBubbleAngleWidth                   5
 
-//普通气泡
+//系统消息
+#define PCMessageServiceInnerLeftPadding            5
+#define PCMessageServiceInnerTopPadding             3.5
+#define PCMessageServiceMaxWidth                    (SCREEN_WIDTH - 80)
+#define PCMessageServiceMaxHeight                   (PCMessageSeriveMessageFontSize * 1.3)
 
-//文字
+//好友验证消息(本地)
+#define PCMessageFriendVefiryLeftPadding            10
+#define PCMessageFriendVefiryInnerLeftPadding       10
+#define PCMessageFriendVefiryInnerTopPadding        10
+#define PCMessageFriendVefiryMaxWidth               (SCREEN_WIDTH - 40)
+
+//文字消息
 #define PCMessageTextBubblePadding                  11
 #define PCMessageTextMaxWidth                       (SCREEN_WIDTH - 150)
 #define PCMessageTextMinHeight                      PCMessageAvatarSize
 #define PCMessageTextInnerBottomPadding             3
-#define PCMessageTextOneLineHeight                     27
+#define PCMessageTextOneLineHeight                  27
+
+//图片消息
+#define PCMessagePhotoMaxWidth                      142
+#define PCMessagePhotoMaxHeight                     142
+#define PCMessagePhotoMinWidth                      48
+#define PCMessagePhotoMinHeight                     48
+#define PCMessagePhotoPadding                       5
 
 //文章分享
 #define PCWebLinkMessageWidth                       190
 
 //字体大小
 #define PCMessageNameFontSize                       12
-#define PCMEssageIdentityFontSize                   12
 #define PCMessageTextFontSize                       15
-#define PCMessageSystemMessageFontSize              12
+#define PCMessageSeriveMessageFontSize              12
 #define PCMessageTimeFontSize                       12
+#define PCMessageFriendVefiryFontSize               14
 
 //正则
 #define URLLINKREGULAR @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
 #define PHONEREGULAR @"((((\\+)|(00))?[- ]?\\d{1,9})[- ]?)?[0-9\\-]{5,26}"
 #define EMAILREGULAR @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
 #define ADRESSREGULAR @"\\d+\\.\\d+\\.\\d+\\.\\d+"
+
 
 #endif /* PCMessageMacros_h */

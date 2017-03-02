@@ -15,11 +15,14 @@
     self = [super init];
     
     if (self) {
+        [self addNotification];
+
         _timeView = [PCMessageTimeView new];
         _timeView.hidden = YES;
         [self addSubview:_timeView];
         
         _avatarView = [UIImageView new];
+        _avatarView.userInteractionEnabled = YES;
         _avatarView.size = CGSizeMake(PCMessageAvatarSize, PCMessageAvatarSize);
         [self addSubview:_avatarView];
         
@@ -29,9 +32,16 @@
         _nameView = [PCMessageNameView new];
         _nameView.hidden = YES;
         [self addSubview:_nameView];
+        
+        [self addGesture];
     }
     
     return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setLayout:(PCMessageLayout *)layout
@@ -42,7 +52,25 @@
     [self setAvatarLayout:layout];
     [self setNameLayout:layout];
     [self setBubbleLayout:layout];
-    self.size = CGSizeMake(SCREEN_WIDTH, self.layout.height);
+    [self setContainerLayout:layout];
+}
+
+#pragma mark Private Method
+- (void)addGesture
+{
+    UILongPressGestureRecognizer *bubbleLongPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(bubbleLongPressAction:)];
+    bubbleLongPressGesture.cancelsTouchesInView = NO;
+    [_bubbleView addGestureRecognizer:bubbleLongPressGesture];
+    
+    UITapGestureRecognizer *avatarTapGestrure = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(avatarTapAction:)];
+    [_avatarView addGestureRecognizer:avatarTapGestrure];
+}
+
+- (void)addNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(menuDidHidenNotificaiton:)
+                                                 name:UIMenuControllerWillHideMenuNotification object:nil];
 }
 
 #pragma mark Set SubView's Layouts
@@ -70,10 +98,8 @@
 
 - (void)setBubbleLayout:(PCMessageLayout *)layout
 {
-    _bubbleView.top = _nameView.hidden ? layout.avatarBubbleViewTop : layout.avatarBubbleViewTop + layout.nameViewLayout.viewHeight;
-    _bubbleView.left = layout.avatarBubbleViewLeft;
-    _bubbleView.size = CGSizeMake(layout.avatarBubbleViewWidth, layout.avatarBubbleViewHeight);
-    _bubbleView.type = layout.bubbleType;
+    _bubbleView.frame = CGRectMake(layout.contentViewLeft, _nameView.hidden ? layout.contentViewTop : layout.contentViewTop + layout.nameViewLayout.viewHeight, layout.contentViewWidth, layout.contentViewHeight);
+    _bubbleView.type = [PCMessageAvatarBubble avatarBubbleType:layout.messageModel];
 }
 
 - (void)setNameLayout:(PCMessageLayout *)layout
@@ -112,6 +138,68 @@
     } else {
         _nameView.hidden = YES;
     }
+}
+
+- (void)setContainerLayout:(PCMessageLayout *)layout
+{
+    if (layout.messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
+        self.frame = CGRectMake(0, 0, SCREEN_WIDTH, layout.height);
+    } else {
+        self.frame = CGRectMake(0, 0, CGRectGetMaxX(_bubbleView.frame), layout.height);
+    }
+}
+
+
+#pragma mark Notification Action
+- (void)menuDidHidenNotificaiton:(NSNotification *)notification
+{
+    [self resignFirstResponder];
+    _bubbleView.highlighted = NO;
+}
+
+
+#pragma mark Gesture Actions
+- (void)avatarTapAction:(UITapGestureRecognizer *)gesture
+{
+    NSLog(@"Avatar View Tap....");
+}
+
+- (void)bubbleLongPressAction:(UILongPressGestureRecognizer *)gesture
+{
+    [self becomeFirstResponder];
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        UIMenuItem *itemCopy = [[UIMenuItem alloc] initWithTitle:@"复制" action:@selector(copyContent)];
+        UIMenuItem *itemMore = [[UIMenuItem alloc] initWithTitle:@"更多..." action:@selector(more)];
+        
+        NSMutableArray *itemArr = [NSMutableArray array];
+        [itemArr addObjectsFromArray:@[itemCopy, itemMore]];
+        UIMenuController * menuController = [UIMenuController sharedMenuController];
+        
+        [menuController setMenuItems:itemArr.copy];
+        CGRect tagetRect = _bubbleView.frame;
+
+        [menuController setTargetRect:tagetRect inView:self];
+        [menuController setMenuVisible:YES animated:YES];
+        _bubbleView.highlighted = YES;
+    } else if (gesture.state == UIGestureRecognizerStateEnded) {
+    }
+}
+
+
+#pragma mark MenuController Method
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)copyContent
+{
+    
+}
+
+- (void)more
+{
+    
 }
 
 @end

@@ -11,4 +11,5 @@
 @interface PCMessageNoAvatarBaseView : UIView
 @property (nonatomic, strong) PCMessageTimeView *timeView;
 @property (nonatomic, strong) PCMessageLayout *layout;
+@property (nonatomic, strong) UIImageView *bubbleView;
 @end

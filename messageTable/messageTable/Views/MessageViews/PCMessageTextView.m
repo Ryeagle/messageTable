@@ -26,19 +26,37 @@
         };
 
         [self.bubbleView addSubview:_textLabel];
+        [self addGestures];
     }
     
     return self;
 }
 
+#pragma mark Private Method
+- (void)addGestures
+{
+    UITapGestureRecognizer *doubleTapGesuture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textDoubleTapGesture:)];
+    doubleTapGesuture.numberOfTapsRequired = 2;
+    [_textLabel addGestureRecognizer:doubleTapGesuture];
+}
+
+#pragma mark SetLayout
 - (void)setLayout:(PCMessageLayout *)layout
 {
     [super setLayout:layout];
+    PCMessageTextViewLayout *textViewLayout = layout.contentLayout;
     
-    _textLabel.top = layout.textViewLayout.textLabelTop;
-    _textLabel.left = layout.textViewLayout.textLabelLeft;
-    _textLabel.size = CGSizeMake(layout.textViewLayout.textLabelWidth, layout.textViewLayout.textLabelHeight);
-    _textLabel.textLayout = layout.textViewLayout.textLayout;
+    _textLabel.top = textViewLayout.textLabelTop;
+    _textLabel.left = textViewLayout.textLabelLeft;
+    _textLabel.size = CGSizeMake(textViewLayout.textLabelWidth, textViewLayout.textLabelHeight);
+    _textLabel.textLayout = textViewLayout.textLayout;
+}
+
+
+#pragma mark Gesture Actions
+- (void)textDoubleTapGesture:(UIGestureRecognizer *)gesture
+{
+    NSLog(@"Double Tap of Text Message");
 }
 
 @end

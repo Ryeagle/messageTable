@@ -29,18 +29,16 @@
 {
     _height = 0;
     _avatarViewLeft = 0;
-    _avatarBubbleViewTop = 0;
-    _avatarBubbleViewLeft = 0;
-    _avatarBubbleViewWidth = 0;
-    _avatarBubbleViewHeight = 0;
+    _contentViewTop = 0;
+    _contentViewLeft = 0;
+    _contentViewWidth = 0;
+    _contentViewHeight = 0;
     _timeViewTop = 0;
     _timeViewLeft = 0;
 }
 
 - (void)setLayout
-{
-    _bubbleType = [PCMessageAvatarBubble componentBubbleType:_messageModel];
-    
+{    
     [self setNameLayout];
     
     if (_shouldShowTime) {
@@ -50,14 +48,7 @@
         _avatarViewTop = PCMessageTopPadding;
     }
     
-    switch (_messageModel.media_type) {
-        case PCMessageMediaTypeText:
-            [self setTextMessageLayout];
-            break;
-            
-        default:
-            break;
-    }
+    [self setContentLayout];
 }
 
 #pragma mark SetupLayout Name View
@@ -78,24 +69,24 @@
     _timeViewLeft = (SCREEN_WIDTH - _timeViewLayout.viewWidth) / 2;
 }
 
-#pragma mark SetupLayout Text Message
-- (void)setTextMessageLayout
+#pragma mark Set Content Layout
+- (void)setContentLayout
 {
-    _textViewLayout = [[PCMessageTextViewLayout alloc] initWithMessageModel:_messageModel];
+    PCMessageMediaType meidaType = _messageModel.media_type;
     
-    if (_messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
-        _avatarViewLeft = PCMessageAvatarSenderLeft;
-        _avatarBubbleViewLeft = _avatarViewLeft - PCMessageBubbleAvatarPadding - _textViewLayout.viewWidth;
-    } else {
-        _avatarViewLeft = PCMessageAvatarReceiverLeft;
-        _avatarBubbleViewLeft = PCMessageAvatarReceiverLeft + PCMessageAvatarSize + PCMessageBubbleAvatarPadding;
+    if (_messageModel.message_type == PCMessageTypeService) {
+        self.contentLayout = [[PCMessageServiceLayout alloc]initWithMessageModel:_messageModel];
+    } else if (meidaType == PCMessageMediaTypeText) {
+        self.contentLayout = [[PCMessageTextViewLayout alloc]initWithMessageModel:_messageModel];
+    } else if (meidaType == PCMessageMediaTypePhoto){
+        self.contentLayout = [[PCMessagePhotoViewLayout alloc]initWithMessageModel:_messageModel];
+    } else if (meidaType == PCMessageMediaTypeFriendVerify) {
+        self.contentLayout = [[PCMessageFriendVerifyLayout alloc]initWithMessageModel:_messageModel];
     }
     
-    _avatarBubbleViewTop = _avatarViewTop;
-    _avatarBubbleViewHeight = _textViewLayout.viewHeight;
-    _avatarBubbleViewWidth = _textViewLayout.viewWidth;
-    
-    _height = _avatarBubbleViewTop + _avatarBubbleViewHeight + PCMessageTopPadding + PCMessageTopPadding;
-}
+    if (self.contentLayout && [self.contentLayout respondsToSelector:@selector(messageContentLayout:)]) {
+        [self.contentLayout messageContentLayout:self];
+    }
+}   
 
 @end

@@ -1,6 +1,47 @@
 {
   "result" : [
     {
+        "content" : "安得猛士兮守四方威加海内兮归故乡的月亮圆又圆 加入聊天",
+        "id" : "58a2ae8e0c750f6fc287873a",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 3,
+        "created_at" : "2017-02-14T07:15:26.000Z",
+        "seq" : 39,
+        "channel_id" : "57b090eef9f1e99e3e838534",
+        "_status" : 1,
+        "creator" : "",
+        "updated_at" : "2017-02-14T07:15:26.000Z",
+        "extend" : {
+        "type" : 1,
+        "user_id" : "57fcb70c28c90c0001daf786"
+        },
+        "tseq" : "14870565261118045700491",
+        "chat_type" : 0
+    },
+    {
+        "content" : "一切有为法如梦幻泡影亦如露如电应作如是观开启了朋友验证，你还不是他(她)朋友。请先发送朋友验证请求，对方验证通过后，才能聊天。 发送朋友验证",
+        "id" : "58ad35a80c750f65a9de9063",
+        "readLimit" : [
+
+        ],
+        "media_type" : 99,
+        "message_type" : 1,
+        "created_at" : "2017-02-27T06:54:32.000Z",
+        "seq" : 3993,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-02-22T06:54:32.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14877464720264156352134",
+        "chat_type" : 0
+    },
+    {
         "content" : "若见诸相非相,即见如来",
         "id" : "58ad35a80c750f65a9de9063",
         "readLimit" : [
@@ -279,8 +320,49 @@
         },
         "tseq" : "14878244501080062429097",
         "chat_type" : 0
-    }
+    },
+    {
+        "content" : "http:\/\/o4a7cbihz.qnssl.com\/message\/4a0c3ca1-738c-4345-b4c4-0a89adeebfb2",
+        "id" : "58b671810c750f6dc003dca5",
+        "readLimit" : [
 
+        ],
+        "media_type" : 4,
+        "message_type" : 1,
+        "created_at" : "2017-03-01T07:00:17.000Z",
+        "seq" : 4148,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "574be5e86bc71f626550b4d1",
+        "updated_at" : "2017-03-01T07:00:17.000Z",
+        "extend" : {
+        "img_h" : 750,
+        "img_w" : 500
+        },
+        "tseq" : "14883516173554360221412",
+        "chat_type" : 0
+    },
+    {
+        "content" : "http:\/\/o4a7cbihz.qnssl.com\/message\/338c8096-c99b-4a15-b10e-01bf298788fb",
+        "id" : "58b671810c750f6dc003dca4",
+        "readLimit" : [
+
+        ],
+        "media_type" : 4,
+        "message_type" : 1,
+        "created_at" : "2017-03-01T07:00:17.000Z",
+        "seq" : 4149,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-03-01T07:00:17.000Z",
+        "extend" : {
+        "img_h" : 667,
+        "img_w" : 1000
+        },
+        "tseq" : "14883516173576117011164",
+        "chat_type" : 0
+    }
   ],
   "server_status" : [
 

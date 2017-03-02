@@ -26,7 +26,6 @@
 - (void)configDefault
 {
     self.userInteractionEnabled = YES;
-#warning 据说clearColor性能不高,之后再优化
     self.backgroundColor = [UIColor clearColor];
     [self.backgroundView setBackgroundColor:[UIColor clearColor]];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -34,14 +33,40 @@
 
 - (void)configContentView:(NSString *)reuseIdentifier
 {
-    _boundsView = [[PCMessageTextView alloc] init];
+    if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeText"]) {
+        _boundsView = [[PCMessageTextView alloc] init];
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypePhoto"]) {
+        _boundsView = [[PCMessagePhotoView alloc] init];
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageTypeService"]) {
+        _boundsView = [[PCMessageServiceView alloc] init];
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeFriendVerify"]) {
+        _boundsView = [[PCMessageFriendVerifyView alloc] init];
+    }
+    else {
+        
+    }
+    
     [self.contentView addSubview:_boundsView];
 }
 
 - (void)setLayout:(PCMessageLayout *)layout
 {
     _layout = layout;
-    PCMessageTextView *textView = (PCMessageTextView *)_boundsView;
-    [textView setLayout:layout];
+    if ([self.reuseIdentifier isEqualToString:@"PCMessageMediaTypeText"]) {
+        PCMessageTextView *textView = (PCMessageTextView *)_boundsView;
+        [textView setLayout:layout];
+    } else if ([self.reuseIdentifier isEqualToString:@"PCMessageMediaTypePhoto"]) {
+        PCMessagePhotoView *photoView = (PCMessagePhotoView *)_boundsView;
+        [photoView setLayout:layout];
+    } else if ([self.reuseIdentifier isEqualToString:@"PCMessageTypeService"]) {
+        PCMessageServiceView *serviceView = (PCMessageServiceView *)_boundsView;
+        [serviceView setLayout:layout];
+    } else if ([self.reuseIdentifier isEqualToString:@"PCMessageMediaTypeFriendVerify"]) {
+        PCMessageFriendVerifyView *verifyView = (PCMessageFriendVerifyView *)_boundsView;
+        [verifyView setLayout:layout];
+    }
+    else {
+        
+    }
 }
 @end

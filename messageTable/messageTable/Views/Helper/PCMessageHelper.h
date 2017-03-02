@@ -10,5 +10,9 @@
 
 @interface PCMessageHelper : NSObject
 
++ (NSString *)getReuseIdentifier:(PCMessageModel *)messageModel;
 
++ (UIImage *)resizableImageWithName:(NSString *)name;
+
++ (NSMutableAttributedString *) highlightTextWithModel:(PCMessageModel *)messageModel font:(UIFont *)font color:(UIColor *)color;
 @end

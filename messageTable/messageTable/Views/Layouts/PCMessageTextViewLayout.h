@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PCMessageTextViewLayout : NSObject
+@interface PCMessageTextViewLayout : NSObject<PCMessageLayoutProtol>
+
 @property (nonatomic, assign) CGFloat viewWidth;
 @property (nonatomic, assign) CGFloat viewHeight;
 @property (nonatomic, strong) YYTextLayout *textLayout;

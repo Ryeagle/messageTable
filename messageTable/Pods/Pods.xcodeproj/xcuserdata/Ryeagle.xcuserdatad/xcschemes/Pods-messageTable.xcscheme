@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D8E428B6A4C464E673AC70231C180FB5'
+               BlueprintIdentifier = '82580ACAE5EF2473078FE5A2B0C0BABC'
                BlueprintName = 'Pods-messageTable'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-messageTable.a'>

@@ -72,7 +72,6 @@
     for(NSString* expression in @[URLLINKREGULAR, PHONEREGULAR, EMAILREGULAR, ADRESSREGULAR]) {
         NSArray* matches = [[NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionDotMatchesLineSeparators error:nil] matchesInString:string options:0 range:range];
         for(NSTextCheckingResult* match in matches) {
-            NSLog(@"Match String: %@", [textStr.string substringWithRange:match.range]);
             [self setHighlightInfo:@{@"String...." : @"Fuck The World"} withRange:match.range toText:textStr];
         }
     }
@@ -98,5 +97,25 @@
     [text setTextHighlight:highlight range:range];
 #warning 根据项目需求更改
     [text setColor:UIColorHex(1A91DA) range:range];
+}
+
+#pragma mark PCMessageLayoutProtol
+- (void)messageContentLayout:(PCMessageLayout *)layout
+{
+    PCMessageModel *messageModel = layout.messageModel;
+    
+    if (messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
+        layout.avatarViewLeft= PCMessageAvatarSenderLeft;
+        layout.contentViewLeft = layout.avatarViewLeft - PCMessageBubbleAvatarPadding - _viewWidth;
+    } else {
+        layout.avatarViewLeft = PCMessageAvatarReceiverLeft;
+        layout.contentViewLeft = PCMessageAvatarReceiverLeft + PCMessageAvatarSize + PCMessageBubbleAvatarPadding;
+    }
+
+    layout.contentViewTop = layout.avatarViewTop;
+    layout.contentViewHeight = _viewHeight;
+    layout.contentViewWidth = _viewWidth;
+
+    layout.height = layout.contentViewTop + layout.contentViewHeight + PCMessageTopPadding + PCMessageTopPadding;
 }
 @end

@@ -23,6 +23,19 @@
 
 @implementation PCChatViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    if ([UIMenuController sharedMenuController].isMenuVisible) {
+        [[UIMenuController sharedMenuController] setMenuVisible:NO];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -107,15 +120,16 @@
         }
     }
     
-    @autoreleasepool {
-        for (int i = 0; i < 13; i++) {
-            [_chatLayoutArr addObjectsFromArray:_chatLayoutArr];
-        }
-
-    }
+//    @autoreleasepool {
+//        for (int i = 0; i < 13; i++) {
+//            [_chatLayoutArr addObjectsFromArray:_chatLayoutArr];
+//        }
+//
+//    }
     
     [self.tableView reloadData];
 }
+
 
 #pragma mark Private Method
 - (void)setShowName:(BOOL)showName
@@ -139,18 +153,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellForChatTable = @"cellForChatTable";
+    PCMessageLayout *laytout = _chatLayoutArr[indexPath.row];
+    NSString *reuseIdentifier = [PCMessageHelper getReuseIdentifier:laytout.messageModel];
     
-    PCMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:cellForChatTable];
+    PCMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     
     if (!cell) {
-        cell = [[PCMessageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellForChatTable];
+        cell = [[PCMessageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     }
     
-    PCMessageLayout *laytout = _chatLayoutArr[indexPath.row];
     cell.layout = laytout;
     
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if ([UIMenuController sharedMenuController].isMenuVisible) {
+        [[UIMenuController sharedMenuController] setMenuVisible:NO];
+    }
 }
 
 @end

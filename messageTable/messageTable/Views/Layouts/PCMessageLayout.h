@@ -8,9 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol PCMessageLayoutProtol <NSObject>
+
+@required
+
+- (void)messageContentLayout:(PCMessageLayout *)layout;
+
+@end
+
 @class PCMessageTimeViewLayout;
 @class PCMessageNameViewLayout;
-@class PCMessageTextViewLayout;
+
 @interface PCMessageLayout : NSObject
 
 @property (nonatomic, strong) PCMessageModel *messageModel;
@@ -30,19 +38,14 @@
 @property (nonatomic, assign) CGFloat avatarViewLeft;
 @property (nonatomic, assign) CGFloat avatarViewTop;
 
-//对话气泡
-@property (nonatomic, assign) CGFloat avatarBubbleViewTop;
-@property (nonatomic, assign) CGFloat avatarBubbleViewLeft;
-@property (nonatomic, assign) CGFloat avatarBubbleViewWidth;
-@property (nonatomic, assign) CGFloat avatarBubbleViewHeight;
-@property (nonatomic, assign) PCMessageComponentBubbleType bubbleType;
+@property (nonatomic, assign) CGFloat contentViewTop;
+@property (nonatomic, assign) CGFloat contentViewLeft;
+@property (nonatomic, assign) CGFloat contentViewWidth;
+@property (nonatomic, assign) CGFloat contentViewHeight;
 
-//文字消息
-@property (nonatomic, strong) PCMessageTextViewLayout *textViewLayout;
+#pragma mark 根据不同消息类型来区分的layout
 
-//网页分享
-@property (nonatomic, strong) YYTextLayout *mainContextLayout;
-@property (nonatomic, strong) YYTextLayout *assistantContextLayout;
+@property (nonatomic, strong) id<PCMessageLayoutProtol>contentLayout;
 
 - (instancetype)initWithMessageModel:(PCMessageModel *)messageModel;
 

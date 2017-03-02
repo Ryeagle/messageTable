@@ -8,8 +8,8 @@
 
 #import "PCMessageAvatarBubble.h"
 
-
-#define T8TextMessageBackgroundImageDef(name, isSend, filePhone) \
+//有头像的气泡
+#define PCTextMessageBackgroundImageDef(name, isSend, filePhone) \
 static UIImage *name() \
 { \
 static UIImage *image = nil; \
@@ -21,12 +21,12 @@ image = [[UIImage imageNamed:filePhone] stretchableImageWithLeftCapWidth:isSend 
 return image; \
 }
 
-T8TextMessageBackgroundImageDef(senderTextImage, true, @"Chat_text_sender_normal")
-T8TextMessageBackgroundImageDef(receiverTextImage, false, @"Chat_text_receiver_normal")
-T8TextMessageBackgroundImageDef(senderLinkImage, false, @"Chat_link_sender_normal")
-T8TextMessageBackgroundImageDef(senderTextHighlightImage, true, @"Chat_text_sender_highlight")
-T8TextMessageBackgroundImageDef(receiverTextHighlightImage, false, @"Chat_text_receiver_highlight")
-T8TextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sender_highlight")
+PCTextMessageBackgroundImageDef(senderTextImage, true, @"Chat_text_sender_normal")
+PCTextMessageBackgroundImageDef(receiverTextImage, false, @"Chat_text_receiver_normal")
+PCTextMessageBackgroundImageDef(senderLinkImage, false, @"Chat_link_sender_normal")
+PCTextMessageBackgroundImageDef(senderTextHighlightImage, true, @"Chat_text_sender_highlight")
+PCTextMessageBackgroundImageDef(receiverTextHighlightImage, false, @"Chat_text_receiver_highlight")
+PCTextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sender_highlight")
 
 @implementation PCMessageAvatarBubble
 
@@ -41,14 +41,15 @@ T8TextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sen
     return self;
 }
 
-+ (PCMessageComponentBubbleType)componentBubbleType:(PCMessageModel *)messageModel
++ (PCMessageAvatarBubbleType)avatarBubbleType:(PCMessageModel *)messageModel
 {
     switch (messageModel.media_type) {
+#warning 未完成....
         case PCMessageMediaTypeText:
             if (messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
-                return PCMessageComponentBubbleTypeTextSender;
+                return PCMessageAvatarBubbleTypeTextSender;
             } else {
-                return PCMessageComponentBubbleTypeTextReceiver;
+                return PCMessageAvatarBubbleTypeTextReceiver;
             }
             break;
             
@@ -56,21 +57,21 @@ T8TextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sen
             break;
     }
     
-    return PCMessageComponentBubbleTypeUnknown;
+    return PCMessageAvatarBubbleTypeUnknown;
 }
 
 #pragma mark Private Method
-- (void)setNormalImageWithType:(PCMessageComponentBubbleType)type
+- (void)setNormalImageWithType:(PCMessageAvatarBubbleType)type
 {
     switch (type) {
-        case PCMessageComponentBubbleTypeTextSender:
+        case PCMessageAvatarBubbleTypeTextSender:
             self.image = senderTextImage();
             break;
-        case PCMessageComponentBubbleTypeLinkSender:
+        case PCMessageAvatarBubbleTypeLinkSender:
             self.image = senderLinkImage();
             break;
-        case PCMessageComponentBubbleTypeTextReceiver:
-        case PCMessageComponentBubbleTypeLinkReceiver:
+        case PCMessageAvatarBubbleTypeTextReceiver:
+        case PCMessageAvatarBubbleTypeLinkReceiver:
             self.image = receiverTextImage();
             break;
         default:
@@ -78,17 +79,17 @@ T8TextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sen
     }
 }
 
-- (void)setHightlightImageWithType:(PCMessageComponentBubbleType)type
+- (void)setHightlightImageWithType:(PCMessageAvatarBubbleType)type
 {
     switch (type) {
-        case PCMessageComponentBubbleTypeTextSender:
+        case PCMessageAvatarBubbleTypeTextSender:
             self.highlightedImage = senderTextHighlightImage();
             break;
-        case PCMessageComponentBubbleTypeLinkSender:
+        case PCMessageAvatarBubbleTypeLinkSender:
             self.highlightedImage = senderLinkHighlightImage();
             break;
-        case PCMessageComponentBubbleTypeTextReceiver:
-        case PCMessageComponentBubbleTypeLinkReceiver:
+        case PCMessageAvatarBubbleTypeTextReceiver:
+        case PCMessageAvatarBubbleTypeLinkReceiver:
             self.highlightedImage = receiverTextHighlightImage();
             break;
         default:
@@ -97,7 +98,7 @@ T8TextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sen
 }
 
 #pragma mark Setter & Getter
-- (void)setType:(PCMessageComponentBubbleType)type
+- (void)setType:(PCMessageAvatarBubbleType)type
 {
     [self setNormalImageWithType:type];
     [self setHightlightImageWithType:type];

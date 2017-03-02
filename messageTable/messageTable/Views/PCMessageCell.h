@@ -13,14 +13,6 @@
 @end
 
 
-@interface PCMessagePhotoView : UIView
-
-@property (nonatomic, strong) UIImageView *avatarView;
-
-@property (nonatomic, strong) PCMessageComponentImageBubble *bubbleView;
-
-@end
-
 @interface PCMessageWebLinkView : UIView
 
 @property (nonatomic, strong) UIImageView *avatarView;
