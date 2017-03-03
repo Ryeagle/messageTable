@@ -12,5 +12,13 @@
 @property (nonatomic, assign) CGFloat viewWidth;
 @property (nonatomic, assign) CGFloat viewHeight;
 
+@property (nonatomic, assign) CGRect cardAvatarRect;
+
+@property (nonatomic, assign) CGRect titleRect;
+@property (nonatomic, strong) YYTextLayout *titleTextLayout;
+
+@property (nonatomic, assign) CGRect nameRect;
+@property (nonatomic, strong) YYTextLayout *nameTextLayout;
+
 - (instancetype)initWithMessageModel:(PCMessageModel *)messageModel;
 @end

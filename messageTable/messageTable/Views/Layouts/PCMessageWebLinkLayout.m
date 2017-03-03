@@ -50,7 +50,7 @@
 
     NSMutableAttributedString *infoAtrrStr = [[NSMutableAttributedString alloc] initWithString:messageModel.webLinkDesc];
     infoAtrrStr.font = [UIFont systemFontOfSize:PCMessageWebLinkInfoFontSize];
-    infoAtrrStr.color = [UIColor blackColor];
+    infoAtrrStr.color = AssistContentColor;
     
     YYTextLinePositionSimpleModifier *infoModifier = [YYTextLinePositionSimpleModifier new];
     infoModifier.fixedLineHeight = PCMessageWebLinkAvatarWidth / 3;
@@ -62,7 +62,7 @@
     
     _infoRect = CGRectMake(CGRectGetMaxX(_webLinkCoverRect) + PCMessageWebLinkInnerLeftPadding, CGRectGetMinY(_webLinkCoverRect), _infoTextLayout.textBoundingSize.width, _infoTextLayout.textBoundingSize.height + PCMessageWebLinkInnerBottomPadding);
     
-    _viewWidth = PCMessageWebLinkContentMaxWidth + 2 * PCMessageWebLinkInnerLeftPadding;
+    _viewWidth = PCMessageWebLinkContentMaxWidth + 2 * PCMessageWebLinkInnerLeftPadding + PCMessageBubbleAngleWidth;
     _viewHeight = PCMessageWebLinkInnerBottomPadding + CGRectGetMaxY(_webLinkCoverRect);
 }
 

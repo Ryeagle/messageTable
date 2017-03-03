@@ -105,6 +105,9 @@
         self.contentLayout = [[PCMessageMyCardLayout alloc] initWithMessageModel:_messageModel];
     } else if (mediaType == PCMessageMediaTypePersonCard) {
         self.contentLayout = [[PCMessageFriendCardLayout alloc] initWithMessageModel:_messageModel];
+    } else {
+        _messageModel.content = @"当前版本不支持此消息";
+        self.contentLayout = [[PCMessageTextViewLayout alloc] initWithMessageModel:_messageModel];
     }
 
     if (self.contentLayout && [self.contentLayout respondsToSelector:@selector(contentWidth)] && [self.contentLayout respondsToSelector:@selector(contentHeight)]) {

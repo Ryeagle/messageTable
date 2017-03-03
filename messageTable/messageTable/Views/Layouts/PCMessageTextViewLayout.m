@@ -40,11 +40,18 @@
 
 - (void)layout:(PCMessageModel *)messageModel
 {
+    UIColor *textColor;
+    if (messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
+        textColor = [UIColor whiteColor];
+    } else {
+        textColor = MainContentColor;
+    }
+
     YYTextLinePositionSimpleModifier *modifier = [YYTextLinePositionSimpleModifier new];
     modifier.fixedLineHeight = PCMessageTextFontSize * 1.3;
     YYTextContainer *textContainer = [YYTextContainer containerWithSize:CGSizeMake(PCMessageTextMaxWidth, MAXFLOAT)];
     textContainer.linePositionModifier = modifier;
-    _textLayout = [YYTextLayout layoutWithContainer:textContainer text:[PCMessageHelper highlightTextWithModel:messageModel font:[UIFont systemFontOfSize:PCMessageTextFontSize] color:MainContentColor]];
+    _textLayout = [YYTextLayout layoutWithContainer:textContainer text:[PCMessageHelper highlightTextWithModel:messageModel font:[UIFont systemFontOfSize:PCMessageTextFontSize] color:textColor]];
     
     _textLabelHeight = _textLayout.textBoundingSize.height + PCMessageTextInnerBottomPadding;
     _textLabelWidth = _textLayout.textBoundingSize.width;

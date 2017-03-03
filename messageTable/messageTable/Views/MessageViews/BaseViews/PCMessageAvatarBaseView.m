@@ -87,9 +87,9 @@
 - (void)setAvatarLayout:(PCMessageLayout *)layout
 {
     if (layout.messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
-        [_avatarView setImage:[UIImage imageNamed:@"Chat_sender_avatar"]];
+        [_avatarView setImage:[[UIImage imageNamed:@"Chat_sender_avatar"] drawRectWithRoundedCorner:20 size:CGSizeMake(40, 40)]];
     } else {
-        [_avatarView setImage:[UIImage imageNamed:@"Chat_receiver_avatar"]];
+        [_avatarView setImage:[[UIImage imageNamed:@"Chat_receiver_avatar"] drawRectWithRoundedCorner:20 size:CGSizeMake(40, 40)]];
     }
     
     _avatarView.left = layout.avatarViewLeft;

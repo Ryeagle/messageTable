@@ -100,7 +100,7 @@
 - (void)getData
 {
     _chatLayoutArr = [NSMutableArray array];
-    NSData *jsonData = [NSData dataNamed:[NSString stringWithFormat:@"JsonFile.json"]];
+    NSData *jsonData = [NSData dataNamed:[NSString stringWithFormat:@"JsonFileText.json"]];
     NSError* error;
     NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData
                                                          options:kNilOptions
@@ -121,7 +121,7 @@
     }
     
     @autoreleasepool {
-        for (int i = 0; i < 13; i++) {
+        for (int i = 0; i < 10; i++) {
             [_chatLayoutArr addObjectsFromArray:_chatLayoutArr];
         }
 

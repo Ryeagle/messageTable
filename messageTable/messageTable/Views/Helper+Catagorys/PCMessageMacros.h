@@ -13,6 +13,7 @@
 
 #import "PCMessageCellProtocol.h"
 #import "PCMessageHelper.h"
+#import "UIImage+PCMessage.h"
 #import "PCMessageAvatarBubble.h"
 #import "PCMessageTimeView.h"
 #import "PCMessageNameView.h"

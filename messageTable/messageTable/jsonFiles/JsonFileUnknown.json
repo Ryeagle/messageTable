@@ -1,0 +1,48 @@
+{
+  "result" : [
+    {
+      "content" : "",
+      "id" : "58b7d3ef0c750f753aba9137",
+      "readLimit" : [
+
+      ],
+      "media_type" : 123,
+      "message_type" : 1,
+      "created_at" : "2017-03-02T08:12:31.000Z",
+      "seq" : 4151,
+      "channel_id" : "57cf9e976068b373dc072b0a",
+      "_status" : 1,
+      "creator" : "57563d10497a822b3d6f48ac",
+      "updated_at" : "2017-03-02T08:12:31.000Z",
+      "extend" : {
+        "card_id" : "5763e3a47c4035ec3ba0f45a"
+      },
+      "tseq" : "14884423513451462029921",
+      "chat_type" : 0
+    },
+    {
+      "content" : "",
+      "id" : "58b7d40b0c750f753aba9139",
+      "readLimit" : [
+
+      ],
+      "media_type" : 123,
+      "message_type" : 1,
+      "created_at" : "2017-03-02T08:12:59.000Z",
+      "seq" : 4152,
+      "channel_id" : "57cf9e976068b373dc072b0a",
+      "_status" : 1,
+      "creator" : "56f3a79bb8df540c19a2556d",
+      "updated_at" : "2017-03-02T08:12:59.000Z",
+      "extend" : {
+        "card_id" : "5758f8f8120ba2fe35dc87a3"
+      },
+      "tseq" : "14884423794678288255075",
+      "chat_type" : 0
+    }
+  ],
+  "server_status" : [
+
+  ],
+  "code" : 1
+}

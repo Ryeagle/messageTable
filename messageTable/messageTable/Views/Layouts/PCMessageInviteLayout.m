@@ -55,7 +55,7 @@
     
     NSMutableAttributedString *infoAtrrStr = [[NSMutableAttributedString alloc] initWithString:infoStr];
     infoAtrrStr.font = [UIFont systemFontOfSize:PCMessageInviteInfoFontSize];
-    infoAtrrStr.color = [UIColor blackColor];
+    infoAtrrStr.color = AssistContentColor;
     
     YYTextLinePositionSimpleModifier *infoModifier = [YYTextLinePositionSimpleModifier new];
     infoModifier.fixedLineHeight = PCMessageInviteAvatarWidth / 3;
@@ -67,7 +67,7 @@
     
     _infoRect = CGRectMake(CGRectGetMaxX(_inviteAvatarRect) + PCMessageInviteInnerLeftPadding, CGRectGetMinY(_inviteAvatarRect), _infoTextLayout.textBoundingSize.width, _infoTextLayout.textBoundingSize.height);
     
-    _viewWidth = PCMessageInviteContentMaxWidth + 2 * PCMessageInviteInnerLeftPadding;
+    _viewWidth = PCMessageInviteContentMaxWidth + 2 * PCMessageInviteInnerLeftPadding + PCMessageBubbleAngleWidth;
     _viewHeight = PCMessageInviteInnerBottomPadding + CGRectGetMaxY(_inviteAvatarRect);
 }
 

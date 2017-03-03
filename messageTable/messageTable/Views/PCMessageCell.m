@@ -53,7 +53,8 @@
         _boundsView = [[PCMessageInviteView alloc] init];
     } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeAudio"]) {
     } else {
-        
+        //不支持的消息类型
+        _boundsView = [[PCMessageTextView alloc] init];
     }
     
     [self.contentView addSubview:_boundsView];

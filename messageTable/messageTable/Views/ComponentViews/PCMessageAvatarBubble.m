@@ -44,7 +44,6 @@ PCTextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sen
 + (PCMessageAvatarBubbleType)avatarBubbleType:(PCMessageModel *)messageModel
 {
     switch (messageModel.media_type) {
-#warning 未完成....
         case PCMessageMediaTypeText:
         case PCMessageMediaTypeAudio:
         case PCMessageMediaTypeRender:
@@ -67,6 +66,11 @@ PCTextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sen
             break;
             
         default:
+            if (messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
+                return PCMessageAvatarBubbleTypeTextSender;
+            } else {
+                return PCMessageAvatarBubbleTypeTextReceiver;
+            }
             break;
     }
     

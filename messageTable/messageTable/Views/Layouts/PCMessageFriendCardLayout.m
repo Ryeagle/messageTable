@@ -22,11 +22,17 @@
 
 - (void)reset
 {
+    _viewWidth = 0;
+    _viewHeight = 0;
+    _cardAvatarRect = CGRectZero;
+    _titleRect = CGRectZero;
+    _nameRect = CGRectZero;
 }
 
 - (void)layout:(PCMessageModel *)messageModel
 {
 }
+
 #pragma mark PCMessageLayoutProtol
 - (CGFloat)contentWidth
 {
