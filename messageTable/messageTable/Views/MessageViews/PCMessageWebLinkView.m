@@ -1,21 +1,21 @@
 //
-//  PCMessageInviteView.m
+//  PCMessageWebLinkView.m
 //  messageTable
 //
-//  Created by Ryeagler on 2017/3/2.
+//  Created by Ryeagler on 2017/3/3.
 //  Copyright © 2017年 Ryeagle. All rights reserved.
 //
 
-#import "PCMessageInviteView.h"
+#import "PCMessageWebLinkView.h"
 
-@implementation PCMessageInviteView
+@implementation PCMessageWebLinkView
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _inviteAvatarView = [UIImageView new];
-        [self.bubbleView addSubview:_inviteAvatarView];
+        _webLinkCoverView = [UIImageView new];
+        [self.bubbleView addSubview:_webLinkCoverView];
         
         _titleLabel = [YYLabel new];
         _titleLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
@@ -43,18 +43,17 @@
 - (void)setLayout:(PCMessageLayout *)layout
 {
     [super setLayout:layout];
-    PCMessageInviteLayout *inviteLayout = layout.contentLayout;
-
-    _inviteAvatarView.frame = inviteLayout.inviteAvatarRect;
+    PCMessageWebLinkLayout *webLinkLayout = layout.contentLayout;
+    
+    _webLinkCoverView.frame = webLinkLayout.webLinkCoverRect;
     self.bubbleView.type = [PCMessageAvatarBubble avatarBubbleType:layout.messageModel];
-    [_inviteAvatarView sd_setImageWithURL:[NSURL URLWithString:[layout.messageModel.invite_avatar stringByAppendingFormat:@"%@",[PCSetImageSizeManager componentStrWithImageWidth:PCMessageInviteAvatarWidth height:PCMessageInviteAvatarWidth]]] placeholderImage:[UIImage imageNamed:@"default_avatar"]];
+    [_webLinkCoverView sd_setImageWithURL:[NSURL URLWithString:[layout.messageModel.webLinkCover stringByAppendingFormat:@"%@",[PCSetImageSizeManager componentStrWithImageWidth:PCMessageWebLinkAvatarWidth height:PCMessageWebLinkAvatarWidth]]] placeholderImage:[UIImage imageNamed:@"defaultLink"]];
     
-    _titleLabel.frame = inviteLayout.titleRect;
-    _titleLabel.textLayout = inviteLayout.titleTextLayout;
+    _titleLabel.frame = webLinkLayout.titleRect;
+    _titleLabel.textLayout = webLinkLayout.titleTextLayout;
     
-    _infoLabel.frame = inviteLayout.infoRect;
-    _infoLabel.textLayout = inviteLayout.infoTextLayout;
+    _infoLabel.frame = webLinkLayout.infoRect;
+    _infoLabel.textLayout = webLinkLayout.infoTextLayout;
 }
-
 
 @end

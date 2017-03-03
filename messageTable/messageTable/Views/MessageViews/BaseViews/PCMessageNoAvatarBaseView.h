@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCMessageNoAvatarBaseView : UIView
+@interface PCMessageNoAvatarBaseView : UIView<PCMessageCellProtocol>
 @property (nonatomic, strong) PCMessageTimeView *timeView;
 @property (nonatomic, strong) PCMessageLayout *layout;
 @property (nonatomic, strong) UIImageView *bubbleView;

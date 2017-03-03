@@ -44,6 +44,8 @@
 		758466581E682B58001E8341 /* PCMessageAudioLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466571E682B58001E8341 /* PCMessageAudioLayout.m */; };
 		7584665B1E682B8D001E8341 /* PCMessageMyCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584665A1E682B8D001E8341 /* PCMessageMyCardLayout.m */; };
 		7584665E1E682BB9001E8341 /* PCMessageFriendCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584665D1E682BB9001E8341 /* PCMessageFriendCardLayout.m */; };
+		758466621E69163F001E8341 /* JsonFileWebLink.json in Resources */ = {isa = PBXBuildFile; fileRef = 758466611E69163F001E8341 /* JsonFileWebLink.json */; };
+		758466651E6916CA001E8341 /* PCMessageWebLinkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466641E6916CA001E8341 /* PCMessageWebLinkView.m */; };
 		759DB00C1E63CBCB0045567D /* PCMessageLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB00B1E63CBCB0045567D /* PCMessageLayout.m */; };
 		759DB0111E63FBF40045567D /* NSDate+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB00E1E63FBF40045567D /* NSDate+T8.m */; };
 		759DB0121E63FBF40045567D /* NSDateFormatter+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0101E63FBF40045567D /* NSDateFormatter+T8.m */; };
@@ -129,6 +131,10 @@
 		7584665A1E682B8D001E8341 /* PCMessageMyCardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageMyCardLayout.m; sourceTree = "<group>"; };
 		7584665C1E682BB9001E8341 /* PCMessageFriendCardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageFriendCardLayout.h; sourceTree = "<group>"; };
 		7584665D1E682BB9001E8341 /* PCMessageFriendCardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageFriendCardLayout.m; sourceTree = "<group>"; };
+		758466601E68FB0C001E8341 /* PCMessageCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageCellProtocol.h; sourceTree = "<group>"; };
+		758466611E69163F001E8341 /* JsonFileWebLink.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFileWebLink.json; sourceTree = "<group>"; };
+		758466631E6916CA001E8341 /* PCMessageWebLinkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageWebLinkView.h; sourceTree = "<group>"; };
+		758466641E6916CA001E8341 /* PCMessageWebLinkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageWebLinkView.m; sourceTree = "<group>"; };
 		759DB00A1E63CBCB0045567D /* PCMessageLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageLayout.h; sourceTree = "<group>"; };
 		759DB00B1E63CBCB0045567D /* PCMessageLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageLayout.m; sourceTree = "<group>"; };
 		759DB00D1E63FBF40045567D /* NSDate+T8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+T8.h"; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 				758466381E680CC3001E8341 /* JsonFileMyCard.json */,
 				7584663A1E680D96001E8341 /* JsonFileFriendCard.json */,
 				7584663C1E680EAF001E8341 /* JsonFileInvite.json */,
+				758466611E69163F001E8341 /* JsonFileWebLink.json */,
 			);
 			path = jsonFiles;
 			sourceTree = "<group>";
@@ -270,6 +277,7 @@
 				7537E1C31E6034DF00CDD21A /* Layouts */,
 				7537E1B51E5FD45800CDD21A /* PCMessageCell.h */,
 				7537E1B61E5FD45800CDD21A /* PCMessageCell.m */,
+				758466601E68FB0C001E8341 /* PCMessageCellProtocol.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,6 +353,8 @@
 				7584660D1E67BE39001E8341 /* PCMessageFriendVerifyView.m */,
 				7584663E1E68107E001E8341 /* PCMessageInviteView.h */,
 				7584663F1E68107E001E8341 /* PCMessageInviteView.m */,
+				758466631E6916CA001E8341 /* PCMessageWebLinkView.h */,
+				758466641E6916CA001E8341 /* PCMessageWebLinkView.m */,
 			);
 			path = MessageViews;
 			sourceTree = "<group>";
@@ -459,6 +469,7 @@
 			files = (
 				7584660B1E67B6B4001E8341 /* JsonFileText.json in Resources */,
 				7537E18E1E5EE7E600CDD21A /* Assets.xcassets in Resources */,
+				758466621E69163F001E8341 /* JsonFileWebLink.json in Resources */,
 				7584663D1E680EB0001E8341 /* JsonFileInvite.json in Resources */,
 				758465F61E66BA52001E8341 /* JsonFilePhoto.json in Resources */,
 				7584663B1E680D96001E8341 /* JsonFileFriendCard.json in Resources */,
@@ -542,6 +553,7 @@
 				758466091E66E19D001E8341 /* PCMessageServiceLayout.m in Sources */,
 				7584665B1E682B8D001E8341 /* PCMessageMyCardLayout.m in Sources */,
 				7584664C1E682A53001E8341 /* PCMessagePhotoTextLayout.m in Sources */,
+				758466651E6916CA001E8341 /* PCMessageWebLinkView.m in Sources */,
 				758466461E6829C4001E8341 /* PCMessageWebLinkLayout.m in Sources */,
 				7537E1C21E6032A300CDD21A /* PCMessageHelper.m in Sources */,
 				7584665E1E682BB9001E8341 /* PCMessageFriendCardLayout.m in Sources */,

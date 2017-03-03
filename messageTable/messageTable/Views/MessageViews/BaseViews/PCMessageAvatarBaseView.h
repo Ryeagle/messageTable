@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class PCMessageLayout;
-@interface PCMessageAvatarBaseView : UIView
+@interface PCMessageAvatarBaseView : UIView<PCMessageCellProtocol>
 @property (nonatomic, strong) PCMessageTimeView *timeView;
 @property (nonatomic, strong) PCMessageNameView *nameView;
 @property (nonatomic, strong) UIImageView *avatarView;

@@ -202,4 +202,9 @@
     
 }
 
+- (void)setupLayout:(PCMessageLayout *)layout;
+{
+    [self setLayout:layout];
+}
+
 @end

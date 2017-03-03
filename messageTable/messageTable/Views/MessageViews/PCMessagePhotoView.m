@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         _photoBubbleView = [PCMessagePhotoBubble new];
-        _photoBubbleView.backgroundColor = [UIColor clearColor];
+        _photoBubbleView.backgroundColor = AppBgColor;
         [self addSubview:_photoBubbleView];
 
     }

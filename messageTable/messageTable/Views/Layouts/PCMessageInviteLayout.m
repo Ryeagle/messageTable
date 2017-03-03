@@ -36,15 +36,14 @@
     titleStr.color = [UIColor blackColor];
     
     YYTextLinePositionSimpleModifier *modifier = [YYTextLinePositionSimpleModifier new];
-    modifier.fixedLineHeight = PCMessageInviteTitleFontSize * 1.3;
-    YYTextContainer *titleContainer = [YYTextContainer containerWithSize:CGSizeMake(PCMessageInviteContentMaxWidth, PCMessageFriendVefiryFontSize * 1.3)];
+    modifier.fixedLineHeight = PCMessageInviteTitleFontSize * 1.2;
+    YYTextContainer *titleContainer = [YYTextContainer containerWithSize:CGSizeMake(PCMessageInviteContentMaxWidth, PCMessageFriendVefiryFontSize * 1.2)];
     titleContainer.linePositionModifier = modifier;
     _titleTextLayout = [YYTextLayout layoutWithContainer:titleContainer text:titleStr];
     
-    _titleRect = CGRectMake(PCMessageInviteInnerLeftPadding, PCMessageInviteInnerTopPadding, _titleTextLayout.textBoundingSize.width, _titleTextLayout.textBoundingSize.height);
+    _titleRect = CGRectMake((messageModel.message_bubble_type == PCMessageBubbleTypeSending) ?PCMessageInviteInnerLeftPadding : PCMessageInviteInnerLeftPadding + PCMessageBubbleAngleWidth, PCMessageInviteInnerTopPadding, _titleTextLayout.textBoundingSize.width, _titleTextLayout.textBoundingSize.height);
     
-    
-    _inviteAvatarRect = CGRectMake(PCMessageInviteInnerLeftPadding, CGRectGetMaxY(_titleRect) + PCMessageInviteTitleInfoPadding, PCMessageInviteAvatarWidth, PCMessageInviteAvatarWidth);
+    _inviteAvatarRect = CGRectMake(CGRectGetMinX(_titleRect), CGRectGetMaxY(_titleRect) + PCMessageInviteTitleInfoPadding, PCMessageInviteAvatarWidth, PCMessageInviteAvatarWidth);
     
     NSString *infoStr = @"";
 #warning 项目中需要更改....
@@ -59,15 +58,17 @@
     infoAtrrStr.color = [UIColor blackColor];
     
     YYTextLinePositionSimpleModifier *infoModifier = [YYTextLinePositionSimpleModifier new];
-    infoModifier.fixedLineHeight = PCMessageInviteInfoFontSize * 1.3;
+    infoModifier.fixedLineHeight = PCMessageInviteAvatarWidth / 3;
     YYTextContainer *infoContainer = [YYTextContainer containerWithSize:CGSizeMake(PCMessageInviteInfoMaxWidth, PCMessageInviteAvatarWidth)];
+    infoContainer.truncationType = YYTextTruncationTypeEnd;
+    infoContainer.maximumNumberOfRows = 3;
     infoContainer.linePositionModifier = infoModifier;
     _infoTextLayout = [YYTextLayout layoutWithContainer:infoContainer text:infoAtrrStr];
     
-    _infoRect = CGRectMake(CGRectGetMaxX(_inviteAvatarRect) + PCMessageInviteInnerLeftPadding, CGRectGetMaxY(_titleRect) + PCMessageInviteTitleInfoPadding, _infoTextLayout.textBoundingSize.width, _infoTextLayout.textBoundingSize.height);
+    _infoRect = CGRectMake(CGRectGetMaxX(_inviteAvatarRect) + PCMessageInviteInnerLeftPadding, CGRectGetMinY(_inviteAvatarRect), _infoTextLayout.textBoundingSize.width, _infoTextLayout.textBoundingSize.height);
     
     _viewWidth = PCMessageInviteContentMaxWidth + 2 * PCMessageInviteInnerLeftPadding;
-    _viewHeight = 2 * PCMessageInviteInnerTopPadding + 0;
+    _viewHeight = PCMessageInviteInnerBottomPadding + CGRectGetMaxY(_inviteAvatarRect);
 }
 
 #pragma mark PCMessageLayoutProtol

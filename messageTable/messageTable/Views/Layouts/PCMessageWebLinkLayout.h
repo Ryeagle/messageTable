@@ -11,6 +11,11 @@
 @interface PCMessageWebLinkLayout : NSObject<PCMessageLayoutProtol>
 @property (nonatomic, assign) CGFloat viewWidth;
 @property (nonatomic, assign) CGFloat viewHeight;
+@property (nonatomic, assign) CGRect webLinkCoverRect;
+@property (nonatomic, strong) YYTextLayout *titleTextLayout;
+@property (nonatomic, assign) CGRect titleRect;
+@property (nonatomic, strong) YYTextLayout *infoTextLayout;
+@property (nonatomic, assign) CGRect infoRect;
 
 - (instancetype)initWithMessageModel:(PCMessageModel *)messageModel;
 @end

@@ -46,10 +46,23 @@ PCTextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sen
     switch (messageModel.media_type) {
 #warning 未完成....
         case PCMessageMediaTypeText:
+        case PCMessageMediaTypeAudio:
+        case PCMessageMediaTypeRender:
             if (messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
                 return PCMessageAvatarBubbleTypeTextSender;
             } else {
                 return PCMessageAvatarBubbleTypeTextReceiver;
+            }
+            break;
+        case PCMessageMediaTypeInvite:
+        case PCMessageMediaTypePersonCard:
+        case PCMessageMediaTypeMyCard:
+        case PCMessageMediaTypeWebLink:
+        case PCMessageMediaTypeCombination:
+            if (messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
+                return PCMessageAvatarBubbleTypeLinkSender;
+            } else {
+                return PCMessageAvatarBubbleTypeLinkReceiver;
             }
             break;
             

@@ -26,8 +26,8 @@
 - (void)configDefault
 {
     self.userInteractionEnabled = YES;
-    self.backgroundColor = [UIColor clearColor];
-    [self.backgroundView setBackgroundColor:[UIColor clearColor]];
+    self.backgroundColor = AppBgColor;
+    [self.backgroundView setBackgroundColor:AppBgColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
@@ -41,8 +41,18 @@
         _boundsView = [[PCMessageServiceView alloc] init];
     } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeFriendVerify"]) {
         _boundsView = [[PCMessageFriendVerifyView alloc] init];
-    }
-    else {
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMeidaTypeWalletAssistant"]) {
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypePhotoText"]) {
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeRender"]) {
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeCombination"]) {
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeWebLink"]) {
+        _boundsView = [[PCMessageWebLinkView alloc] init];
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeMyCard"]) {
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypePersonCard"]) {
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeInvite"]) {
+        _boundsView = [[PCMessageInviteView alloc] init];
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeAudio"]) {
+    } else {
         
     }
     
@@ -52,21 +62,6 @@
 - (void)setLayout:(PCMessageLayout *)layout
 {
     _layout = layout;
-    if ([self.reuseIdentifier isEqualToString:@"PCMessageMediaTypeText"]) {
-        PCMessageTextView *textView = (PCMessageTextView *)_boundsView;
-        [textView setLayout:layout];
-    } else if ([self.reuseIdentifier isEqualToString:@"PCMessageMediaTypePhoto"]) {
-        PCMessagePhotoView *photoView = (PCMessagePhotoView *)_boundsView;
-        [photoView setLayout:layout];
-    } else if ([self.reuseIdentifier isEqualToString:@"PCMessageTypeService"]) {
-        PCMessageServiceView *serviceView = (PCMessageServiceView *)_boundsView;
-        [serviceView setLayout:layout];
-    } else if ([self.reuseIdentifier isEqualToString:@"PCMessageMediaTypeFriendVerify"]) {
-        PCMessageFriendVerifyView *verifyView = (PCMessageFriendVerifyView *)_boundsView;
-        [verifyView setLayout:layout];
-    }
-    else {
-        
-    }
+    [_boundsView setupLayout:layout];
 }
 @end

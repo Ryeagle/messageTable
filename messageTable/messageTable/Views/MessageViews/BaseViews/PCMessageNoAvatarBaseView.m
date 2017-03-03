@@ -47,4 +47,9 @@
 {
     self.frame = CGRectMake(0, 0, SCREEN_WIDTH, layout.height);
 }
+
+- (void)setupLayout:(PCMessageLayout *)layout;
+{
+    [self setLayout:layout];
+}
 @end

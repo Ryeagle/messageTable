@@ -11,6 +11,7 @@
 
 //#define RyeagleForTest
 
+#import "PCMessageCellProtocol.h"
 #import "PCMessageHelper.h"
 #import "PCMessageAvatarBubble.h"
 #import "PCMessageTimeView.h"
@@ -23,6 +24,7 @@
 #import "PCMessageServiceView.h"
 #import "PCMessageFriendVerifyView.h"
 #import "PCMessageInviteView.h"
+#import "PCMessageWebLinkView.h"
 
 #import "PCMessageLayout.h"
 #import "PCMessageTextViewLayout.h"
@@ -98,18 +100,20 @@
 
 //群聊邀请
 #define PCMessageInviteInnerLeftPadding             10
-#define PCMessageInviteInnerTopPadding              10
+#define PCMessageInviteInnerTopPadding              7
+#define PCMessageInviteInnerBottomPadding           10
 #define PCMessageInviteContentMaxWidth              200
 #define PCMessageInviteTitleInfoPadding             5
 #define PCMessageInviteInfoAvatarPadding            5
-#define PCMessageInviteAvatarWidth                  45
+#define PCMessageInviteAvatarWidth                  50
 #define PCMessageInviteInfoMaxWidth                 (PCMessageInviteContentMaxWidth - PCMessageInviteAvatarWidth - PCMessageInviteInfoAvatarPadding)
 
 //网页分享
 #define PCMessageWebLinkInnerLeftPadding            10
-#define PCMessageWebLinkInnerTopPadding             10
+#define PCMessageWebLinkInnerTopPadding             7
+#define PCMessageWebLinkInnerBottomPadding          10
 #define PCMessageWebLinkContentMaxWidth             200
-#define PCMessageWebLinkAvatarWidth                 45
+#define PCMessageWebLinkAvatarWidth                 50
 #define PCMessageWebLinkTitleInfoPadding            5
 #define PCMessageWebLinkInfoAvatarPadding           12.5
 #define PCMessageWebLinkInfoMaxWidth                (PCMessageWebLinkContentMaxWidth - PCMessageWebLinkAvatarWidth - PCMessageWebLinkInfoAvatarPadding)
