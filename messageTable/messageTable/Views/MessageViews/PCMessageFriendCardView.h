@@ -11,6 +11,6 @@
 @interface PCMessageFriendCardView : PCMessageAvatarBaseView
 @property (nonatomic, strong) UIImageView *cardAvatarView;
 @property (nonatomic, strong) YYLabel *titleLabel;
-@property (nonatomic, strong) UIImageView *lineView;
+@property (nonatomic, strong) UIView *lineView;
 @property (nonatomic, strong) YYLabel *nameLabel;
 @end

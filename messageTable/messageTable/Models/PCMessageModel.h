@@ -158,7 +158,7 @@ typedef NS_ENUM(NSInteger, PCMessageUpdateType) {
 @property (nonatomic, copy) NSString *orderId;
 @property (nonatomic, assign) NSInteger recordsId;
 @property (nonatomic, copy) NSString *productName;
-@property (nonatomic, copy) NSString *payTaPCet;
+@property (nonatomic, copy) NSString *payTarget;
 @property (nonatomic, copy) NSString *payMethod;
 
 //历史记录消息

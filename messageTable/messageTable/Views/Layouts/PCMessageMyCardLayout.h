@@ -14,6 +14,8 @@
 
 @property (nonatomic, assign) CGRect cardAvatarRect;
 
+@property (nonatomic, assign) CGRect lineViewRect;
+
 @property (nonatomic, assign) CGRect titleRect;
 @property (nonatomic, strong) YYTextLayout *titleTextLayout;
 

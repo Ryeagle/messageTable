@@ -19,6 +19,7 @@
 #import <SDWebImage/SDWebImageDownloader.h>
 #import "SDWebImageManager.h"
 #import "NSDate+T8.h"
+#import "UIImage+T8.h"
 #import "NSDateFormatter+T8.h"
 #import "NSDictionary+PC.h"
 #import "PCUserDefaultHelper.h"

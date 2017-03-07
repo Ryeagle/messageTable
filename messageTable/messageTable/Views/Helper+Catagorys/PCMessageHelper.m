@@ -122,4 +122,22 @@
     [text setColor:hightlightColor range:range];
 }
 
++ (BOOL)isNoAvatarView:(PCMessageModel *)messsageModel
+{
+    if (messsageModel.message_type == PCMessageTypeService) {
+        return YES;
+    }
+    switch (messsageModel.media_type) {
+        case PCMessageMediaTypeFriendVerify:
+        case PCMessageMediaTypePhotoText:
+        case PCMessageMeidaTypeWalletAssistant:
+            return YES;
+            break;
+            
+        default:
+            break;
+    }
+    
+    return NO;
+}
 @end

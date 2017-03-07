@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7509BDEC1E6D44830026C7E4 /* JsonFileWallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 7509BDEB1E6D44830026C7E4 /* JsonFileWallet.json */; };
+		7509BDEF1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7509BDEE1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m */; };
+		7509BDF21E6D55A80026C7E4 /* UIImage+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 7509BDF11E6D55A80026C7E4 /* UIImage+T8.m */; };
 		7537E1831E5EE7E600CDD21A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1821E5EE7E600CDD21A /* main.m */; };
 		7537E1861E5EE7E600CDD21A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1851E5EE7E600CDD21A /* AppDelegate.m */; };
 		7537E18E1E5EE7E600CDD21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7537E18D1E5EE7E600CDD21A /* Assets.xcassets */; };
@@ -64,6 +67,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7509BDEB1E6D44830026C7E4 /* JsonFileWallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFileWallet.json; sourceTree = "<group>"; };
+		7509BDED1E6D44D30026C7E4 /* PCMessageWalletAssistantView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageWalletAssistantView.h; sourceTree = "<group>"; };
+		7509BDEE1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageWalletAssistantView.m; sourceTree = "<group>"; };
+		7509BDF01E6D55A80026C7E4 /* UIImage+T8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+T8.h"; sourceTree = "<group>"; };
+		7509BDF11E6D55A80026C7E4 /* UIImage+T8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+T8.m"; sourceTree = "<group>"; };
 		7537E17E1E5EE7E600CDD21A /* messageTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = messageTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7537E1821E5EE7E600CDD21A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7537E1841E5EE7E600CDD21A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -239,8 +247,9 @@
 		7537E1981E5EE81E00CDD21A /* jsonFiles */ = {
 			isa = PBXGroup;
 			children = (
-				7584660A1E67B6B4001E8341 /* JsonFileText.json */,
 				7537E1991E5EE81E00CDD21A /* JsonFile.json */,
+				7509BDEB1E6D44830026C7E4 /* JsonFileWallet.json */,
+				7584660A1E67B6B4001E8341 /* JsonFileText.json */,
 				758465F51E66BA52001E8341 /* JsonFilePhoto.json */,
 				758466381E680CC3001E8341 /* JsonFileMyCard.json */,
 				7584663A1E680D96001E8341 /* JsonFileFriendCard.json */,
@@ -254,6 +263,8 @@
 		7537E19A1E5EE81E00CDD21A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				7509BDF01E6D55A80026C7E4 /* UIImage+T8.h */,
+				7509BDF11E6D55A80026C7E4 /* UIImage+T8.m */,
 				758465EB1E669FB7001E8341 /* PCSetImageSizeManager.h */,
 				758465EC1E669FB7001E8341 /* PCSetImageSizeManager.m */,
 				759DB00D1E63FBF40045567D /* NSDate+T8.h */,
@@ -361,6 +372,8 @@
 				758466691E693EE2001E8341 /* PCMessageMyCardView.m */,
 				7584666B1E693EF3001E8341 /* PCMessageFriendCardView.h */,
 				7584666C1E693EF3001E8341 /* PCMessageFriendCardView.m */,
+				7509BDED1E6D44D30026C7E4 /* PCMessageWalletAssistantView.h */,
+				7509BDEE1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m */,
 			);
 			path = MessageViews;
 			sourceTree = "<group>";
@@ -485,6 +498,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7509BDEC1E6D44830026C7E4 /* JsonFileWallet.json in Resources */,
 				7584660B1E67B6B4001E8341 /* JsonFileText.json in Resources */,
 				7537E18E1E5EE7E600CDD21A /* Assets.xcassets in Resources */,
 				758466621E69163F001E8341 /* JsonFileWebLink.json in Resources */,
@@ -555,6 +569,7 @@
 				7584666D1E693EF3001E8341 /* PCMessageFriendCardView.m in Sources */,
 				759DB0201E6537270045567D /* PCMessageTextViewLayout.m in Sources */,
 				7537E1B11E5EF06F00CDD21A /* PCMainViewController.m in Sources */,
+				7509BDF21E6D55A80026C7E4 /* UIImage+T8.m in Sources */,
 				7537E1AA1E5EE81E00CDD21A /* PCMessageModel.m in Sources */,
 				7584666A1E693EE2001E8341 /* PCMessageMyCardView.m in Sources */,
 				7537E1B71E5FD45800CDD21A /* PCMessageCell.m in Sources */,
@@ -590,6 +605,7 @@
 				758466841E6956F0001E8341 /* PCMessageHelper.m in Sources */,
 				759DB0371E653FD40045567D /* PCMessageAvatarBaseView.m in Sources */,
 				758465EA1E668FD8001E8341 /* PCMessagePhotoView.m in Sources */,
+				7509BDEF1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m in Sources */,
 				758466401E68107E001E8341 /* PCMessageInviteView.m in Sources */,
 				759DB02E1E653CB00045567D /* PCMessageNameView.m in Sources */,
 				759DB0311E653F8F0045567D /* PCMessageNoAvatarBaseView.m in Sources */,

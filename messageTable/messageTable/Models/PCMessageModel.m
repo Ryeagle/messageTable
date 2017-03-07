@@ -100,7 +100,7 @@
                 self.orderId = extend[@"order_id"];
                 self.recordsId = [extend[@"records_id"] integerValue];
                 self.productName = extend[@"product_name"];
-                self.payTaPCet = extend[@"pay_taPCet"];
+                self.payTarget = extend[@"pay_target"];
                 self.payMethod = extend[@"pay_method"];
             }
         } else {

@@ -42,15 +42,18 @@
     } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeFriendVerify"]) {
         _boundsView = [[PCMessageFriendVerifyView alloc] init];
     } else if ([reuseIdentifier isEqualToString:@"PCMessageMeidaTypeWalletAssistant"]) {
-    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypePhotoText"]) {
-    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeRender"]) {
-    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeCombination"]) {
+        _boundsView = [[PCMessageWalletAssistantView alloc] init];
     } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeWebLink"]) {
         _boundsView = [[PCMessageWebLinkView alloc] init];
     } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeMyCard"]) {
+        _boundsView = [[PCMessageMyCardView alloc] init];
     } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypePersonCard"]) {
+        _boundsView = [[PCMessageFriendCardView alloc] init];
     } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeInvite"]) {
         _boundsView = [[PCMessageInviteView alloc] init];
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypePhotoText"]) {
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeRender"]) {
+    } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeCombination"]) {
     } else if ([reuseIdentifier isEqualToString:@"PCMessageMediaTypeAudio"]) {
     } else {
         //不支持的消息类型

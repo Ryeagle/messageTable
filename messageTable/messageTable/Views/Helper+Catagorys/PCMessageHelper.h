@@ -14,5 +14,7 @@
 
 + (UIImage *)resizableImageWithName:(NSString *)name;
 
++ (BOOL)isNoAvatarView:(PCMessageModel *)messsageModel;
+
 + (NSMutableAttributedString *) highlightTextWithModel:(PCMessageModel *)messageModel font:(UIFont *)font color:(UIColor *)color;
 @end

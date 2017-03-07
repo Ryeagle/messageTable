@@ -99,8 +99,16 @@
 
 - (void)getData
 {
+    NSString *pathStr = @"";
+    if ([self.猴子  isEqualToString:@"猴子的花果山🐒"]) {
+        pathStr = @"JsonFile.json";
+    } else if ([self.猴子  isEqualToString:@"猴子的水帘洞🐵"]) {
+        pathStr = @"JsonFilePhoto.json";
+    } else if ([self.猴子  isEqualToString:@"猴子的蟠桃园🍑"]) {
+        pathStr = @"JsonFileWallet.json";
+    }
     _chatLayoutArr = [NSMutableArray array];
-    NSData *jsonData = [NSData dataNamed:[NSString stringWithFormat:@"JsonFileText.json"]];
+    NSData *jsonData = [NSData dataNamed:pathStr];
     NSError* error;
     NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData
                                                          options:kNilOptions
@@ -143,7 +151,7 @@
 {
     PCMessageLayout *layout = [_chatLayoutArr objectAtIndex:indexPath.row];
     
-    return ([PCUserDefaultHelper sharedInstance].showMemberName && layout.messageModel.message_bubble_type == PCMessageBubbleTypeReceiving)? layout.height + PCMessageNameHeight : layout.height;
+    return ([PCUserDefaultHelper sharedInstance].showMemberName && (layout.messageModel.message_bubble_type == PCMessageBubbleTypeReceiving && ![PCMessageHelper isNoAvatarView:layout.messageModel])) ? layout.height + PCMessageNameHeight : layout.height;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

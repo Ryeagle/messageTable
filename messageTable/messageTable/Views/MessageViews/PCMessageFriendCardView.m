@@ -26,6 +26,10 @@
         _titleLabel.fadeOnAsynchronouslyDisplay = NO;
         [self.bubbleView addSubview:_titleLabel];
         
+        _lineView = [UIView new];
+        _lineView.backgroundColor = PCMessageCardLineColor;
+        [self.bubbleView addSubview:_lineView];
+        
         _nameLabel = [YYLabel new];
         _nameLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
         _nameLabel.clearContentsBeforeAsynchronouslyDisplay = NO;
@@ -48,7 +52,9 @@
     self.bubbleView.type = [PCMessageAvatarBubble avatarBubbleType:layout.messageModel];
     
     _cardAvatarView.frame = myCardLayout.cardAvatarRect;
-    [_cardAvatarView sd_setImageWithURL:[NSURL URLWithString:[layout.messageModel.webLinkCover stringByAppendingFormat:@"%@",[PCSetImageSizeManager componentStrWithImageWidth:PCMessageWebLinkAvatarWidth height:PCMessageWebLinkAvatarWidth]]] placeholderImage:[UIImage imageNamed:@"default_avatar"]];
+    [_cardAvatarView sd_setImageWithURL:[NSURL URLWithString:[layout.messageModel.friendCardAvatar stringByAppendingFormat:@"%@",[PCSetImageSizeManager componentStrWithImageWidth:PCMessageWebLinkAvatarWidth height:PCMessageWebLinkAvatarWidth]]] placeholderImage:[UIImage imageNamed:@"default_avatar"]];
+    
+    _lineView.frame = myCardLayout.lineViewRect;
     
     _titleLabel.frame = myCardLayout.titleRect;
     _titleLabel.textLayout = myCardLayout.titleTextLayout;

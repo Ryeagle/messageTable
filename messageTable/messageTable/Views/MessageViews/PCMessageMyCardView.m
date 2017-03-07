@@ -26,6 +26,10 @@
         _titleLabel.fadeOnAsynchronouslyDisplay = NO;
         [self.bubbleView addSubview:_titleLabel];
         
+        _lineView = [UIView new];
+        _lineView.backgroundColor = PCMessageCardLineColor;
+        [self.bubbleView addSubview:_lineView];
+        
         _nameLabel = [YYLabel new];
         _nameLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
         _nameLabel.clearContentsBeforeAsynchronouslyDisplay = NO;
@@ -44,19 +48,26 @@
 {
     [super setLayout:layout];
     
-    PCMessageMyCardLayout *myCardLayout = layout.contentLayout;
+    PCMessageFriendCardLayout *myCardLayout = layout.contentLayout;
     
     self.bubbleView.type = [PCMessageAvatarBubble avatarBubbleType:layout.messageModel];
     
     _cardAvatarView.frame = myCardLayout.cardAvatarRect;
-    [_cardAvatarView sd_setImageWithURL:[NSURL URLWithString:[layout.messageModel.webLinkCover stringByAppendingFormat:@"%@",[PCSetImageSizeManager componentStrWithImageWidth:PCMessageWebLinkAvatarWidth height:PCMessageWebLinkAvatarWidth]]] placeholderImage:[UIImage imageNamed:@"default_avatar"]];
+    [_cardAvatarView sd_setImageWithURL:[NSURL URLWithString:[layout.messageModel.friendCardAvatar stringByAppendingFormat:@"%@",[PCSetImageSizeManager componentStrWithImageWidth:PCMessageWebLinkAvatarWidth height:PCMessageWebLinkAvatarWidth]]] placeholderImage:[UIImage imageNamed:@"default_avatar"]];
+    
+    _lineView.frame = myCardLayout.lineViewRect;
     
     _titleLabel.frame = myCardLayout.titleRect;
     _titleLabel.textLayout = myCardLayout.titleTextLayout;
     
     _nameLabel.frame = myCardLayout.nameRect;
-    _nameLabel.textLayout = myCardLayout.nameTextLayout;
-
+    NSMutableAttributedString *nameStr = [[NSMutableAttributedString alloc] initWithString:@"晚来天欲雪能饮一杯无"];
+    nameStr.font = [UIFont systemFontOfSize: PCMessageCardNameFontSize];
+    nameStr.color = [UIColor blackColor];
+    YYTextContainer *nameContainer = [YYTextContainer containerWithSize:CGSizeMake(PCMessageCardNameMaxWidth, PCMessageCardNameFontSize * 1.2)];
+    nameContainer.maximumNumberOfRows = 1;
+    nameContainer.truncationType = YYTextTruncationTypeEnd;
+    _nameLabel.textLayout = [YYTextLayout layoutWithContainer:nameContainer text:nameStr];
 }
 
 @end

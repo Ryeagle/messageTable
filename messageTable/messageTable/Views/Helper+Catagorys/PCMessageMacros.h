@@ -26,6 +26,9 @@
 #import "PCMessageFriendVerifyView.h"
 #import "PCMessageInviteView.h"
 #import "PCMessageWebLinkView.h"
+#import "PCMessageFriendCardView.h"
+#import "PCMessageMyCardView.h"
+#import "PCMessageWalletAssistantView.h"
 
 #import "PCMessageLayout.h"
 #import "PCMessageTextViewLayout.h"
@@ -119,6 +122,40 @@
 #define PCMessageWebLinkInfoAvatarPadding           12.5
 #define PCMessageWebLinkInfoMaxWidth                (PCMessageWebLinkContentMaxWidth - PCMessageWebLinkAvatarWidth - PCMessageWebLinkInfoAvatarPadding)
 
+//好友名片,我的名片
+#define PCMessageCardInnerPadding                   10
+#define PCMessageCardTitleLinePadding               5
+#define PCMessageCardLineAvatarPadding              5
+#define PCMessageCardLineLeft                       1
+#define PCMessageCardAvatarWidth                    50
+#define PCMessageCardAvatarNamePadding              5
+#define PCMessageCardNameMaxWidth                   140
+#define PCMessageCardLineHeight                     1
+#define PCMessageCardLineTitlePadding               3
+#define PCMessageCardBottomPadding                  3
+#define PCMessageCardLineColor                      UIColorRGB(0xEAEAEA)
+
+//钱包助手
+#define PCMessageWalletContentWidth                 (SCREEN_WIDTH - 30)
+#define PCMessageWalletLeftPadding                  15
+#define PCMessageWalletTopPadding                   12.5
+#define PCMessageWalletBottomPadding                12.5
+#define PCMessageWalletTitleWidth                   (PCMessageWalletContentWidth - 2 * PCMessageWalletLeftPadding)
+#define PCMessageWalletDateWidth                    PCMessageWalletTitleWidth
+#define PCMessageWalletAmountWidth                  PCMessageWalletTitleWidth
+#define PCMessageWalletDetailHeight                 20
+#define PCMessageWalletDetailTitleWidth             75
+#define PCMessageWalletDetailCotentWidth            (PCMessageWalletTitleWidth - PCMessageWalletDetailTitleWidth)
+#define PCMessageWalletLineHeight                   0.5
+#define PCMessageWalletLineWidth                    PCMessageWalletTitleWidth
+#define PCMessageWalletClickDetailHeight            20
+#define PCMessageWalletTitleDatePadding             4
+#define PCMessageWalletDateAmountPaddding           18
+#define PCMessageWalletAmountDetailPaddding         36
+#define PCMessageWalletDetailInnerPadding           4
+#define PCMessageWalletDetailLinePadding            17
+#define PCMessageWalletLineClickDetailPadding       12
+#define PCMessageWalletArrowWidth                   13.5
 
 //字体大小
 #define PCMessageNameFontSize                       12
@@ -130,6 +167,13 @@
 #define PCMessageInviteInfoFontSize                 12
 #define PCMessageWebLinkTitleFontSize               14
 #define PCMessageWebLinkInfoFontSize                12
+#define PCMessageCardNameFontSize                   16
+#define PCMessageCardTitleSize                      10
+#define PCMessageWalletTitleFontSize                17
+#define PCMessageWalletDateFontSize                 17
+#define PCMessageWalletAmountFontSize               41
+#define PCMessageWalletDetailFontSize               15
+#define PCMessageWalletClickDetailFontSize          14
 
 //正则
 #define URLLINKREGULAR @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
