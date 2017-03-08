@@ -63,5 +63,21 @@
     _nameLabel.textLayout = myCardLayout.nameTextLayout;
 }
 
+#pragma mark Gesture Action
+- (void)bubbleTapAction:(UITapGestureRecognizer *)gesture
+{
+    NSLog(@"FriendCard Message Tap...");
+    
+    self.bubbleView.highlighted = YES;
+    
+    __weak typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        weakSelf.bubbleView.highlighted = NO;
+    });
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCFriendCardTapEvent layout:self.layout object:nil];
+    }
+}
 
 @end

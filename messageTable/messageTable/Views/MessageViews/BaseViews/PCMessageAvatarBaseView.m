@@ -58,12 +58,18 @@
 #pragma mark Private Method
 - (void)addGesture
 {
+    _bubbleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bubbleTapAction:)];
+    [_bubbleView addGestureRecognizer:_bubbleTapGesture];
+
     UILongPressGestureRecognizer *bubbleLongPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(bubbleLongPressAction:)];
     bubbleLongPressGesture.cancelsTouchesInView = NO;
     [_bubbleView addGestureRecognizer:bubbleLongPressGesture];
     
-    UITapGestureRecognizer *avatarTapGestrure = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(avatarTapAction:)];
-    [_avatarView addGestureRecognizer:avatarTapGestrure];
+    UITapGestureRecognizer *avatarTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(avatarTapAction:)];
+    [_avatarView addGestureRecognizer:avatarTapGesture];
+    
+    UILongPressGestureRecognizer *avatarLongPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(avatarLongPressAction:)];
+    [_avatarView addGestureRecognizer:avatarLongPressGesture];
 }
 
 - (void)addNotification
@@ -159,20 +165,34 @@
 
 
 #pragma mark Gesture Actions
+- (void)bubbleTapAction:(UITapGestureRecognizer *)gesture
+{
+    //overwrite by subClass
+}
+
 - (void)avatarTapAction:(UITapGestureRecognizer *)gesture
 {
     NSLog(@"Avatar View Tap....");
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCAvatarTapEvent layout:_layout object:nil];
+    }
 }
 
 - (void)bubbleLongPressAction:(UILongPressGestureRecognizer *)gesture
 {
+    NSLog(@"Bubble Long Press....");
     [self becomeFirstResponder];
     if (gesture.state == UIGestureRecognizerStateBegan) {
+        UIMenuItem *itemStick = [[UIMenuItem alloc] initWithTitle:@"置顶" action:@selector(stickPush)];
         UIMenuItem *itemCopy = [[UIMenuItem alloc] initWithTitle:@"复制" action:@selector(copyContent)];
+        UIMenuItem *itemForward = [[UIMenuItem alloc] initWithTitle:@"转发" action:@selector(forward)];
+        UIMenuItem *itemFavorite = [[UIMenuItem alloc] initWithTitle:@"收藏" action:@selector(favorite)];
+        UIMenuItem *itemRevoke = [[UIMenuItem alloc] initWithTitle:@"撤回" action:@selector(revoke)];
+        UIMenuItem *itemDelete = [[UIMenuItem alloc] initWithTitle:@"删除" action:@selector(delete)];
         UIMenuItem *itemMore = [[UIMenuItem alloc] initWithTitle:@"更多..." action:@selector(more)];
-        
+
         NSMutableArray *itemArr = [NSMutableArray array];
-        [itemArr addObjectsFromArray:@[itemCopy, itemMore]];
+        [itemArr addObjectsFromArray:@[itemStick, itemCopy, itemForward, itemFavorite, itemRevoke, itemDelete, itemMore]];
         UIMenuController * menuController = [UIMenuController sharedMenuController];
         
         [menuController setMenuItems:itemArr.copy];
@@ -185,6 +205,15 @@
     }
 }
 
+- (void)avatarLongPressAction:(UILongPressGestureRecognizer *)gesture
+{
+    NSLog(@"Avatar Long Press...");
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+            [self.delegate receiveViewEvent:PCAvatarLongPressEvent layout:_layout object:nil];
+        }
+    }
+}
 
 #pragma mark MenuController Method
 - (BOOL)canBecomeFirstResponder
@@ -194,17 +223,62 @@
 
 - (void)copyContent
 {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCMenuCopyEvent layout:self.layout object:nil];
+    }
+}
+
+- (void)forward
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCMenuForwardEvent layout:self.layout object:nil];
+    }
 }
 
 - (void)more
 {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCMenuMoreEvent layout:self.layout object:nil];
+    }
 }
 
+- (void)revoke
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCMenuRevokeEvent layout:self.layout object:nil];
+    }
+}
+
+- (void)delete
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCMenuDeleteEvent layout:self.layout object:nil];
+    }
+}
+
+- (void)favorite
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCMenuFavoriteEvent layout:self.layout object:nil];
+    }
+}
+
+- (void)stickPush
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCMenuStickEvent layout:self.layout object:nil];
+    }
+}
+
+#pragma mark PCMessageCellProtocol
 - (void)setupLayout:(PCMessageLayout *)layout;
 {
     [self setLayout:layout];
+}
+
+- (void)setDelegate:(id)delegate
+{
+    _delegate = delegate;
 }
 
 @end

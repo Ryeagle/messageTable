@@ -6,10 +6,12 @@
 //  Copyright © 2017年 Ryeagle. All rights reserved.
 //
 
-@interface PCMessageCell : UITableViewCell
+@interface PCMessageCell : UITableViewCell<PCMessageCellProtocol>
 
 @property (nonatomic, strong) UIView<PCMessageCellProtocol> *boundsView;
 
 @property (nonatomic, strong) PCMessageLayout *layout;
+
+@property (nonatomic, weak) id<PCMessageCellProtocol> delegate;
 
 @end

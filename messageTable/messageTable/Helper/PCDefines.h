@@ -9,6 +9,20 @@
 #ifndef PCDefines_h
 #define PCDefines_h
 
+#undef	AS_SINGLETON
+#define AS_SINGLETON( __class ) \
++ (__class *)sharedInstance;
+
+#undef	DEF_SINGLETON
+#define DEF_SINGLETON( __class ) \
++ (__class *)sharedInstance \
+{ \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once( &once, ^{ __singleton__ = [[self alloc] init]; } ); \
+return __singleton__; \
+}
+
 //屏幕宽度
 #define SCREEN_WIDTH ([[UIScreen mainScreen]bounds].size.width)
 //屏幕高度

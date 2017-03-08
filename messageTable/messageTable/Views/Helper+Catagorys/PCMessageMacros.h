@@ -57,6 +57,8 @@
 #define PCMessageTimeInnerTopPadding                3.5
 #define PCMessageTimeBottomPadding                  10
 
+#define PCMessageTimeViewHeight                     31
+
 //姓名
 #define PCMessageNameHeight                         (PCMessageNameLabelHeight + 2 * PCMessageNameInnderPadding)
 #define PCMessageNameLeftPaddding                   (PCMessageBubbleAvatarPadding + PCMessageBubbleAngleWidth)
@@ -181,5 +183,33 @@
 #define EMAILREGULAR @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
 #define ADRESSREGULAR @"\\d+\\.\\d+\\.\\d+\\.\\d+"
 
-
+//TO Add
+static NSString *PCPhotoMessageTapEvent = @"PCPhotoMessageTapEvent";
+static NSString *PCResendTapEvent = @"PCResendTapEvent";
+static NSString *PCCombinationMessageTapEvent = @"PCCombinationMessageTapEvent";
+static NSString *PCMenuMoreEvent = @"PCMenuMoreEvent";
+static NSString *PCMenuDeleteEvent = @"PCMenuDeleteEvent";
+static NSString *PCMenuRevokeEvent = @"PCMenuRevokeEvent";
+static NSString *PCMenuForwardEvent = @"PCMenuForwardEvent";
+static NSString *PCMenuFavoriteEvent = @"PCMenuFavoriteEvent";
+static NSString *PCMenuStickEvent = @"PCMenuStickEvent";
+static NSString *PCMenuCopyEvent = @"PCMenuCopyEvent";
+//Added
+static NSString *PCWalletDetailTapEvent = @"PCWalletDetailTapEvent";
+static NSString *PCAvatarLongPressEvent = @"PCAvatarLongPressEvent";
+static NSString *PCContentLongPressEvent = @"PCContentLongPressEvent";
+static NSString *PCAvatarTapEvent = @"PCAvatarTapEvent";
+static NSString *PCFriendCardTapEvent = @"PCFriendCardTapEvent";
+static NSString *PCChannelInviteTapEvent = @"PCChannelInviteTapEvent";
+static NSString *PCMyCardsTapEvent = @"PCMyCardsTapEvent";
+static NSString *PCBubbleDoubleTapEvent = @"PCBubbleDoubleTapEvent";
+static NSString *PCWebLinkTapEvent = @"PCWebLinkTapEvent";
+static NSString *PCFriendVerifyTapEvent = @"PCFriendVerifyTapEvent";
+static NSString *PCURLStringTapEvent = @"PCURLStringTapEvent";
+static NSString *PCPhoneNumberStringTapEvent = @"PCPhoneNumberStringTapEvent";
+static NSString *PCEmailStringTapEvent = @"PCEmailStringTapEvent";
+static NSString *PCAdressStringTapEvent = @"PCAdressStringTapEvent";
+//Unuesed
+static NSString *PCChannelApplyTapEvent = @"PCChannelApplyTapEvent";
+static NSString *PCAddFriendPhoneTapEvent = @"PCAddFriendPhoneTapEvent";
 #endif /* PCMessageMacros_h */

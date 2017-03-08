@@ -92,12 +92,12 @@
         for(NSString* expression in @[URLLINKREGULAR, PHONEREGULAR, EMAILREGULAR, ADRESSREGULAR]) {
             NSArray* matches = [[NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionDotMatchesLineSeparators error:nil] matchesInString:string options:0 range:range];
             for(NSTextCheckingResult* match in matches) {
-                [self setHighlightInfo:@{@"String...." : @"Fuck The World"} withRange:match.range toText:textStr fillColor:UIColorHex(EBEEF0) highlightColor:UIColorHex(1A91DA)];
+                [self setHighlightInfo:@{@"PCMessageText" : expression} withRange:match.range toText:textStr fillColor:UIColorHex(EBEEF0) highlightColor:UIColorHex(1A91DA)];
             }
         }
     } else if (messageModel.media_type == PCMessageMediaTypeFriendVerify) {
         NSRange range = [textStr.string rangeOfString:@" 发送朋友验证"];
-        [self setHighlightInfo:@{@"String...." : @"Fuck The World"} withRange:range toText:textStr fillColor:UIColorHex(EBEEF0) highlightColor:UIColorHex(1A91DA)];
+        [self setHighlightInfo:@{@"PCMessageFriendVerify" : @"PCMessageFriendVerify"} withRange:range toText:textStr fillColor:UIColorHex(EBEEF0) highlightColor:UIColorHex(1A91DA)];
     }
     
     return textStr;

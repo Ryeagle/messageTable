@@ -107,9 +107,18 @@
         _arrowView = [UIImageView new];
         [self.bubbleView addSubview:_arrowView];
 
+        [self addGesture];
     }
     
     return self;
+}
+
+- (void)addGesture
+{
+    self.bubbleView.userInteractionEnabled = YES;
+
+    UITapGestureRecognizer *walletTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(walletTapAction:)];
+    [self.bubbleView addGestureRecognizer:walletTapGesture];
 }
 
 - (void)setLayout:(PCMessageLayout *)layout
@@ -120,6 +129,7 @@
     
     self.bubbleView.frame = CGRectMake(layout.contentViewLeft, layout.contentViewTop, layout.contentViewWidth, layout.contentViewHeight);
     self.bubbleView.image = [PCMessageHelper resizableImageWithName:@"photoText_msg_bg"];
+    self.bubbleView.highlightedImage = [PCMessageHelper resizableImageWithName:@"photoText_msg_bg_pressed"];
     
     PCWalletType walletType = messageModel.walletType;
     
@@ -187,5 +197,21 @@
 
 }
 
+#pragma mark Gesture Action
+- (void)walletTapAction:(UITapGestureRecognizer *)gesture
+{
+    NSLog(@"Wallet Detail Message Tap...");
+    
+    self.bubbleView.highlighted = YES;
+    
+    __weak typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        weakSelf.bubbleView.highlighted = NO;
+    });
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCWalletDetailTapEvent layout:self.layout object:nil];
+    }
+}
 
 @end

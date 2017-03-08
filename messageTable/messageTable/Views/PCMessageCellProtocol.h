@@ -9,8 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @class PCMessageLayout;
+@class PCMessageCell;
 @protocol PCMessageCellProtocol <NSObject>
+
+@optional
 
 - (void)setupLayout:(PCMessageLayout *)layout;
 
+- (void)setDelegate:(id)delegate;
+
+- (void)receiveViewEvent:(NSString *)eventPath layout:(PCMessageLayout *)layout object:(id)object;
+
+- (void)receiveCellEvent:(NSString *)eventPaht cell:(PCMessageCell *)cell object:(id)object;
 @end

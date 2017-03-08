@@ -21,8 +21,28 @@
         _textLabel.ignoreCommonProperties = YES;
         _textLabel.fadeOnHighlight = NO;
         _textLabel.fadeOnAsynchronouslyDisplay = NO;
+        
+        __weak typeof(self) weakSelf = self;
+
         _textLabel.highlightTapAction =  ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
-            NSLog(@"点击了:%@", [text.string substringWithRange:range]);
+            YYTextHighlight *highlight = [weakSelf.textLabel.textLayout.text attribute:YYTextHighlightAttributeName atIndex:range.location];
+            NSDictionary *info = highlight.userInfo;
+            
+            NSString *eventStr = nil;
+            if ([[info objectForKey:@"PCMessageText"] isEqualToString:URLLINKREGULAR]) {
+                eventStr = PCURLStringTapEvent;
+            } else if ([[info objectForKey:@"PCMessageText"] isEqualToString:PHONEREGULAR]) {
+                eventStr = PCPhoneNumberStringTapEvent;
+            } else if ([[info objectForKey:@"PCMessageText"] isEqualToString:EMAILREGULAR]) {
+                eventStr = PCEmailStringTapEvent;
+            } else {
+                eventStr = PCAdressStringTapEvent;
+            }
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+                [weakSelf.delegate receiveViewEvent:eventStr layout:weakSelf.layout object:text.string];
+            }
+            NSLog(@"%@点击了:%@", eventStr, [text.string substringWithRange:range]);
         };
 
         [self.bubbleView addSubview:_textLabel];
@@ -38,6 +58,7 @@
     UITapGestureRecognizer *doubleTapGesuture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textDoubleTapGesture:)];
     doubleTapGesuture.numberOfTapsRequired = 2;
     [_textLabel addGestureRecognizer:doubleTapGesuture];
+    [self.bubbleView removeGestureRecognizer:self.bubbleTapGesture];
 }
 
 #pragma mark SetLayout
@@ -57,6 +78,9 @@
 - (void)textDoubleTapGesture:(UIGestureRecognizer *)gesture
 {
     NSLog(@"Double Tap of Text Message");
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCBubbleDoubleTapEvent layout:self.layout object:nil];
+    }
 }
 
 @end

@@ -60,6 +60,7 @@
         _boundsView = [[PCMessageTextView alloc] init];
     }
     
+    [_boundsView setDelegate:self];
     [self.contentView addSubview:_boundsView];
 }
 
@@ -67,5 +68,12 @@
 {
     _layout = layout;
     [_boundsView setupLayout:layout];
+}
+
+- (void)receiveViewEvent:(NSString *)eventPath layout:(PCMessageLayout *)layout object:(id)object
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveCellEvent:cell:object:)]) {
+        [self.delegate receiveCellEvent:eventPath cell:self object:object];
+    }
 }
 @end

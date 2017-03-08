@@ -22,6 +22,13 @@
         _verifyTextLabel.fadeOnHighlight = NO;
         _verifyTextLabel.fadeOnAsynchronouslyDisplay = NO;
         
+        __weak typeof(self) weakSelf = self;
+        _verifyTextLabel.highlightTapAction =  ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+                [weakSelf.delegate receiveViewEvent:PCFriendVerifyTapEvent layout:weakSelf.layout object:text.string];
+            }
+            NSLog(@"%@点击了:%@", PCFriendVerifyTapEvent, [text.string substringWithRange:range]);
+        };
         self.bubbleView.userInteractionEnabled = YES;
         [self.bubbleView addSubview:_verifyTextLabel];
     }

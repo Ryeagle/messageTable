@@ -56,5 +56,21 @@
     _infoLabel.textLayout = inviteLayout.infoTextLayout;
 }
 
+#pragma mark Gesture Action
+- (void)bubbleTapAction:(UITapGestureRecognizer *)gesture
+{
+    self.bubbleView.highlighted = YES;
+    
+    __weak typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        weakSelf.bubbleView.highlighted = NO;
+    });
+    
+    NSLog(@"Invite Mesage Tap...");
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCChannelInviteTapEvent layout:self.layout object:nil];
+    }
+}
 
 @end

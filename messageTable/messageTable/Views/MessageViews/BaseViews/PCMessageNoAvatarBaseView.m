@@ -48,8 +48,14 @@
     self.frame = CGRectMake(0, 0, SCREEN_WIDTH, layout.height);
 }
 
+#pragma mark PCMessageCellProtocol
 - (void)setupLayout:(PCMessageLayout *)layout;
 {
     [self setLayout:layout];
+}
+
+- (void)setDelegate:(id)delegate
+{
+    _delegate = delegate;
 }
 @end

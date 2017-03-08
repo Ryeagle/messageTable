@@ -15,4 +15,7 @@
 @property (nonatomic, strong) UIImageView *avatarView;
 @property (nonatomic, strong) PCMessageAvatarBubble *bubbleView;
 @property (nonatomic, strong) PCMessageLayout *layout;
+@property (nonatomic, weak) id<PCMessageCellProtocol> delegate;
+
+@property (nonatomic, strong) UITapGestureRecognizer *bubbleTapGesture;
 @end
