@@ -17,7 +17,9 @@
     if (self) {
         _photoBubbleView = [PCMessagePhotoBubble new];
         _photoBubbleView.backgroundColor = AppBgColor;
-        [self addSubview:_photoBubbleView];
+        
+        
+        [self.bubbleView addSubview:_photoBubbleView];
 
     }
     
@@ -29,7 +31,7 @@
     [super setLayout:layout];
     PCMessagePhotoViewLayout *photoViewLayout = (PCMessagePhotoViewLayout *)layout.contentLayout;
     
-    self.photoBubbleView.frame = CGRectMake(layout.contentViewLeft, self.nameView.hidden ? layout.contentViewTop : layout.contentViewTop + layout.nameViewLayout.viewHeight, layout.contentViewWidth, layout.contentViewHeight);
+    self.photoBubbleView.frame = CGRectMake(photoViewLayout.photoBubbleLeft, photoViewLayout.photoBubbleTop, layout.contentViewWidth, layout.contentViewHeight);
     self.photoBubbleView.type = photoViewLayout.photoBubbleType;
     
     NSString *urlStr = layout.messageModel.content;
@@ -84,4 +86,21 @@
     }
 }
 
+
+#pragma mark Gesture Action
+- (void)bubbleTapAction:(UITapGestureRecognizer *)gesture
+{
+    self.bubbleView.highlighted = YES;
+    
+    __weak typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        weakSelf.bubbleView.highlighted = NO;
+    });
+    
+    NSLog(@"Photo Message Tap...");
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(receiveViewEvent:layout:object:)]) {
+        [self.delegate receiveViewEvent:PCPhotoMessageTapEvent layout:self.layout object:nil];
+    }
+}
 @end

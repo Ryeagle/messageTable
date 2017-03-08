@@ -67,9 +67,9 @@ PCTextMessageBackgroundImageDef(senderLinkHighlightImage, false, @"Chat_link_sen
             
         default:
             if (messageModel.message_bubble_type == PCMessageBubbleTypeSending) {
-                return PCMessageAvatarBubbleTypeTextSender;
+                return PCMessageAvatarBubbleTypeUnknown;
             } else {
-                return PCMessageAvatarBubbleTypeTextReceiver;
+                return PCMessageAvatarBubbleTypeUnknown;
             }
             break;
     }

@@ -187,6 +187,7 @@
 static NSString *PCPhotoMessageTapEvent = @"PCPhotoMessageTapEvent";
 static NSString *PCResendTapEvent = @"PCResendTapEvent";
 static NSString *PCCombinationMessageTapEvent = @"PCCombinationMessageTapEvent";
+//Added
 static NSString *PCMenuMoreEvent = @"PCMenuMoreEvent";
 static NSString *PCMenuDeleteEvent = @"PCMenuDeleteEvent";
 static NSString *PCMenuRevokeEvent = @"PCMenuRevokeEvent";
@@ -194,7 +195,6 @@ static NSString *PCMenuForwardEvent = @"PCMenuForwardEvent";
 static NSString *PCMenuFavoriteEvent = @"PCMenuFavoriteEvent";
 static NSString *PCMenuStickEvent = @"PCMenuStickEvent";
 static NSString *PCMenuCopyEvent = @"PCMenuCopyEvent";
-//Added
 static NSString *PCWalletDetailTapEvent = @"PCWalletDetailTapEvent";
 static NSString *PCAvatarLongPressEvent = @"PCAvatarLongPressEvent";
 static NSString *PCContentLongPressEvent = @"PCContentLongPressEvent";
