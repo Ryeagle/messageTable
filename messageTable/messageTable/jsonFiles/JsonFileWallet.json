@@ -1,0 +1,134 @@
+{
+  "result" : [
+    {
+        "content" : "",
+        "id" : "5863b65f80d4f90001560475",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2016-12-28T12:55:59.000Z",
+        "seq" : 140,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2016-12-28T12:55:59.000Z",
+        "extend" : {
+            "amount" : 20000,
+            "order_id" : "148289602966610000005385",
+            "records_id" : 1731,
+            "time" : 1482896033,
+            "type" : 1
+        },
+        "tseq" : "14829297592350701624015",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "586b7d8a0c750f035ca6bd40",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2017-01-03T10:31:38.000Z",
+        "seq" : 142,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2017-01-03T10:31:38.000Z",
+        "extend" : {
+        "amount" : 20,
+        "order_id" : "148343948762310000005690",
+        "records_id" : 1817,
+        "time" : 1483439491,
+        "type" : 2
+        },
+        "tseq" : "14834394981686943117103",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58708e9f0c750f74c1a496fa",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2017-01-07T06:45:51.000Z",
+        "seq" : 144,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2017-01-07T06:45:51.000Z",
+        "extend" : {
+        "amount" : 4,
+        "order_id" : "148377154578410000006080",
+        "product_name" : "与君歌一曲请君为我而倾耳听钟鼓馔玉不足贵",
+        "time" : 1483771545,
+        "pay_method" : "钱包余额",
+        "records_id" : 1931,
+        "type" : 3,
+        "pay_target" : "新生大学团队"
+        },
+        "tseq" : "14837715510535721712116",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58708e9f0c750f74c1a496fa",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2017-01-07T06:45:51.000Z",
+        "seq" : 144,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2017-01-07T06:45:51.000Z",
+        "extend" : {
+            "amount" : 4,
+            "order_id" : "148377154578410000006080",
+            "product_name" : "晚来天欲雪能饮一杯无",
+            "time" : 1483771545,
+            "pay_method" : "钱包余额",
+            "records_id" : 1931,
+            "type" : 4,
+            "pay_target" : "新生大学团队"
+        },
+        "tseq" : "14837715510535721712116",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58708e9f0c750f74c1a496fa",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2017-01-07T06:45:51.000Z",
+        "seq" : 144,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2017-01-07T06:45:51.000Z",
+        "extend" : {
+              "amount" : 20000,
+              "order_id" : "148289602966610000005385",
+              "records_id" : 1731,
+              "time" : 1482896033,
+              "type" : 5
+        },
+        "tseq" : "14837715510535721712116",
+        "chat_type" : 0
+    }
+  ],
+  "server_status" : [
+
+  ],
+  "code" : 1
+}

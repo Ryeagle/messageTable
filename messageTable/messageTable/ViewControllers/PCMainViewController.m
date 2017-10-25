@@ -40,8 +40,7 @@
 
 - (void)setupChatArray
 {
-    _chatArray = [NSMutableArray array];
-    [_chatArray addObject:@"猴子的花果山🐒"];
+    _chatArray = @[@"猴子的花果山🐒", @"猴子的水帘洞🐵", @"猴子的蟠桃园🍑"].mutableCopy;
 }
 
 #pragma mark UITableViewDelegate & UITableViewDataSource
@@ -73,11 +72,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        PCChatViewController *chatViewController = [[PCChatViewController alloc] init];
-        
-        [self.navigationController pushViewController:chatViewController animated:YES];
-    }
+    PCChatViewController *chatViewController = [[PCChatViewController alloc] init];
+    
+    //汉字变量😀...
+    NSString *猴子 = _chatArray[indexPath.row];
+    chatViewController.猴子 = 猴子;
+    [self.navigationController pushViewController:chatViewController animated:YES];
     
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

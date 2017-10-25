@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7509BDEC1E6D44830026C7E4 /* JsonFileWallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 7509BDEB1E6D44830026C7E4 /* JsonFileWallet.json */; };
+		7509BDEF1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7509BDEE1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m */; };
+		7509BDF21E6D55A80026C7E4 /* UIImage+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 7509BDF11E6D55A80026C7E4 /* UIImage+T8.m */; };
 		7537E1831E5EE7E600CDD21A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1821E5EE7E600CDD21A /* main.m */; };
 		7537E1861E5EE7E600CDD21A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1851E5EE7E600CDD21A /* AppDelegate.m */; };
 		7537E18E1E5EE7E600CDD21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7537E18D1E5EE7E600CDD21A /* Assets.xcassets */; };
@@ -17,10 +20,58 @@
 		7537E1AA1E5EE81E00CDD21A /* PCMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1A31E5EE81E00CDD21A /* PCMessageModel.m */; };
 		7537E1AE1E5EEF5900CDD21A /* PCChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1AD1E5EEF5900CDD21A /* PCChatViewController.m */; };
 		7537E1B11E5EF06F00CDD21A /* PCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1B01E5EF06F00CDD21A /* PCMainViewController.m */; };
+		7537E1B71E5FD45800CDD21A /* PCMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E1B61E5FD45800CDD21A /* PCMessageCell.m */; };
+		758465E41E667AB2001E8341 /* PCMessagePhotoBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 758465E31E667AB2001E8341 /* PCMessagePhotoBubble.m */; };
+		758465E71E6686A7001E8341 /* PCMessagePhotoViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758465E61E6686A7001E8341 /* PCMessagePhotoViewLayout.m */; };
+		758465EA1E668FD8001E8341 /* PCMessagePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758465E91E668FD8001E8341 /* PCMessagePhotoView.m */; };
+		758465ED1E669FB7001E8341 /* PCSetImageSizeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 758465EC1E669FB7001E8341 /* PCSetImageSizeManager.m */; };
+		758465F31E66B6A8001E8341 /* PCMessageNameViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758465F01E66B6A8001E8341 /* PCMessageNameViewLayout.m */; };
+		758465F41E66B6A8001E8341 /* PCMessageTimeViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758465F21E66B6A8001E8341 /* PCMessageTimeViewLayout.m */; };
+		758465F61E66BA52001E8341 /* JsonFilePhoto.json in Resources */ = {isa = PBXBuildFile; fileRef = 758465F51E66BA52001E8341 /* JsonFilePhoto.json */; };
+		758466061E66D097001E8341 /* PCMessageServiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466051E66D097001E8341 /* PCMessageServiceView.m */; };
+		758466091E66E19D001E8341 /* PCMessageServiceLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466081E66E19D001E8341 /* PCMessageServiceLayout.m */; };
+		7584660B1E67B6B4001E8341 /* JsonFileText.json in Resources */ = {isa = PBXBuildFile; fileRef = 7584660A1E67B6B4001E8341 /* JsonFileText.json */; };
+		7584660E1E67BE39001E8341 /* PCMessageFriendVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584660D1E67BE39001E8341 /* PCMessageFriendVerifyView.m */; };
+		758466111E67BEC4001E8341 /* PCMessageFriendVerifyLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466101E67BEC4001E8341 /* PCMessageFriendVerifyLayout.m */; };
+		758466391E680CC3001E8341 /* JsonFileMyCard.json in Resources */ = {isa = PBXBuildFile; fileRef = 758466381E680CC3001E8341 /* JsonFileMyCard.json */; };
+		7584663B1E680D96001E8341 /* JsonFileFriendCard.json in Resources */ = {isa = PBXBuildFile; fileRef = 7584663A1E680D96001E8341 /* JsonFileFriendCard.json */; };
+		7584663D1E680EB0001E8341 /* JsonFileInvite.json in Resources */ = {isa = PBXBuildFile; fileRef = 7584663C1E680EAF001E8341 /* JsonFileInvite.json */; };
+		758466401E68107E001E8341 /* PCMessageInviteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584663F1E68107E001E8341 /* PCMessageInviteView.m */; };
+		758466431E681BDC001E8341 /* PCMessageInviteLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466421E681BDC001E8341 /* PCMessageInviteLayout.m */; };
+		758466461E6829C4001E8341 /* PCMessageWebLinkLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466451E6829C4001E8341 /* PCMessageWebLinkLayout.m */; };
+		758466491E682A27001E8341 /* PCMessageWalletAssistantLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466481E682A27001E8341 /* PCMessageWalletAssistantLayout.m */; };
+		7584664C1E682A53001E8341 /* PCMessagePhotoTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584664B1E682A53001E8341 /* PCMessagePhotoTextLayout.m */; };
+		7584664F1E682ABB001E8341 /* PCMessageRenderLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584664E1E682ABB001E8341 /* PCMessageRenderLayout.m */; };
+		758466521E682B0E001E8341 /* PCMessageCombinationLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466511E682B0E001E8341 /* PCMessageCombinationLayout.m */; };
+		758466581E682B58001E8341 /* PCMessageAudioLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466571E682B58001E8341 /* PCMessageAudioLayout.m */; };
+		7584665B1E682B8D001E8341 /* PCMessageMyCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584665A1E682B8D001E8341 /* PCMessageMyCardLayout.m */; };
+		7584665E1E682BB9001E8341 /* PCMessageFriendCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584665D1E682BB9001E8341 /* PCMessageFriendCardLayout.m */; };
+		758466621E69163F001E8341 /* JsonFileWebLink.json in Resources */ = {isa = PBXBuildFile; fileRef = 758466611E69163F001E8341 /* JsonFileWebLink.json */; };
+		758466651E6916CA001E8341 /* PCMessageWebLinkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466641E6916CA001E8341 /* PCMessageWebLinkView.m */; };
+		758466671E692A9A001E8341 /* JsonFileUnknown.json in Resources */ = {isa = PBXBuildFile; fileRef = 758466661E692A9A001E8341 /* JsonFileUnknown.json */; };
+		7584666A1E693EE2001E8341 /* PCMessageMyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466691E693EE2001E8341 /* PCMessageMyCardView.m */; };
+		7584666D1E693EF3001E8341 /* PCMessageFriendCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584666C1E693EF3001E8341 /* PCMessageFriendCardView.m */; };
+		758466841E6956F0001E8341 /* PCMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466801E6956F0001E8341 /* PCMessageHelper.m */; };
+		758466881E6957A5001E8341 /* UIImage+PCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 758466871E6957A5001E8341 /* UIImage+PCMessage.m */; };
+		759DB00C1E63CBCB0045567D /* PCMessageLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB00B1E63CBCB0045567D /* PCMessageLayout.m */; };
+		759DB0111E63FBF40045567D /* NSDate+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB00E1E63FBF40045567D /* NSDate+T8.m */; };
+		759DB0121E63FBF40045567D /* NSDateFormatter+T8.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0101E63FBF40045567D /* NSDateFormatter+T8.m */; };
+		759DB0201E6537270045567D /* PCMessageTextViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB01F1E6537270045567D /* PCMessageTextViewLayout.m */; };
+		759DB0271E653AD50045567D /* PCMessageAvatarBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0261E653AD50045567D /* PCMessageAvatarBubble.m */; };
+		759DB02A1E653BCD0045567D /* PCMessageTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0291E653BCD0045567D /* PCMessageTimeView.m */; };
+		759DB02E1E653CB00045567D /* PCMessageNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB02D1E653CB00045567D /* PCMessageNameView.m */; };
+		759DB0311E653F8F0045567D /* PCMessageNoAvatarBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0301E653F8F0045567D /* PCMessageNoAvatarBaseView.m */; };
+		759DB0371E653FD40045567D /* PCMessageAvatarBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0361E653FD40045567D /* PCMessageAvatarBaseView.m */; };
+		759DB03A1E65404E0045567D /* PCMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759DB0391E65404E0045567D /* PCMessageTextView.m */; };
 		B65900405FD8E268D5CBB53E /* libPods-messageTable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C358F32768BC5905385D0184 /* libPods-messageTable.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7509BDEB1E6D44830026C7E4 /* JsonFileWallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFileWallet.json; sourceTree = "<group>"; };
+		7509BDED1E6D44D30026C7E4 /* PCMessageWalletAssistantView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageWalletAssistantView.h; sourceTree = "<group>"; };
+		7509BDEE1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageWalletAssistantView.m; sourceTree = "<group>"; };
+		7509BDF01E6D55A80026C7E4 /* UIImage+T8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+T8.h"; sourceTree = "<group>"; };
+		7509BDF11E6D55A80026C7E4 /* UIImage+T8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+T8.m"; sourceTree = "<group>"; };
 		7537E17E1E5EE7E600CDD21A /* messageTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = messageTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7537E1821E5EE7E600CDD21A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7537E1841E5EE7E600CDD21A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,6 +92,88 @@
 		7537E1AD1E5EEF5900CDD21A /* PCChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCChatViewController.m; sourceTree = "<group>"; };
 		7537E1AF1E5EF06F00CDD21A /* PCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMainViewController.h; sourceTree = "<group>"; };
 		7537E1B01E5EF06F00CDD21A /* PCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMainViewController.m; sourceTree = "<group>"; };
+		7537E1B51E5FD45800CDD21A /* PCMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageCell.h; sourceTree = "<group>"; };
+		7537E1B61E5FD45800CDD21A /* PCMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageCell.m; sourceTree = "<group>"; };
+		7537E1CA1E60409D00CDD21A /* PCDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCDefines.h; sourceTree = "<group>"; };
+		758465E21E667AB2001E8341 /* PCMessagePhotoBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessagePhotoBubble.h; sourceTree = "<group>"; };
+		758465E31E667AB2001E8341 /* PCMessagePhotoBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessagePhotoBubble.m; sourceTree = "<group>"; };
+		758465E51E6686A7001E8341 /* PCMessagePhotoViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessagePhotoViewLayout.h; sourceTree = "<group>"; };
+		758465E61E6686A7001E8341 /* PCMessagePhotoViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessagePhotoViewLayout.m; sourceTree = "<group>"; };
+		758465E81E668FD8001E8341 /* PCMessagePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessagePhotoView.h; sourceTree = "<group>"; };
+		758465E91E668FD8001E8341 /* PCMessagePhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessagePhotoView.m; sourceTree = "<group>"; };
+		758465EB1E669FB7001E8341 /* PCSetImageSizeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCSetImageSizeManager.h; sourceTree = "<group>"; };
+		758465EC1E669FB7001E8341 /* PCSetImageSizeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSetImageSizeManager.m; sourceTree = "<group>"; };
+		758465EF1E66B6A8001E8341 /* PCMessageNameViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageNameViewLayout.h; sourceTree = "<group>"; };
+		758465F01E66B6A8001E8341 /* PCMessageNameViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageNameViewLayout.m; sourceTree = "<group>"; };
+		758465F11E66B6A8001E8341 /* PCMessageTimeViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageTimeViewLayout.h; sourceTree = "<group>"; };
+		758465F21E66B6A8001E8341 /* PCMessageTimeViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageTimeViewLayout.m; sourceTree = "<group>"; };
+		758465F51E66BA52001E8341 /* JsonFilePhoto.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFilePhoto.json; sourceTree = "<group>"; };
+		758466041E66D097001E8341 /* PCMessageServiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageServiceView.h; sourceTree = "<group>"; };
+		758466051E66D097001E8341 /* PCMessageServiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageServiceView.m; sourceTree = "<group>"; };
+		758466071E66E19D001E8341 /* PCMessageServiceLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageServiceLayout.h; sourceTree = "<group>"; };
+		758466081E66E19D001E8341 /* PCMessageServiceLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageServiceLayout.m; sourceTree = "<group>"; };
+		7584660A1E67B6B4001E8341 /* JsonFileText.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFileText.json; sourceTree = "<group>"; };
+		7584660C1E67BE39001E8341 /* PCMessageFriendVerifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageFriendVerifyView.h; sourceTree = "<group>"; };
+		7584660D1E67BE39001E8341 /* PCMessageFriendVerifyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageFriendVerifyView.m; sourceTree = "<group>"; };
+		7584660F1E67BEC4001E8341 /* PCMessageFriendVerifyLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageFriendVerifyLayout.h; sourceTree = "<group>"; };
+		758466101E67BEC4001E8341 /* PCMessageFriendVerifyLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageFriendVerifyLayout.m; sourceTree = "<group>"; };
+		758466381E680CC3001E8341 /* JsonFileMyCard.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFileMyCard.json; sourceTree = "<group>"; };
+		7584663A1E680D96001E8341 /* JsonFileFriendCard.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFileFriendCard.json; sourceTree = "<group>"; };
+		7584663C1E680EAF001E8341 /* JsonFileInvite.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFileInvite.json; sourceTree = "<group>"; };
+		7584663E1E68107E001E8341 /* PCMessageInviteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageInviteView.h; sourceTree = "<group>"; };
+		7584663F1E68107E001E8341 /* PCMessageInviteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageInviteView.m; sourceTree = "<group>"; };
+		758466411E681BDC001E8341 /* PCMessageInviteLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageInviteLayout.h; sourceTree = "<group>"; };
+		758466421E681BDC001E8341 /* PCMessageInviteLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageInviteLayout.m; sourceTree = "<group>"; };
+		758466441E6829C4001E8341 /* PCMessageWebLinkLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageWebLinkLayout.h; sourceTree = "<group>"; };
+		758466451E6829C4001E8341 /* PCMessageWebLinkLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageWebLinkLayout.m; sourceTree = "<group>"; };
+		758466471E682A27001E8341 /* PCMessageWalletAssistantLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageWalletAssistantLayout.h; sourceTree = "<group>"; };
+		758466481E682A27001E8341 /* PCMessageWalletAssistantLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageWalletAssistantLayout.m; sourceTree = "<group>"; };
+		7584664A1E682A53001E8341 /* PCMessagePhotoTextLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessagePhotoTextLayout.h; sourceTree = "<group>"; };
+		7584664B1E682A53001E8341 /* PCMessagePhotoTextLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessagePhotoTextLayout.m; sourceTree = "<group>"; };
+		7584664D1E682ABB001E8341 /* PCMessageRenderLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageRenderLayout.h; sourceTree = "<group>"; };
+		7584664E1E682ABB001E8341 /* PCMessageRenderLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageRenderLayout.m; sourceTree = "<group>"; };
+		758466501E682B0E001E8341 /* PCMessageCombinationLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageCombinationLayout.h; sourceTree = "<group>"; };
+		758466511E682B0E001E8341 /* PCMessageCombinationLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageCombinationLayout.m; sourceTree = "<group>"; };
+		758466561E682B58001E8341 /* PCMessageAudioLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageAudioLayout.h; sourceTree = "<group>"; };
+		758466571E682B58001E8341 /* PCMessageAudioLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageAudioLayout.m; sourceTree = "<group>"; };
+		758466591E682B8D001E8341 /* PCMessageMyCardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageMyCardLayout.h; sourceTree = "<group>"; };
+		7584665A1E682B8D001E8341 /* PCMessageMyCardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageMyCardLayout.m; sourceTree = "<group>"; };
+		7584665C1E682BB9001E8341 /* PCMessageFriendCardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageFriendCardLayout.h; sourceTree = "<group>"; };
+		7584665D1E682BB9001E8341 /* PCMessageFriendCardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageFriendCardLayout.m; sourceTree = "<group>"; };
+		758466601E68FB0C001E8341 /* PCMessageCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageCellProtocol.h; sourceTree = "<group>"; };
+		758466611E69163F001E8341 /* JsonFileWebLink.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFileWebLink.json; sourceTree = "<group>"; };
+		758466631E6916CA001E8341 /* PCMessageWebLinkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageWebLinkView.h; sourceTree = "<group>"; };
+		758466641E6916CA001E8341 /* PCMessageWebLinkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageWebLinkView.m; sourceTree = "<group>"; };
+		758466661E692A9A001E8341 /* JsonFileUnknown.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonFileUnknown.json; sourceTree = "<group>"; };
+		758466681E693EE2001E8341 /* PCMessageMyCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageMyCardView.h; sourceTree = "<group>"; };
+		758466691E693EE2001E8341 /* PCMessageMyCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageMyCardView.m; sourceTree = "<group>"; };
+		7584666B1E693EF3001E8341 /* PCMessageFriendCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageFriendCardView.h; sourceTree = "<group>"; };
+		7584666C1E693EF3001E8341 /* PCMessageFriendCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageFriendCardView.m; sourceTree = "<group>"; };
+		7584667F1E6956F0001E8341 /* PCMessageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageHelper.h; sourceTree = "<group>"; };
+		758466801E6956F0001E8341 /* PCMessageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageHelper.m; sourceTree = "<group>"; };
+		758466811E6956F0001E8341 /* PCMessageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageMacros.h; sourceTree = "<group>"; };
+		758466861E6957A5001E8341 /* UIImage+PCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PCMessage.h"; sourceTree = "<group>"; };
+		758466871E6957A5001E8341 /* UIImage+PCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PCMessage.m"; sourceTree = "<group>"; };
+		759DB00A1E63CBCB0045567D /* PCMessageLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageLayout.h; sourceTree = "<group>"; };
+		759DB00B1E63CBCB0045567D /* PCMessageLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageLayout.m; sourceTree = "<group>"; };
+		759DB00D1E63FBF40045567D /* NSDate+T8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+T8.h"; sourceTree = "<group>"; };
+		759DB00E1E63FBF40045567D /* NSDate+T8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+T8.m"; sourceTree = "<group>"; };
+		759DB00F1E63FBF40045567D /* NSDateFormatter+T8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+T8.h"; sourceTree = "<group>"; };
+		759DB0101E63FBF40045567D /* NSDateFormatter+T8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+T8.m"; sourceTree = "<group>"; };
+		759DB01E1E6537270045567D /* PCMessageTextViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageTextViewLayout.h; sourceTree = "<group>"; };
+		759DB01F1E6537270045567D /* PCMessageTextViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageTextViewLayout.m; sourceTree = "<group>"; };
+		759DB0251E653AD50045567D /* PCMessageAvatarBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageAvatarBubble.h; sourceTree = "<group>"; };
+		759DB0261E653AD50045567D /* PCMessageAvatarBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageAvatarBubble.m; sourceTree = "<group>"; };
+		759DB0281E653BCD0045567D /* PCMessageTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageTimeView.h; sourceTree = "<group>"; };
+		759DB0291E653BCD0045567D /* PCMessageTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageTimeView.m; sourceTree = "<group>"; };
+		759DB02C1E653CB00045567D /* PCMessageNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageNameView.h; sourceTree = "<group>"; };
+		759DB02D1E653CB00045567D /* PCMessageNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageNameView.m; sourceTree = "<group>"; };
+		759DB02F1E653F8F0045567D /* PCMessageNoAvatarBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageNoAvatarBaseView.h; sourceTree = "<group>"; };
+		759DB0301E653F8F0045567D /* PCMessageNoAvatarBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageNoAvatarBaseView.m; sourceTree = "<group>"; };
+		759DB0351E653FD40045567D /* PCMessageAvatarBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageAvatarBaseView.h; sourceTree = "<group>"; };
+		759DB0361E653FD40045567D /* PCMessageAvatarBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageAvatarBaseView.m; sourceTree = "<group>"; };
+		759DB0381E65404E0045567D /* PCMessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMessageTextView.h; sourceTree = "<group>"; };
+		759DB0391E65404E0045567D /* PCMessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMessageTextView.m; sourceTree = "<group>"; };
 		79F3533901F069E52ED393CF /* Pods-messageTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messageTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-messageTable/Pods-messageTable.release.xcconfig"; sourceTree = "<group>"; };
 		ACA1CA7225731D40F2DC83C3 /* Pods-messageTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messageTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-messageTable/Pods-messageTable.debug.xcconfig"; sourceTree = "<group>"; };
 		C358F32768BC5905385D0184 /* libPods-messageTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-messageTable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,10 +224,10 @@
 				7537E1841E5EE7E600CDD21A /* AppDelegate.h */,
 				7537E1851E5EE7E600CDD21A /* AppDelegate.m */,
 				7537E1981E5EE81E00CDD21A /* jsonFiles */,
+				7537E1A51E5EE81E00CDD21A /* ViewControllers */,
 				7537E19A1E5EE81E00CDD21A /* Helper */,
 				7537E1A11E5EE81E00CDD21A /* Models */,
 				7537E1A41E5EE81E00CDD21A /* Views */,
-				7537E1A51E5EE81E00CDD21A /* ViewControllers */,
 				7537E1811E5EE7E600CDD21A /* Supporting Files */,
 			);
 			path = messageTable;
@@ -115,6 +248,14 @@
 			isa = PBXGroup;
 			children = (
 				7537E1991E5EE81E00CDD21A /* JsonFile.json */,
+				7509BDEB1E6D44830026C7E4 /* JsonFileWallet.json */,
+				7584660A1E67B6B4001E8341 /* JsonFileText.json */,
+				758465F51E66BA52001E8341 /* JsonFilePhoto.json */,
+				758466381E680CC3001E8341 /* JsonFileMyCard.json */,
+				7584663A1E680D96001E8341 /* JsonFileFriendCard.json */,
+				7584663C1E680EAF001E8341 /* JsonFileInvite.json */,
+				758466661E692A9A001E8341 /* JsonFileUnknown.json */,
+				758466611E69163F001E8341 /* JsonFileWebLink.json */,
 			);
 			path = jsonFiles;
 			sourceTree = "<group>";
@@ -122,12 +263,21 @@
 		7537E19A1E5EE81E00CDD21A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				7509BDF01E6D55A80026C7E4 /* UIImage+T8.h */,
+				7509BDF11E6D55A80026C7E4 /* UIImage+T8.m */,
+				758465EB1E669FB7001E8341 /* PCSetImageSizeManager.h */,
+				758465EC1E669FB7001E8341 /* PCSetImageSizeManager.m */,
+				759DB00D1E63FBF40045567D /* NSDate+T8.h */,
+				759DB00E1E63FBF40045567D /* NSDate+T8.m */,
+				759DB00F1E63FBF40045567D /* NSDateFormatter+T8.h */,
+				759DB0101E63FBF40045567D /* NSDateFormatter+T8.m */,
 				7537E19B1E5EE81E00CDD21A /* NSDictionary+PC.h */,
 				7537E19C1E5EE81E00CDD21A /* NSDictionary+PC.m */,
 				7537E19D1E5EE81E00CDD21A /* NSString+PC.h */,
 				7537E19E1E5EE81E00CDD21A /* NSString+PC.m */,
 				7537E19F1E5EE81E00CDD21A /* PCUserDefaultHelper.h */,
 				7537E1A01E5EE81E00CDD21A /* PCUserDefaultHelper.m */,
+				7537E1CA1E60409D00CDD21A /* PCDefines.h */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -144,6 +294,13 @@
 		7537E1A41E5EE81E00CDD21A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7584667E1E6956F0001E8341 /* Helper+Catagorys */,
+				7537E1C41E60351D00CDD21A /* MessageViews */,
+				759DB0241E653AAD0045567D /* ComponentViews */,
+				7537E1C31E6034DF00CDD21A /* Layouts */,
+				7537E1B51E5FD45800CDD21A /* PCMessageCell.h */,
+				7537E1B61E5FD45800CDD21A /* PCMessageCell.m */,
+				758466601E68FB0C001E8341 /* PCMessageCellProtocol.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +314,117 @@
 				7537E1B01E5EF06F00CDD21A /* PCMainViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7537E1C31E6034DF00CDD21A /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				758465EE1E66B680001E8341 /* ComponentLayouts */,
+				759DB00A1E63CBCB0045567D /* PCMessageLayout.h */,
+				759DB00B1E63CBCB0045567D /* PCMessageLayout.m */,
+				759DB01E1E6537270045567D /* PCMessageTextViewLayout.h */,
+				759DB01F1E6537270045567D /* PCMessageTextViewLayout.m */,
+				758465E51E6686A7001E8341 /* PCMessagePhotoViewLayout.h */,
+				758465E61E6686A7001E8341 /* PCMessagePhotoViewLayout.m */,
+				758466071E66E19D001E8341 /* PCMessageServiceLayout.h */,
+				758466081E66E19D001E8341 /* PCMessageServiceLayout.m */,
+				7584660F1E67BEC4001E8341 /* PCMessageFriendVerifyLayout.h */,
+				758466101E67BEC4001E8341 /* PCMessageFriendVerifyLayout.m */,
+				758466411E681BDC001E8341 /* PCMessageInviteLayout.h */,
+				758466421E681BDC001E8341 /* PCMessageInviteLayout.m */,
+				758466441E6829C4001E8341 /* PCMessageWebLinkLayout.h */,
+				758466451E6829C4001E8341 /* PCMessageWebLinkLayout.m */,
+				758466471E682A27001E8341 /* PCMessageWalletAssistantLayout.h */,
+				758466481E682A27001E8341 /* PCMessageWalletAssistantLayout.m */,
+				7584664A1E682A53001E8341 /* PCMessagePhotoTextLayout.h */,
+				7584664B1E682A53001E8341 /* PCMessagePhotoTextLayout.m */,
+				7584664D1E682ABB001E8341 /* PCMessageRenderLayout.h */,
+				7584664E1E682ABB001E8341 /* PCMessageRenderLayout.m */,
+				758466501E682B0E001E8341 /* PCMessageCombinationLayout.h */,
+				758466511E682B0E001E8341 /* PCMessageCombinationLayout.m */,
+				758466561E682B58001E8341 /* PCMessageAudioLayout.h */,
+				758466571E682B58001E8341 /* PCMessageAudioLayout.m */,
+				758466591E682B8D001E8341 /* PCMessageMyCardLayout.h */,
+				7584665A1E682B8D001E8341 /* PCMessageMyCardLayout.m */,
+				7584665C1E682BB9001E8341 /* PCMessageFriendCardLayout.h */,
+				7584665D1E682BB9001E8341 /* PCMessageFriendCardLayout.m */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		7537E1C41E60351D00CDD21A /* MessageViews */ = {
+			isa = PBXGroup;
+			children = (
+				759DB02B1E653C690045567D /* BaseViews */,
+				759DB0381E65404E0045567D /* PCMessageTextView.h */,
+				759DB0391E65404E0045567D /* PCMessageTextView.m */,
+				758465E81E668FD8001E8341 /* PCMessagePhotoView.h */,
+				758465E91E668FD8001E8341 /* PCMessagePhotoView.m */,
+				758466041E66D097001E8341 /* PCMessageServiceView.h */,
+				758466051E66D097001E8341 /* PCMessageServiceView.m */,
+				7584660C1E67BE39001E8341 /* PCMessageFriendVerifyView.h */,
+				7584660D1E67BE39001E8341 /* PCMessageFriendVerifyView.m */,
+				7584663E1E68107E001E8341 /* PCMessageInviteView.h */,
+				7584663F1E68107E001E8341 /* PCMessageInviteView.m */,
+				758466631E6916CA001E8341 /* PCMessageWebLinkView.h */,
+				758466641E6916CA001E8341 /* PCMessageWebLinkView.m */,
+				758466681E693EE2001E8341 /* PCMessageMyCardView.h */,
+				758466691E693EE2001E8341 /* PCMessageMyCardView.m */,
+				7584666B1E693EF3001E8341 /* PCMessageFriendCardView.h */,
+				7584666C1E693EF3001E8341 /* PCMessageFriendCardView.m */,
+				7509BDED1E6D44D30026C7E4 /* PCMessageWalletAssistantView.h */,
+				7509BDEE1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m */,
+			);
+			path = MessageViews;
+			sourceTree = "<group>";
+		};
+		758465EE1E66B680001E8341 /* ComponentLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				758465EF1E66B6A8001E8341 /* PCMessageNameViewLayout.h */,
+				758465F01E66B6A8001E8341 /* PCMessageNameViewLayout.m */,
+				758465F11E66B6A8001E8341 /* PCMessageTimeViewLayout.h */,
+				758465F21E66B6A8001E8341 /* PCMessageTimeViewLayout.m */,
+			);
+			path = ComponentLayouts;
+			sourceTree = "<group>";
+		};
+		7584667E1E6956F0001E8341 /* Helper+Catagorys */ = {
+			isa = PBXGroup;
+			children = (
+				7584667F1E6956F0001E8341 /* PCMessageHelper.h */,
+				758466801E6956F0001E8341 /* PCMessageHelper.m */,
+				758466811E6956F0001E8341 /* PCMessageMacros.h */,
+				758466861E6957A5001E8341 /* UIImage+PCMessage.h */,
+				758466871E6957A5001E8341 /* UIImage+PCMessage.m */,
+			);
+			path = "Helper+Catagorys";
+			sourceTree = "<group>";
+		};
+		759DB0241E653AAD0045567D /* ComponentViews */ = {
+			isa = PBXGroup;
+			children = (
+				759DB0251E653AD50045567D /* PCMessageAvatarBubble.h */,
+				759DB0261E653AD50045567D /* PCMessageAvatarBubble.m */,
+				758465E21E667AB2001E8341 /* PCMessagePhotoBubble.h */,
+				758465E31E667AB2001E8341 /* PCMessagePhotoBubble.m */,
+				759DB0281E653BCD0045567D /* PCMessageTimeView.h */,
+				759DB0291E653BCD0045567D /* PCMessageTimeView.m */,
+				759DB02C1E653CB00045567D /* PCMessageNameView.h */,
+				759DB02D1E653CB00045567D /* PCMessageNameView.m */,
+			);
+			path = ComponentViews;
+			sourceTree = "<group>";
+		};
+		759DB02B1E653C690045567D /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				759DB02F1E653F8F0045567D /* PCMessageNoAvatarBaseView.h */,
+				759DB0301E653F8F0045567D /* PCMessageNoAvatarBaseView.m */,
+				759DB0351E653FD40045567D /* PCMessageAvatarBaseView.h */,
+				759DB0361E653FD40045567D /* PCMessageAvatarBaseView.m */,
+			);
+			path = BaseViews;
 			sourceTree = "<group>";
 		};
 		8807199330FC535EE0820F86 /* Frameworks */ = {
@@ -202,7 +470,7 @@
 				TargetAttributes = {
 					7537E17D1E5EE7E600CDD21A = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 54KWRA6QCY;
+						DevelopmentTeam = L46G99983Y;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -230,8 +498,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7509BDEC1E6D44830026C7E4 /* JsonFileWallet.json in Resources */,
+				7584660B1E67B6B4001E8341 /* JsonFileText.json in Resources */,
 				7537E18E1E5EE7E600CDD21A /* Assets.xcassets in Resources */,
+				758466621E69163F001E8341 /* JsonFileWebLink.json in Resources */,
+				7584663D1E680EB0001E8341 /* JsonFileInvite.json in Resources */,
+				758465F61E66BA52001E8341 /* JsonFilePhoto.json in Resources */,
+				7584663B1E680D96001E8341 /* JsonFileFriendCard.json in Resources */,
 				7537E1A61E5EE81E00CDD21A /* JsonFile.json in Resources */,
+				758466671E692A9A001E8341 /* JsonFileUnknown.json in Resources */,
+				758466391E680CC3001E8341 /* JsonFileMyCard.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,14 +566,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7584666D1E693EF3001E8341 /* PCMessageFriendCardView.m in Sources */,
+				759DB0201E6537270045567D /* PCMessageTextViewLayout.m in Sources */,
 				7537E1B11E5EF06F00CDD21A /* PCMainViewController.m in Sources */,
+				7509BDF21E6D55A80026C7E4 /* UIImage+T8.m in Sources */,
 				7537E1AA1E5EE81E00CDD21A /* PCMessageModel.m in Sources */,
+				7584666A1E693EE2001E8341 /* PCMessageMyCardView.m in Sources */,
+				7537E1B71E5FD45800CDD21A /* PCMessageCell.m in Sources */,
 				7537E1AE1E5EEF5900CDD21A /* PCChatViewController.m in Sources */,
+				758466111E67BEC4001E8341 /* PCMessageFriendVerifyLayout.m in Sources */,
 				7537E1A71E5EE81E00CDD21A /* NSDictionary+PC.m in Sources */,
+				758465ED1E669FB7001E8341 /* PCSetImageSizeManager.m in Sources */,
+				758465E41E667AB2001E8341 /* PCMessagePhotoBubble.m in Sources */,
 				7537E1A91E5EE81E00CDD21A /* PCUserDefaultHelper.m in Sources */,
+				759DB02A1E653BCD0045567D /* PCMessageTimeView.m in Sources */,
 				7537E1861E5EE7E600CDD21A /* AppDelegate.m in Sources */,
+				7584664F1E682ABB001E8341 /* PCMessageRenderLayout.m in Sources */,
 				7537E1A81E5EE81E00CDD21A /* NSString+PC.m in Sources */,
+				758465F41E66B6A8001E8341 /* PCMessageTimeViewLayout.m in Sources */,
+				758465F31E66B6A8001E8341 /* PCMessageNameViewLayout.m in Sources */,
+				7584660E1E67BE39001E8341 /* PCMessageFriendVerifyView.m in Sources */,
+				758466091E66E19D001E8341 /* PCMessageServiceLayout.m in Sources */,
+				7584665B1E682B8D001E8341 /* PCMessageMyCardLayout.m in Sources */,
+				7584664C1E682A53001E8341 /* PCMessagePhotoTextLayout.m in Sources */,
+				758466881E6957A5001E8341 /* UIImage+PCMessage.m in Sources */,
+				758466651E6916CA001E8341 /* PCMessageWebLinkView.m in Sources */,
+				758466461E6829C4001E8341 /* PCMessageWebLinkLayout.m in Sources */,
+				7584665E1E682BB9001E8341 /* PCMessageFriendCardLayout.m in Sources */,
+				759DB03A1E65404E0045567D /* PCMessageTextView.m in Sources */,
+				758466491E682A27001E8341 /* PCMessageWalletAssistantLayout.m in Sources */,
+				759DB00C1E63CBCB0045567D /* PCMessageLayout.m in Sources */,
+				759DB0271E653AD50045567D /* PCMessageAvatarBubble.m in Sources */,
+				758466581E682B58001E8341 /* PCMessageAudioLayout.m in Sources */,
+				759DB0111E63FBF40045567D /* NSDate+T8.m in Sources */,
+				758465E71E6686A7001E8341 /* PCMessagePhotoViewLayout.m in Sources */,
+				758466431E681BDC001E8341 /* PCMessageInviteLayout.m in Sources */,
 				7537E1831E5EE7E600CDD21A /* main.m in Sources */,
+				758466841E6956F0001E8341 /* PCMessageHelper.m in Sources */,
+				759DB0371E653FD40045567D /* PCMessageAvatarBaseView.m in Sources */,
+				758465EA1E668FD8001E8341 /* PCMessagePhotoView.m in Sources */,
+				7509BDEF1E6D44D30026C7E4 /* PCMessageWalletAssistantView.m in Sources */,
+				758466401E68107E001E8341 /* PCMessageInviteView.m in Sources */,
+				759DB02E1E653CB00045567D /* PCMessageNameView.m in Sources */,
+				759DB0311E653F8F0045567D /* PCMessageNoAvatarBaseView.m in Sources */,
+				759DB0121E63FBF40045567D /* NSDateFormatter+T8.m in Sources */,
+				758466521E682B0E001E8341 /* PCMessageCombinationLayout.m in Sources */,
+				758466061E66D097001E8341 /* PCMessageServiceView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,11 +711,12 @@
 			baseConfigurationReference = ACA1CA7225731D40F2DC83C3 /* Pods-messageTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 54KWRA6QCY;
+				DEVELOPMENT_TEAM = L46G99983Y;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/messageTable/PrefixHeader.pch";
 				INFOPLIST_FILE = messageTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.messageTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryeagle.messageTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -411,11 +726,12 @@
 			baseConfigurationReference = 79F3533901F069E52ED393CF /* Pods-messageTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 54KWRA6QCY;
+				DEVELOPMENT_TEAM = L46G99983Y;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/messageTable/PrefixHeader.pch";
 				INFOPLIST_FILE = messageTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.messageTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryeagle.messageTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -1,0 +1,97 @@
+{
+  "result" : [
+    {
+      "content" : "",
+      "id" : "58b7d5740c750f753aba9141",
+      "readLimit" : [
+
+      ],
+      "media_type" : 8,
+      "message_type" : 1,
+      "created_at" : "2017-03-02T08:19:00.000Z",
+      "seq" : 4153,
+      "channel_id" : "57cf9e976068b373dc072b0a",
+      "_status" : 1,
+      "creator" : "57563d10497a822b3d6f48ac",
+      "updated_at" : "2017-03-02T08:19:00.000Z",
+      "extend" : {
+        "avatar" : "http:\/\/o4a7cbihz.qnssl.com\/avatar\/a23ffc6c-1d99-4311-b190-be874ec15ca5",
+        "name" : "艾文",
+        "user_id" : "5742f1dc37b9b75e209d4aff"
+      },
+      "tseq" : "14884427406556800195681",
+      "chat_type" : 0
+    },
+    {
+      "content" : "",
+      "id" : "58b7d5820c750f753aba9142",
+      "readLimit" : [
+
+      ],
+      "media_type" : 8,
+      "message_type" : 1,
+      "created_at" : "2017-03-02T08:19:14.000Z",
+      "seq" : 4154,
+      "channel_id" : "57cf9e976068b373dc072b0a",
+      "_status" : 1,
+      "creator" : "58ae66420c750f644a9e4fca",
+      "updated_at" : "2017-03-02T08:19:14.000Z",
+      "extend" : {
+        "avatar" : "http:\/\/o3b126ie1.qnssl.com\/avatar\/a1abe55a-f3ed-4072-857a-15c34e9d66a0",
+        "name" : "徐高阳",
+        "user_id" : "5711cbd93d09d9a26ec47e75"
+      },
+      "tseq" : "14884427546167810664859",
+      "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d5740c750f753aba9141",
+        "readLimit" : [
+
+        ],
+        "media_type" : 8,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:19:00.000Z",
+        "seq" : 4153,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "57563d10497a822b3d6f48ac",
+        "updated_at" : "2017-03-02T08:19:00.000Z",
+        "extend" : {
+        "avatar" : "http:\/\/o4a7cbihz.qnssl.com\/avatar\/a23ffc6c-1d99-4311-b190-be874ec15ca5",
+        "name" : "晚来天欲雪能饮一杯无酒逢知己千杯少",
+        "user_id" : "5742f1dc37b9b75e209d4aff"
+        },
+        "tseq" : "14884427406556800195681",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d5820c750f753aba9142",
+        "readLimit" : [
+
+        ],
+        "media_type" : 8,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:19:14.000Z",
+        "seq" : 4154,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-03-02T08:19:14.000Z",
+        "extend" : {
+        "avatar" : "http:\/\/o3b126ie1.qnssl.com\/avatar\/a1abe55a-f3ed-4072-857a-15c34e9d66a0",
+        "name" : "晚来天欲雪能饮一杯无酒逢知己千杯少",
+        "user_id" : "5711cbd93d09d9a26ec47e75"
+        },
+        "tseq" : "14884427546167810664859",
+        "chat_type" : 0
+    }
+
+  ],
+  "server_status" : [
+
+  ],
+  "code" : 1
+}

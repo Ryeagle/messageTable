@@ -10,4 +10,7 @@
 
 @interface PCChatViewController : UIViewController
 
+//竟然可以使用汉字......
+@property (nonatomic, copy) NSString *猴子;
+
 @end

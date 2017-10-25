@@ -1,6 +1,225 @@
 {
   "result" : [
     {
+        "content" : "安得猛士兮守四方 加入聊天",
+        "id" : "58a2ae8e0c750f6fc287873a",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 3,
+        "created_at" : "2017-02-14T07:15:26.000Z",
+        "seq" : 39,
+        "channel_id" : "57b090eef9f1e99e3e838534",
+        "_status" : 1,
+        "creator" : "",
+        "updated_at" : "2017-02-14T07:15:26.000Z",
+        "extend" : {
+        "type" : 1,
+        "user_id" : "57fcb70c28c90c0001daf786"
+        },
+        "tseq" : "14870565261118045700491",
+        "chat_type" : 0
+    },
+    {
+        "content" : "一切有为法如梦幻泡影亦如露如电应作如是观开启了朋友验证，你还不是他(她)朋友。请先发送朋友验证请求，对方验证通过后，才能聊天。 发送朋友验证",
+        "id" : "58ad35a80c750f65a9de9063",
+        "readLimit" : [
+
+        ],
+        "media_type" : 99,
+        "message_type" : 1,
+        "created_at" : "2017-02-27T06:54:32.000Z",
+        "seq" : 3993,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-02-22T06:54:32.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14877464720264156352134",
+        "chat_type" : 0
+    },
+    {
+        "content" : "http:\/\/h5-dev.xinshengdaxue.com\/post_detail.html?id=58aba19176aa63a723d4ef62&rid=owG5uqb_BLCe6qmpPJmLjNEB1uv0kCJnYiHuCYdHV3p7RRdYN_62ZihsUvqWyrq2SCyO16bk6LEu2Z0Mq8ugTJUGLdWz8ssJcYBrmYxWsMK2pgASfcmzXJwHQLkVw4XALlTpniTjSH2UFaxtpJlmPQ==",
+        "id" : "58b7dbff0c750f753aba9152",
+        "readLimit" : [
+
+        ],
+        "media_type" : 10,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:46:55.000Z",
+        "seq" : 4157,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-03-02T08:46:55.000Z",
+        "extend" : {
+        "title" : "菩提萨埵依般若波罗蜜多故心无挂碍无挂碍故无有恐怖远离颠倒梦想究竟涅槃三世诸佛依般若波罗蜜多故得阿耨多罗三藐三菩提",
+        "host" : "h5-dev.xinshengdaxue.com",
+        "description" : "观自在菩萨行深般若波罗蜜多时照见五蕴皆空度一切苦厄舍利子色不异空空不异色色即是空空即是色受想行识亦复如是舍利子是诸法空相不生不灭不垢不净不增不减是故空中无色无受想行识无眼耳鼻舌身意无色声香味触法无眼乃至无意识界无无明亦无无明尽乃至无老死亦无老死尽",
+        "cover" : "https:\/\/o4a7cbihz.qnssl.com\/cover\/72ba17fd-6a4a-4b52-96f3-db5116650658"
+        },
+        "tseq" : "14884444153688718671605",
+        "chat_type" : 0
+    },
+    {
+        "content" : "http:\/\/h5-dev.xinshengdaxue.com\/post_detail.html?id=58aba19176aa63a723d4ef62&rid=owG5uqb_BLCe6qmpPJmLjNEB1uv0kCJnYiHuCYdHV3p7RRdYN_62ZihsUvqWyrq2SCyO16bk6LEu2Z0Mq8ugTJUGLdWz8ssJcYBrmYxWsMK2pgASfcmzXJwHQLkVw4XALlTpniTjSH2UFaxtpJlmPQ==",
+        "id" : "58b8d9410c750f753aba9292",
+        "readLimit" : [
+
+        ],
+        "media_type" : 10,
+        "message_type" : 1,
+        "created_at" : "2017-03-03T02:47:29.000Z",
+        "seq" : 4159,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "57563d10497a822b3d6f48ac",
+        "updated_at" : "2017-03-03T02:47:29.000Z",
+        "extend" : {
+        "title" : "菩提萨埵依般若波罗蜜多故心无挂碍无挂碍故无有恐怖远离颠倒梦想究竟涅槃三世诸佛依般若波罗蜜多故得阿耨多罗三藐三菩提",
+        "host" : "h5-dev.xinshengdaxue.com",
+        "description" : "观自在菩萨行深般若波罗蜜多时照见五蕴皆空度一切苦厄舍利子色不异空空不异色色即是空空即是色受想行识亦复如是舍利子是诸法空相不生不灭不垢不净不增不减是故空中无色无受想行识无眼耳鼻舌身意无色声香味触法无眼乃至无意识界无无明亦无无明尽乃至无老死亦无老死尽",
+        "cover" : "https:\/\/o4a7cbihz.qnssl.com\/cover\/72ba17fd-6a4a-4b52-96f3-db5116650658"
+        },
+        "tseq" : "14885092496796516246481",
+        "chat_type" : 0
+    },
+    {
+        "content" : "http:\/\/h5-dev.xinshengdaxue.com\/post_detail.html?id=58abb2b976aa63a723d4ef63&rid=owG5uqb_BLCe6qmpPJmLjN97PNWxRRnJSSiJ6zDJrpO7DD4AycoMl304b4Pt0jZe5fKZYrZkCBK8iMin7tkwIZTBL9FR0hjGJE8NNKdH19VrPgx5i2j6VUf0bma2b-MsdR43kDYwETCf_JENKjN4LA==",
+        "id" : "58b8d9690c750f753aba9293",
+        "readLimit" : [
+
+        ],
+        "media_type" : 10,
+        "message_type" : 1,
+        "created_at" : "2017-03-03T02:48:09.000Z",
+        "seq" : 4160,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-03-03T02:48:09.000Z",
+        "extend" : {
+        "title" : "🐒🐒🐒🐒🐒🐒故心无挂碍无挂碍故无有恐怖远离颠倒梦想究竟涅槃",
+        "host" : "h5-dev.xinshengdaxue.com",
+        "description" : "🐒🐒🐒🐒🐒🐒🐒故心无挂碍无挂碍故无有恐怖远离颠倒梦想究竟涅槃",
+        "cover" : "https:\/\/o4a7cbihz.qnssl.com\/cover\/4a97d309-1228-465a-8ba8-2ea0785d0059"
+        },
+        "tseq" : "14885092894266194392330",
+        "chat_type" : 0
+    },
+    {
+        "content" : "http:\/\/h5-dev.xinshengdaxue.com\/post_detail.html?id=58abb2f776aa63a723d4ef64&rid=owG5uqb_BLCe6qmpPJmLjDVi5iQ1ZHAxcPWYU1mC5ZUC7PAJGK-TbrBBBkr98c3Pxe3A5xrM6Yo0s489t-ajM_veh7l1_tgaKtbNlmmN1zCoCogqyF0DV0y4VkCudd02HdxwB9Kxpsayy2yGnynSNA==",
+        "id" : "58b8d97d0c750f753aba9294",
+        "readLimit" : [
+
+        ],
+        "media_type" : 10,
+        "message_type" : 1,
+        "created_at" : "2017-03-03T02:48:29.000Z",
+        "seq" : 4161,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9edfca",
+        "updated_at" : "2017-03-03T02:48:29.000Z",
+        "extend" : {
+        "title" : "🐒🐒🐒🐒🐒🐒🐒故心无挂碍无挂碍故无有恐怖远离颠倒梦想究竟涅槃",
+        "host" : "h5-dev.xinshengdaxue.com",
+        "description" : "🐒🐒🐒🐒🐒🐒🐒故心无挂碍无挂碍故无有恐怖远离颠倒梦想究竟涅槃",
+        "cover" : "https:\/\/o4a7cbihz.qnssl.com\/cover\/faa28c58-3086-4655-b9c1-3ca46558412b"
+        },
+        "tseq" : "14885093097512008451714",
+        "chat_type" : 0
+    },
+    {
+        "content" : "若见诸相非相,即见如来",
+        "id" : "58ad35a80c750f65a9de9063",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-27T06:54:32.000Z",
+        "seq" : 3993,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-02-22T06:54:32.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14877464720264156352134",
+        "chat_type" : 0
+    },
+    {
+        "content" : "绝圣弃智，民利百倍；绝仁弃义，民复孝慈；绝巧弃利，盗贼无有。此三者以为文不足，故令有所属；见素抱朴，少私寡欲；绝学无忧",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "http:\/\/h5-dev.xinshengdaxue.com\/post_detail.html?id=58aba19176aa63a723d4ef62&rid=owG5uqb_BLCe6qmpPJmLjNEB1uv0kCJnYiHuCYdHV3p7RRdYN_62ZihsUvqWyrq2SCyO16bk6LEu2Z0Mq8ugTJUGLdWz8ssJcYBrmYxWsMK2pgASfcmzXJwHQLkVw4XALlTpniTjSH2UFaxtpJlmPQ==",
+        "id" : "58b7dbff0c750f753aba9152",
+        "readLimit" : [
+
+        ],
+        "media_type" : 10,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:46:55.000Z",
+        "seq" : 4157,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-03-02T08:46:55.000Z",
+        "extend" : {
+        "title" : "阿耨多罗三藐三菩提",
+        "host" : "h5-dev.xinshengdaxue.com",
+        "description" : "观自在菩萨行深般若波罗蜜多时照见五蕴皆空度一切苦厄舍利子色不异空空不异色色即是空空即是色受想行识亦复如是舍利子是诸法空相不生不灭不垢不净不增不减是故空中无色无受想行识无眼耳鼻舌身意无色声香味触法无眼乃至无意识界无无明亦无无明尽乃至无老死亦无老死尽",
+        "cover" : "https:\/\/o4a7cbihz.qnssl.com\/cover\/72ba17fd-6a4a-4b52-96f3-db5116650658"
+        },
+        "tseq" : "14884444153688718671605",
+        "chat_type" : 0
+    },
+    {
+        "content" : "http:\/\/h5-dev.xinshengdaxue.com\/post_detail.html?id=58aba19176aa63a723d4ef62&rid=owG5uqb_BLCe6qmpPJmLjNEB1uv0kCJnYiHuCYdHV3p7RRdYN_62ZihsUvqWyrq2SCyO16bk6LEu2Z0Mq8ugTJUGLdWz8ssJcYBrmYxWsMK2pgASfcmzXJwHQLkVw4XALlTpniTjSH2UFaxtpJlmPQ==",
+        "id" : "58b8d9410c750f753aba9292",
+        "readLimit" : [
+
+        ],
+        "media_type" : 10,
+        "message_type" : 1,
+        "created_at" : "2017-03-03T02:47:29.000Z",
+        "seq" : 4159,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "57563d10497a822b3d6f48ac",
+        "updated_at" : "2017-03-03T02:47:29.000Z",
+        "extend" : {
+        "title" : "阿耨多罗三藐三菩提",
+        "host" : "h5-dev.xinshengdaxue.com",
+        "description" : "观自在菩萨行深般若波罗蜜多时照见五蕴皆空度一切苦厄舍利子色不异空空不异色色即是空空即是色受想行识亦复如是舍利子是诸法空相不生不灭不垢不净不增不减是故空中无色无受想行识无眼耳鼻舌身意无色声香味触法无眼乃至无意识界无无明亦无无明尽乃至无老死亦无老死尽",
+        "cover" : "https:\/\/o4a7cbihz.qnssl.com\/cover\/72ba17fd-6a4a-4b52-96f3-db5116650658"
+        },
+        "tseq" : "14885092496796516246481",
+        "chat_type" : 0
+    },
+    {
         "content" : "凡有所相,皆为虚妄",
         "id" : "58ad35a80c750f65a9de9063",
         "readLimit" : [
@@ -18,6 +237,52 @@
 
         },
         "tseq" : "14877464720264156352134",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d6660c750f753aba9144",
+        "readLimit" : [
+
+        ],
+        "media_type" : 7,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:23:02.000Z",
+        "seq" : 4155,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "57563d10497a822b3d6f48ac",
+        "updated_at" : "2017-03-02T08:23:02.000Z",
+        "extend" : {
+        "channel_id" : "57d61827fd8d2c0001534d1b",
+        "special_type" : 2,
+        "channel_avatar" : "http:\/\/o4a7cbihz.qnssl.com\/gavatar\/t9b4019284550060e.jpg",
+        "channel_name" : "我们都会有"
+        },
+        "tseq" : "14884429820888019789743",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d6930c750f753aba9146",
+        "readLimit" : [
+
+        ],
+        "media_type" : 7,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:23:47.000Z",
+        "seq" : 4156,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-03-02T08:23:47.000Z",
+        "extend" : {
+        "channel_id" : "57cf9f546068b373dc072b39",
+        "special_type" : 5,
+        "channel_avatar" : "http:\/\/o4a7cbihz.qnssl.com\/gavatar\/t2640e198302fa49c.jpg",
+        "channel_name" : "猴子🐵的水帘洞"
+        },
+        "tseq" : "14884430278536414229390",
         "chat_type" : 0
     },
     {
@@ -52,7 +317,7 @@
         "seq" : 3993,
         "channel_id" : "57cf9e976068b373dc072b0a",
         "_status" : 1,
-        "creator" : "5767abbecbaf43383bfba097",
+        "creator" : "58ae66420c750f644a9e4fca",
         "updated_at" : "2017-02-22T06:54:32.000Z",
         "extend" : {
 
@@ -61,7 +326,47 @@
         "chat_type" : 0
     },
     {
-        "content" : "绝圣弃智，民利百倍；绝仁弃义，民复孝慈；绝巧弃利，盗贼无有。此三者以为文不足，故令有所属；见素抱朴，少私寡欲；绝学无忧",
+        "content" : "😀😀😢🇨🇳绝圣弃智，民利百倍；绝仁弃义，民复孝慈；绝巧弃利，盗贼无有。此三者以为文不足，故令有所属；见素抱朴，少私寡欲；绝学无忧",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "凡有所相,皆为虚妄",
+        "id" : "58ad35a80c750f65a9de9063",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-22T06:54:32.000Z",
+        "seq" : 3993,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "56f3a79bb8df540c19a2556d",
+        "updated_at" : "2017-02-22T06:54:32.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14877464720264156352134",
+        "chat_type" : 0
+    },
+    {
+        "content" : "😀😀😢🇨🇳😀😀😢🇨🇳绝圣弃智，民利百倍；绝仁弃义，民复孝慈；绝巧弃利，盗贼无有。此三者以为文不足，故令有所属；见素抱朴，少私寡欲；绝学无忧载营魄抱一①，能无离乎？专气致柔②，能如婴儿乎③？涤除玄鉴④，能无疵乎？爱民治国，能无为乎⑤？天门开阖⑥，能为雌乎⑦？明白四达，能无知乎⑧？生之畜之⑨，生而不有，为而不恃，长而不宰，是谓玄德⑩",
         "id" : "58ae66420c750f644a9e4fca",
         "readLimit" : [
 
@@ -78,6 +383,422 @@
 
         },
         "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "😀😀😢🇨🇳😀😀😀😢🇺🇸😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "56f3a79bb8df540c19a2556d",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "😀😀😢🇨🇳😀😀😀😢🇺🇸😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳😀😀😢🇨🇳",
+        "id" : "58ae66420c750f644a9esfca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "我",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "56f3a79bb8df540c19a2556d",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "我",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "lizhuo@tinfinite.com😀打算18734900387😀www.baidu.com🇨🇳🇺🇸🇨🇺192.168.1.1",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "56f3a79bb8df540c19a2556d",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "我",
+        "id" : "58ae66420c750f644a9e4fca",
+        "readLimit" : [
+
+        ],
+        "media_type" : -1,
+        "message_type" : 1,
+        "created_at" : "2017-02-23T04:34:10.000Z",
+        "seq" : 4000,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-02-23T04:34:10.000Z",
+        "extend" : {
+
+        },
+        "tseq" : "14878244501080062429097",
+        "chat_type" : 0
+    },
+    {
+        "content" : "http:\/\/o4a7cbihz.qnssl.com\/message\/4a0c3ca1-738c-4345-b4c4-0a89adeebfb2",
+        "id" : "58b671810c750f6dc003dca5",
+        "readLimit" : [
+
+        ],
+        "media_type" : 4,
+        "message_type" : 1,
+        "created_at" : "2017-03-01T07:00:17.000Z",
+        "seq" : 4148,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "574be5e86bc71f626550b4d1",
+        "updated_at" : "2017-03-01T07:00:17.000Z",
+        "extend" : {
+        "img_h" : 750,
+        "img_w" : 500
+        },
+        "tseq" : "14883516173554360221412",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "5863b65f80d4f90001560475",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2016-12-28T12:55:59.000Z",
+        "seq" : 140,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2016-12-28T12:55:59.000Z",
+        "extend" : {
+        "amount" : 20000,
+        "order_id" : "148289602966610000005385",
+        "records_id" : 1731,
+        "time" : 1482896033,
+        "type" : 1
+        },
+        "tseq" : "14829297592350701624015",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "586b7d8a0c750f035ca6bd40",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2017-01-03T10:31:38.000Z",
+        "seq" : 142,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2017-01-03T10:31:38.000Z",
+        "extend" : {
+        "amount" : 20,
+        "order_id" : "148343948762310000005690",
+        "records_id" : 1817,
+        "time" : 1483439491,
+        "type" : 2
+        },
+        "tseq" : "14834394981686943117103",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58708e9f0c750f74c1a496fa",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2017-01-07T06:45:51.000Z",
+        "seq" : 144,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2017-01-07T06:45:51.000Z",
+        "extend" : {
+        "amount" : 4,
+        "order_id" : "148377154578410000006080",
+        "product_name" : "与君歌一曲请君为我而倾耳听钟鼓馔玉不足贵",
+        "time" : 1483771545,
+        "pay_method" : "钱包余额",
+        "records_id" : 1931,
+        "type" : 3,
+        "pay_target" : "新生大学团队"
+        },
+        "tseq" : "14837715510535721712116",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58708e9f0c750f74c1a496fa",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2017-01-07T06:45:51.000Z",
+        "seq" : 144,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2017-01-07T06:45:51.000Z",
+        "extend" : {
+        "amount" : 4,
+        "order_id" : "148377154578410000006080",
+        "product_name" : "晚来天欲雪能饮一杯无",
+        "time" : 1483771545,
+        "pay_method" : "钱包余额",
+        "records_id" : 1931,
+        "type" : 4,
+        "pay_target" : "新生大学团队"
+        },
+        "tseq" : "14837715510535721712116",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58708e9f0c750f74c1a496fa",
+        "readLimit" : [
+
+        ],
+        "media_type" : 14,
+        "message_type" : 1,
+        "created_at" : "2017-01-07T06:45:51.000Z",
+        "seq" : 144,
+        "channel_id" : "58047e44483f410001a98c4e",
+        "_status" : 1,
+        "creator" : "57ec8afb7dcfa50001756757",
+        "updated_at" : "2017-01-07T06:45:51.000Z",
+        "extend" : {
+        "amount" : 20000,
+        "order_id" : "148289602966610000005385",
+        "records_id" : 1731,
+        "time" : 1482896033,
+        "type" : 5
+        },
+        "tseq" : "14837715510535721712116",
+        "chat_type" : 0
+    },
+    {
+        "content" : "http:\/\/o4a7cbihz.qnssl.com\/message\/338c8096-c99b-4a15-b10e-01bf298788fb",
+        "id" : "58b671810c750f6dc003dca4",
+        "readLimit" : [
+
+        ],
+        "media_type" : 4,
+        "message_type" : 1,
+        "created_at" : "2017-03-01T07:00:17.000Z",
+        "seq" : 4149,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-03-01T07:00:17.000Z",
+        "extend" : {
+        "img_h" : 667,
+        "img_w" : 1000
+        },
+        "tseq" : "14883516173576117011164",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d3ef0c750f753aba9137",
+        "readLimit" : [
+
+        ],
+        "media_type" : 9,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:12:31.000Z",
+        "seq" : 4151,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "57563d10497a822b3d6f48ac",
+        "updated_at" : "2017-03-02T08:12:31.000Z",
+        "extend" : {
+        "card_id" : "5763e3a47c4035ec3ba0f45a"
+        },
+        "tseq" : "14884423513451462029921",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d40b0c750f753aba9139",
+        "readLimit" : [
+
+        ],
+        "media_type" : 9,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:12:59.000Z",
+        "seq" : 4152,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "56f3a79bb8df540c19a2556d",
+        "updated_at" : "2017-03-02T08:12:59.000Z",
+        "extend" : {
+        "card_id" : "5758f8f8120ba2fe35dc87a3"
+        },
+        "tseq" : "14884423794678288255075",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d5740c750f753aba9141",
+        "readLimit" : [
+
+        ],
+        "media_type" : 8,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:19:00.000Z",
+        "seq" : 4153,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "57563d10497a822b3d6f48ac",
+        "updated_at" : "2017-03-02T08:19:00.000Z",
+        "extend" : {
+        "avatar" : "http:\/\/o4a7cbihz.qnssl.com\/avatar\/a23ffc6c-1d99-4311-b190-be874ec15ca5",
+        "name" : "艾文",
+        "user_id" : "5742f1dc37b9b75e209d4aff"
+        },
+        "tseq" : "14884427406556800195681",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d5820c750f753aba9142",
+        "readLimit" : [
+
+        ],
+        "media_type" : 8,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:19:14.000Z",
+        "seq" : 4154,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-03-02T08:19:14.000Z",
+        "extend" : {
+        "avatar" : "http:\/\/o3b126ie1.qnssl.com\/avatar\/a1abe55a-f3ed-4072-857a-15c34e9d66a0",
+        "name" : "徐高阳",
+        "user_id" : "5711cbd93d09d9a26ec47e75"
+        },
+        "tseq" : "14884427546167810664859",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d5740c750f753aba9141",
+        "readLimit" : [
+
+        ],
+        "media_type" : 8,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:19:00.000Z",
+        "seq" : 4153,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "57563d10497a822b3d6f48ac",
+        "updated_at" : "2017-03-02T08:19:00.000Z",
+        "extend" : {
+        "avatar" : "http:\/\/o4a7cbihz.qnssl.com\/avatar\/a23ffc6c-1d99-4311-b190-be874ec15ca5",
+        "name" : "晚来天欲雪能饮一杯无酒逢知己千杯少",
+        "user_id" : "5742f1dc37b9b75e209d4aff"
+        },
+        "tseq" : "14884427406556800195681",
+        "chat_type" : 0
+    },
+    {
+        "content" : "",
+        "id" : "58b7d5820c750f753aba9142",
+        "readLimit" : [
+
+        ],
+        "media_type" : 8,
+        "message_type" : 1,
+        "created_at" : "2017-03-02T08:19:14.000Z",
+        "seq" : 4154,
+        "channel_id" : "57cf9e976068b373dc072b0a",
+        "_status" : 1,
+        "creator" : "58ae66420c750f644a9e4fca",
+        "updated_at" : "2017-03-02T08:19:14.000Z",
+        "extend" : {
+        "avatar" : "http:\/\/o3b126ie1.qnssl.com\/avatar\/a1abe55a-f3ed-4072-857a-15c34e9d66a0",
+        "name" : "晚来天欲雪能饮一杯无酒逢知己千杯少",
+        "user_id" : "5711cbd93d09d9a26ec47e75"
+        },
+        "tseq" : "14884427546167810664859",
         "chat_type" : 0
     }
   ],

@@ -14,6 +14,6 @@
 
 @property (nonatomic, strong) NSString *userId;
 
-
+@property (nonatomic, assign) BOOL showMemberName;
 
 @end

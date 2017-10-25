@@ -14,10 +14,21 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import "YYKit.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/SDWebImageManager.h>
+#import <SDWebImage/SDWebImageDownloader.h>
+#import "SDWebImageManager.h"
+#import "NSDate+T8.h"
+#import "UIImage+T8.h"
+#import "NSDateFormatter+T8.h"
 #import "NSDictionary+PC.h"
 #import "PCUserDefaultHelper.h"
 #import "NSString+PC.h"
 #import "PCMessageModel.h"
+#import "PCDefines.h"
+#import "PCMessageModel.h"
+#import "PCMessageMacros.h"
+#import "PCSetImageSizeManager.h"
 #endif
 
 #endif /* PrefixHeader_pch */
