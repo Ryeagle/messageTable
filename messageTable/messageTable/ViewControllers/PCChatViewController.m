@@ -128,12 +128,12 @@
         }
     }
     
-//    @autoreleasepool {
-//        for (int i = 0; i < 10; i++) {
-//            [_chatLayoutArr addObjectsFromArray:_chatLayoutArr];
-//        }
-//
-//    }
+    @autoreleasepool {
+        for (int i = 0; i < 8; i++) {
+            [_chatLayoutArr addObjectsFromArray:_chatLayoutArr];
+        }
+
+    }
     
     [self.tableView reloadData];
 }

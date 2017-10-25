@@ -470,7 +470,7 @@
 				TargetAttributes = {
 					7537E17D1E5EE7E600CDD21A = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 54KWRA6QCY;
+						DevelopmentTeam = L46G99983Y;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -711,12 +711,12 @@
 			baseConfigurationReference = ACA1CA7225731D40F2DC83C3 /* Pods-messageTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 54KWRA6QCY;
+				DEVELOPMENT_TEAM = L46G99983Y;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/messageTable/PrefixHeader.pch";
 				INFOPLIST_FILE = messageTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.messageTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryeagle.messageTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -726,12 +726,12 @@
 			baseConfigurationReference = 79F3533901F069E52ED393CF /* Pods-messageTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 54KWRA6QCY;
+				DEVELOPMENT_TEAM = L46G99983Y;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/messageTable/PrefixHeader.pch";
 				INFOPLIST_FILE = messageTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.messageTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryeagle.messageTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
